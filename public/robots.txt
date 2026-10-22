@@ -1,0 +1,6 @@
+# robots.txt for LaPon Tech Solutions (https://lapon.solutions)
+User-agent: *
+Allow: /
+Allow: /servicios
+
+Sitemap: https://lapon.solutions/sitemap.xml

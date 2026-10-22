@@ -1,0 +1,447 @@
+---
+// Archivo: src/pages/servicios.astro
+import Layout from "../layouts/Layout.astro";
+import serviciosData from "../json/servicios.json";
+
+const { empresa, servicios, faq, garantias } = serviciosData;
+
+const pageTitle = "Servicios y Soluciones para Negocios | LaPon Tech Solutions San Pedro Sula";
+const pageDescription = "Páginas web profesionales, presencia en Google Maps, sistemas de inventario y facturación, automatizaciones de WhatsApp y asesoría en computadoras para negocios en Honduras.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+
+  <!-- ─── HERO DE SERVICIOS ─────────────────────────────────────────────── -->
+  <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none" aria-hidden="true"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-4xl">
+      <div class="inline-flex items-center gap-2 bg-slate-900 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-6 shadow-glow-emerald">
+        <span>Soluciones Claras y Accesibles · San Pedro Sula, Honduras</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+        Herramientas y Servicios que{" "}
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400">
+          Hacen Crecer tu Negocio
+        </span>
+      </h1>
+
+      <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto mb-8">
+        Te explicamos en español sencillo, sin palabras raras: desde crear tu página web para que nuevos clientes te encuentren en Google, hasta ordenar tus inventarios y ayudarte con cualquier problema en tus computadoras.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a
+          href="/#contacto"
+          class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-7 py-3.5 rounded-xl text-sm transition-all shadow-glow-emerald hover:-translate-y-0.5"
+        >
+          Consultar por WhatsApp
+        </a>
+        <a
+          href="#faq"
+          class="bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold px-6 py-3.5 rounded-xl text-sm border border-slate-700 transition-all"
+        >
+          Preguntas Frecuentes
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ÍNDICE RÁPIDO DE SERVICIOS ───────────────────────────────────── -->
+  <nav class="bg-slate-900/70 border-b border-slate-800/80 sticky top-20 z-40 backdrop-blur-md hidden md:block">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center space-x-6 py-3.5 text-xs sm:text-sm">
+        <a href="#presencia-digital" class="text-slate-300 hover:text-emerald-400 font-medium transition-colors">1. Páginas Web & Google Maps</a>
+        <span class="text-slate-700">•</span>
+        <a href="#facturacion-inventario" class="text-slate-300 hover:text-emerald-400 font-medium transition-colors">2. Inventario, POS & Facturación</a>
+        <span class="text-slate-700">•</span>
+        <a href="#automatizaciones" class="text-slate-300 hover:text-emerald-400 font-medium transition-colors">3. Automatizaciones & WhatsApp</a>
+        <span class="text-slate-700">•</span>
+        <a href="#asesoria-tecnica" class="text-slate-300 hover:text-emerald-400 font-medium transition-colors">4. Asesoría en Software & Equipos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── DESGLOSE DE SERVICIOS ────────────────────────────────────────── -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-20 max-w-6xl">
+
+    <!-- 1. PÁGINA WEB & GOOGLE MAPS -->
+    <article id="presencia-digital" class="scroll-mt-32 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-card-subtle">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-md">
+            Servicio 01 · Presencia y Nuevos Clientes
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+            Página Web Profesional & Presencia en Google Maps
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Hoy en día, cuando una persona necesita comprar un producto o contratar un servicio en San Pedro Sula, lo primero que hace es buscar en su teléfono. Diseñamos tu página web clara, moderna y rápida para que aparezcas en los primeros resultados de Google Maps y te escriban directamente a tu WhatsApp.
+          </p>
+
+          <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 text-sm text-slate-300">
+            <strong class="text-emerald-400 block mb-1">¿Para quién es este servicio?</strong>
+            Para todo negocio (desde la tienda local, clínica, taller o restaurante hasta la empresa mediana) que quiere que los clientes lo encuentren fácil y le pidan cotizaciones por internet.
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-white font-bold text-base uppercase tracking-wider">
+              Lo que incluye tu proyecto:
+            </h3>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Página web rápida que carga en menos de 1 segundo en celulares y computadoras.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Configuración de tu ubicación, horario y teléfono en Google Maps para que la gente llegue a tu local.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Botón flotante de WhatsApp para que te escriban con un solo clic sin tener que guardar tu número.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>El dominio web queda a tu nombre: eres el dueño 100% legal de tu página sin cuotas mensuales forzosas.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-7 space-y-6 lg:sticky lg:top-36">
+          <h3 class="text-base font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            Resumen del Paquete
+          </h3>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Propiedad</span>
+              <p class="text-emerald-400 font-bold">100% tuya (sin cuotas mensuales obligatorias)</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Tiempo de Entrega</span>
+              <p class="text-white font-medium">De 1 a 2 semanas con revisiones contigo</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Qué necesitas para empezar</span>
+              <p class="text-slate-300">Solo tus fotos, tus datos de contacto y contarnos qué vendes. Nosotros nos encargamos de todo el resto.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800">
+            <a
+              href="/#contacto"
+              class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-5 rounded-xl text-sm transition-all shadow-glow-emerald"
+            >
+              <span>Cotizar Página Web</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. SISTEMAS A MEDIDA, FACTURACIÓN & INVENTARIO -->
+    <article id="facturacion-inventario" class="scroll-mt-32 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-card-subtle">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-md">
+            Servicio 02 · Control y Cuentas Claras
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+            Sistemas a Medida, Facturación & Control de Inventario
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Si tu inventario no cuadra, tienes mercadería que no sabes a dónde fue a parar, o estás cansado de que los programas comerciales te cobren mensualidades en dólares por cada empleado, creamos un sistema a la medida exacta de tu negocio.
+          </p>
+
+          <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 text-sm text-slate-300">
+            <strong class="text-emerald-400 block mb-1">¿Para quién es este servicio?</strong>
+            Para tiendas, ferreterías, bodegas, distribuidoras y comercios que necesitan saber exactamente qué tienen en existencia y facturar rápido en caja.
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-white font-bold text-base uppercase tracking-wider">
+              Lo que te permite hacer:
+            </h3>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Control exacto de inventario (Kardex): qué entra, qué sale y cuánto dinero tienes en mercadería.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Punto de venta (POS) para cobrar rápido en mostrador usando lectores de código de barra y ticketera térmica.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Alertas automáticas cuando se esté acabando un producto para pedir a tiempo al proveedor.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Facturación adaptada a los requisitos fiscales locales, sin complicaciones.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Capacitación paso a paso para que tú y tu equipo aprendan a usarlo sin miedo.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-7 space-y-6 lg:sticky lg:top-36">
+          <h3 class="text-base font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            Resumen del Paquete
+          </h3>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Cero Licencias por Usuario</span>
+              <p class="text-emerald-400 font-bold">Pueden usarlo 2, 5 o 20 empleados sin cobros adicionales</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Equipos Compatibles</span>
+              <p class="text-white font-medium">Computadoras, tablets, pistolas de código de barra e impresoras de recibos</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Acompañamiento</span>
+              <p class="text-slate-300">Te enseñamos cómo usarlo con calma y te respaldamos en los primeros días de uso.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800">
+            <a
+              href="/#contacto"
+              class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-5 rounded-xl text-sm transition-all shadow-glow-emerald"
+            >
+              <span>Cotizar Sistema a Medida</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. AUTOMATIZACIÓN DE PROCESOS & WHATSAPP -->
+    <article id="automatizaciones" class="scroll-mt-32 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-card-subtle">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-md">
+            Servicio 03 · Ahorro de Tiempo
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+            Automatización de Procesos & WhatsApp para Negocios
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Si pasas horas respondiendo lo mismo por WhatsApp, anotando pedidos a mano o copiando datos de un lado a otro en Excel, conectamos tus herramientas para que la información fluya sola y atiendas a tus clientes de inmediato.
+          </p>
+
+          <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 text-sm text-slate-300">
+            <strong class="text-emerald-400 block mb-1">¿Para quién es este servicio?</strong>
+            Para negocios que reciben muchas solicitudes de cotización o pedidos al día y no se dan abasto para responder rápido o llevar el control manual.
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-white font-bold text-base uppercase tracking-wider">
+              Tareas que automatizamos para ti:
+            </h3>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Respuestas y avisos automáticos por WhatsApp cuando entra un nuevo cliente o pedido.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Sincronización instantánea de solicitudes web o mensajes directo a tus hojas de Google Sheets o Excel.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Recordatorios automáticos de cobro o vencimiento de facturas para que no tengas que cobrar a mano.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Generación y envío automático de cotizaciones en PDF en pocos segundos.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-7 space-y-6 lg:sticky lg:top-36">
+          <h3 class="text-base font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            Resumen del Paquete
+          </h3>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Beneficio Inmediato</span>
+              <p class="text-emerald-400 font-bold">Ahorro de horas hombre y atención al cliente en menos de 1 minuto</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Canales Soportados</span>
+              <p class="text-white font-medium">WhatsApp Business, correo electrónico, formularios web y hojas de cálculo</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Tranquilidad</span>
+              <p class="text-slate-300">Menos errores humanos al tipear datos y clientes mejor atendidos.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800">
+            <a
+              href="/#contacto"
+              class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-5 rounded-xl text-sm transition-all shadow-glow-emerald"
+            >
+              <span>Cotizar Automatizaciones</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. ASESORÍA INFORMÁTICA INTEGRAL (SOFTWARE Y HARDWARE) -->
+    <article id="asesoria-tecnica" class="scroll-mt-32 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-card-subtle">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-md">
+            Servicio 04 · Asesoría de Confianza
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+            Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            ¿Dudas con la tecnología de tu negocio? Somos tu equipo técnico de confianza al que puedes llamar o escribir cuando tengas cualquier problema: desde qué computadoras o pantallas comprar para tu oficina sin que te cobren de más, hasta arreglar sistemas lentos o hacer copias de seguridad de tus archivos importantes.
+          </p>
+
+          <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 text-sm text-slate-300">
+            <strong class="text-emerald-400 block mb-1">¿Para quién es este servicio?</strong>
+            Para dueños de negocio que no tienen tiempo ni ganas de lidiar con problemas técnicos y quieren tener informáticos de confianza a un mensaje de distancia.
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-white font-bold text-base uppercase tracking-wider">
+              En qué te podemos ayudar:
+            </h3>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Asesoría en compra de equipos: te decimos qué computadoras o impresoras comprar según tu presupuesto real para no gastar de más.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Diagnóstico y solución para computadoras lentas, fallos de Windows o programas que se quedan pegados.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Copias de seguridad (backups) automáticas para que nunca pierdas tu contabilidad ni facturas si se daña un disco.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Revisión y mejoras para tu página web actual o recuperación de cuentas y correos corporativos perdidos.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-7 space-y-6 lg:sticky lg:top-36">
+          <h3 class="text-base font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            Resumen del Paquete
+          </h3>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Modalidad</span>
+              <p class="text-emerald-400 font-bold">Por hora, por proyecto cerrado o asesoría puntual</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Comunicación</span>
+              <p class="text-white font-medium">Trato directo por llamada o WhatsApp con David y Kevin</p>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-1 uppercase font-mono text-xs">Honestidad</span>
+              <p class="text-slate-300">Te decimos la verdad técnica sobre si un equipo vale la pena arreglarlo o no.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800">
+            <a
+              href="/#contacto"
+              class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-5 rounded-xl text-sm transition-all shadow-glow-emerald"
+            >
+              <span>Consultar Asesoría Informática</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ─── PREGUNTAS FRECUENTES (FAQ CLARO Y SIN ENREDOS) ────────────────── -->
+  <section id="faq" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Cuentas Claras
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+          Preguntas Frecuentes
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          Respuestas transparentes sobre propiedad, costos de servidores, soporte y cómo trabajamos contigo.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {faq.map((item) => (
+          <details class="group bg-slate-900 border border-slate-800 rounded-2xl p-6 transition-all [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base sm:text-lg select-none list-none">
+              <span>{item.pregunta}</span>
+              <span class="ml-4 w-7 h-7 rounded-full bg-slate-800 text-emerald-400 flex items-center justify-center text-sm font-mono flex-shrink-0 group-open:rotate-180 transition-transform">
+                ▼
+              </span>
+            </summary>
+            <p class="mt-4 text-slate-300 text-sm leading-relaxed pt-3 border-t border-slate-800/80">
+              {item.respuesta}
+            </p>
+          </details>
+        ))}
+      </div>
+
+      <!-- Banner Final -->
+      <div class="mt-16 bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 border border-emerald-500/30 rounded-3xl p-8 sm:p-10 text-center shadow-glow-emerald">
+        <h3 class="text-2xl font-bold text-white mb-3">
+          ¿Tienes una duda o quieres platicar de tu proyecto?
+        </h3>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto mb-6">
+          Escríbenos por WhatsApp o déjanos un mensaje. Te responderemos con total honestidad sobre cuál es la opción más sencilla y económica para tu negocio.
+        </p>
+        <a
+          href="/#contacto"
+          class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-3.5 rounded-xl text-sm transition-all shadow-glow-emerald"
+        >
+          <span>Escríbenos por WhatsApp</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

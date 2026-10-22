@@ -1,0 +1,628 @@
+---
+// Archivo: src/pages/index.astro
+import Layout from "../layouts/Layout.astro";
+import serviciosData from "../json/servicios.json";
+
+const { empresa, hero, por_que_nosotros, servicios, sobre_nosotros, metodologia, garantias, contacto_whatsapp } = serviciosData;
+
+const pageTitle = "LaPon Tech Solutions | Páginas Web, Sistemas a Medida y Asesoría Tecnológica en San Pedro Sula";
+const pageDescription = "Creamos páginas web rápidas, presencia en Google Maps, sistemas de inventario y facturación, automatizaciones de WhatsApp y asesoría en computadoras para negocios y empresas en Honduras.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+
+  <!-- ─── 1. HERO SECTION (ACCESIBLE, DIRECTO Y DE ALTO IMPACTO) ──────────── -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-800/80">
+    <!-- Ambient Light & Grid -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none" aria-hidden="true"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2.5 bg-slate-900/90 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-8 backdrop-blur-md shadow-glow-emerald">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>📍 San Pedro Sula, Cortés · {hero.badge}</span>
+        </div>
+
+        <!-- Título Principal Claro y Amigable -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
+          {hero.titulo_principal}{" "}
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400">
+            {hero.titulo_destacado}
+          </span>
+        </h1>
+
+        <!-- Subtítulo para todo tipo de negocio -->
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+          {hero.subtitulo}
+        </p>
+
+        <!-- CTAs Principales -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <button
+            type="button"
+            id="hero-wa-btn"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-glow-emerald hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 min-h-[52px] text-base cursor-pointer"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
+            </svg>
+            <span>{hero.cta_whatsapp_texto}</span>
+          </button>
+
+          <a
+            href="/servicios"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-900 text-slate-200 hover:text-white font-bold px-7 py-4 rounded-xl border border-slate-700/80 hover:border-slate-600 transition-all duration-200 min-h-[52px] text-base backdrop-blur-sm"
+          >
+            <span>{hero.cta_servicios_texto}</span>
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 4 Estadísticas Clave (Inspiradas en el diseño original) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-10 border-t border-slate-800/80">
+          {hero.estadisticas.map((stat) => (
+            <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80 backdrop-blur-sm text-center">
+              <p class="text-2xl sm:text-3xl font-black text-amber-300 font-mono mb-1">{stat.valor}</p>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium leading-snug">{stat.etiqueta}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 2. SERVICIOS CLAROS PARA TU NEGOCIO ────────────────────────────── -->
+  <section id="servicios" class="py-20 lg:py-28 border-b border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Soluciones para tu Negocio
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+          Servicios pensados para dar resultados
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          Sin palabras raras ni tecnicismos: páginas web que atraen clientes, sistemas que ordenan tu inventario y ventas, automatizaciones que ahorran horas de trabajo y asesoría informática para cualquier duda.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {servicios.map((servicio) => (
+          <article
+            id={servicio.id}
+            class={`rounded-2xl p-7 sm:p-9 bg-slate-900 border transition-all duration-300 flex flex-col justify-between relative overflow-hidden group hover:shadow-card-subtle ${
+              servicio.popular
+                ? "border-emerald-500/60 ring-1 ring-emerald-500/30"
+                : "border-slate-800 hover:border-slate-700"
+            }`}
+          >
+            {servicio.popular && (
+              <div class="absolute top-0 right-0 bg-emerald-500 text-slate-950 text-xs font-black px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">
+                Más Solicitado
+              </div>
+            )}
+
+            <div>
+              <div class="mb-5 inline-flex p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 text-emerald-400">
+                {servicio.id === "presencia-digital" && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                )}
+                {servicio.id === "facturacion-inventario" && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                )}
+                {servicio.id === "automatizaciones" && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                )}
+                {servicio.id === "asesoria-tecnica" && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                )}
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-2">{servicio.titulo}</h3>
+              <p class="text-emerald-400 font-semibold text-sm mb-4">{servicio.subtitulo}</p>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                {servicio.descripcion}
+              </p>
+
+              <!-- Para quién es -->
+              <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800 text-xs text-slate-300 mb-6">
+                <span class="font-bold text-emerald-400 block mb-0.5">¿Para quién es ideal?</span>
+                {servicio.para_quien}
+              </div>
+
+              <!-- Puntos Clave -->
+              <ul class="space-y-3 mb-8" aria-label={`Características de ${servicio.titulo}`}>
+                {servicio.puntos_clave.map((punto) => (
+                  <li class="flex items-start gap-3 text-sm text-slate-300">
+                    <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{punto}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Botones -->
+            <div class="pt-6 border-t border-slate-800 mt-auto flex flex-col sm:flex-row gap-3">
+              <button
+                type="button"
+                class="select-service-btn w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white font-bold py-3.5 px-6 rounded-xl border border-slate-700 hover:border-emerald-500 transition-all duration-200 text-sm cursor-pointer"
+                data-service-val={servicio.servicio_form_val}
+                data-service-name={servicio.titulo}
+              >
+                <span>Cotizar este paquete</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <a
+                href={`/servicios#${servicio.id}`}
+                class="inline-flex items-center justify-center py-3.5 px-4 rounded-xl text-slate-400 hover:text-white text-xs font-semibold hover:bg-slate-800/60 transition-colors text-center whitespace-nowrap"
+              >
+                Ver detalles →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 3. POR QUÉ TRABAJAR CON NOSOTROS (COMPARATIVA TRANSPARENTE) ────── -->
+  <section id="por-que-nosotros" class="py-20 lg:py-28 bg-slate-900/40 border-b border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-400 font-bold text-xs uppercase tracking-widest bg-amber-500/10 border border-amber-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Trato Directo y Transparente
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+          {por_que_nosotros.titulo}
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          {por_que_nosotros.subtitulo}
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        {por_que_nosotros.comparativa.map((item) => (
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-7 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div class="md:col-span-4">
+              <h3 class="text-base sm:text-lg font-bold text-white">{item.aspecto}</h3>
+            </div>
+            
+            <!-- Con Nosotros -->
+            <div class="md:col-span-4 p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40">
+              <p class="text-xs font-bold text-emerald-400 uppercase tracking-wide mb-1 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Con LaPon Tech Solutions
+              </p>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">{item.nosotros}</p>
+            </div>
+
+            <!-- Otras agencias o plantillas genéricas -->
+            <div class="md:col-span-4 p-4 rounded-xl bg-slate-950/70 border border-slate-800">
+              <p class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-1 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                Agencias genéricas / Plantillas
+              </p>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">{item.otros}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 4. SECCIÓN UNIFICADA: SOBRE NOSOTROS & FUNDADORES ─────────────── -->
+  <section id="nosotros" class="py-20 lg:py-28 border-b border-slate-800/80 relative overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
+      
+      <!-- Encabezado de la Sección -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          {sobre_nosotros.badge}
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-5">
+          {sobre_nosotros.titulo_principal}
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
+          {sobre_nosotros.subtitulo}
+        </p>
+      </div>
+
+      <!-- Manifiesto de Empresa (Propósito y Realidad de PYMEs) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+        <div class="lg:col-span-7 space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
+          {sobre_nosotros.parrafos.map((p) => (
+            <p>{p}</p>
+          ))}
+        </div>
+
+        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-card-subtle">
+          <h3 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            Nuestros Pilares Fundamentales
+          </h3>
+          <div class="space-y-4">
+            {sobre_nosotros.principios.map((principio) => (
+              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/80">
+                <h4 class="text-emerald-400 font-bold text-sm mb-1">{principio.titulo}</h4>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">{principio.descripcion}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque de Fundadores: Dos Fundadores, Una Visión Compartida -->
+      <div class="pt-12 border-t border-slate-800/80">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">
+            {sobre_nosotros.fundadores_titulo}
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            {sobre_nosotros.fundadores_subtitulo}
+          </p>
+        </div>
+
+        <!-- Cards de los Dos Fundadores con el logo real de LaPon -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {sobre_nosotros.fundadores.map((fundador) => (
+            <div class="bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-7 sm:p-8 transition-all duration-300 flex flex-col justify-between group shadow-card-subtle">
+              <div>
+                <!-- Icono de Fundador con el Isotipo Real de LaPon -->
+                <div class="w-14 h-14 rounded-2xl bg-slate-950 border border-slate-700/80 flex items-center justify-center p-2 mb-5 shadow-glow-emerald group-hover:border-emerald-400 transition-colors">
+                  <img src="/icons/logo.png" alt="Logo LaPon" class="w-full h-full object-contain" width="40" height="40" />
+                </div>
+
+                <span class="text-xs font-mono font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-2.5 py-1 rounded-md inline-block mb-2">
+                  {fundador.cargo}
+                </span>
+
+                <h4 class="text-xl sm:text-2xl font-bold text-white mb-2">{fundador.nombre}</h4>
+                <p class="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-4">
+                  {fundador.enfoque}
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                  {fundador.descripcion}
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Técnicos en programación y diseño de sistemas</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Cierre de Visión -->
+        <div class="mt-12 text-center max-w-3xl mx-auto bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed italic">
+            "Creemos que desarrollar software va más allá de escribir código: implica comprender las necesidades de las personas, analizar los problemas de un negocio y diseñar soluciones que sean útiles, sostenibles y capaces de crecer con él."
+          </p>
+          <span class="text-emerald-400 font-semibold text-xs tracking-wider uppercase block mt-3">
+            — David Flores Lagos & Kevin D. Ponce · Fundadores de LaPon Tech Solutions
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 5. METODOLOGÍA / CÓMO TRABAJAMOS ──────────────────────────────── -->
+  <section id="metodologia" class="py-20 lg:py-28 bg-slate-900/30 border-b border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Flujo de Trabajo
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+          {metodologia.titulo}
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          {metodologia.subtitulo}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {metodologia.pasos.map((paso) => (
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
+            <div>
+              <span class="text-3xl font-black text-amber-300/30 font-mono block mb-2">{paso.numero}</span>
+              <h3 class="text-base font-bold text-white mb-2">{paso.nombre}</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">{paso.descripcion}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Nota de Transparencia de Costes de Dominio e Infraestructura (del original) -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left mb-12 shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center flex-shrink-0 shadow-md">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-bold text-white text-base mb-1">Cuentas claras sobre dominio y servidores</h4>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Los costos de servicios externos indispensables (como el nombre de tu dominio web o el servidor en caso de requerir un sistema a medida) se contratan directamente a tu nombre. Te asesoramos para elegir la opción más económica y confiable, sin comisiones ocultas ni cobros inflados.
+          </p>
+        </div>
+      </div>
+
+      <!-- Garantías -->
+      <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-card-subtle">
+        <h3 class="text-xl sm:text-2xl font-bold text-white text-center mb-8 text-amber-300">
+          {garantias.titulo}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {garantias.items.map((g) => (
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800">
+              <h4 class="font-bold text-base text-white mb-2">{g.titulo}</h4>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">{g.descripcion}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 6. SECCIÓN DE CONTACTO DOBLE CANAL ────────────────────────────── -->
+  <section id="contacto" class="py-20 lg:py-28 relative">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Hablemos de tu Proyecto
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+          {contacto_whatsapp.titulo}
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          {contacto_whatsapp.subtitulo}
+        </p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        
+        <!-- Canal 1: Acceso Directo por WhatsApp -->
+        <div class="bg-emerald-950/40 border border-emerald-700/50 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-4 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center flex-shrink-0 shadow-glow-emerald">
+              <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">¿Prefieres escribirnos directamente?</h3>
+              <p class="text-xs sm:text-sm text-slate-300">Inicia una conversación directa por WhatsApp con nosotros sin intermediarios.</p>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            id="direct-wa-chat-btn"
+            class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition-all shadow-glow-emerald text-sm whitespace-nowrap cursor-pointer flex-shrink-0"
+          >
+            Abrir WhatsApp Directo
+          </button>
+        </div>
+
+        <!-- Separador -->
+        <div class="relative my-8 text-center">
+          <hr class="border-slate-800" />
+          <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+            O describe tu consulta a continuación
+          </span>
+        </div>
+
+        <!-- Canal 2: Formulario de Contacto -->
+        <form id="contact-form" class="space-y-6" novalidate>
+          <!-- Honeypot invisible -->
+          <div class="hidden" style="display:none !important;" aria-hidden="true">
+            <label for="b_field">No llenar este campo:</label>
+            <input type="text" id="b_field" name="b_field" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Nombre -->
+            <div>
+              <label for="user_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                Tu Nombre <span class="text-emerald-400">*</span>
+              </label>
+              <input
+                type="text"
+                id="user_name"
+                name="user_name"
+                required
+                placeholder="Ej. Carlos Martínez"
+                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-500 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+              />
+            </div>
+
+            <!-- Negocio -->
+            <div>
+              <label for="business_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                Nombre de tu Negocio o Proyecto
+              </label>
+              <input
+                type="text"
+                id="business_name"
+                name="business_name"
+                placeholder="Ej. Taller Martínez / Distribuidora Norte"
+                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-500 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+              />
+            </div>
+          </div>
+
+          <!-- Selección de Servicio -->
+          <div>
+            <label for="service_select" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+              Servicio de Interés <span class="text-emerald-400">*</span>
+            </label>
+            <select
+              id="service_select"
+              name="service_select"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all cursor-pointer"
+            >
+              <option value="" disabled selected class="text-slate-500">Selecciona una opción...</option>
+              {contacto_whatsapp.select_opciones.map((opt) => (
+                <option value={opt.valor} class="bg-slate-900 text-white">{opt.texto}</option>
+              ))}
+            </select>
+          </div>
+
+          <!-- Mensaje -->
+          <div>
+            <label for="user_message" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+              Detalles o dudas sobre lo que necesitas <span class="text-emerald-400">*</span>
+            </label>
+            <textarea
+              id="user_message"
+              name="user_message"
+              rows="4"
+              required
+              placeholder="Cuéntanos brevemente qué te gustaría resolver en tu negocio, si ya tienes una página o sistema, o para cuándo te gustaría empezar..."
+              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-500 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+            ></textarea>
+          </div>
+
+          <!-- Alerta de validación -->
+          <div id="form-error" class="hidden p-4 bg-red-950/60 border border-red-800 text-red-200 rounded-xl text-sm font-medium"></div>
+
+          <!-- Botón de Envío -->
+          <button
+            type="submit"
+            id="submit-form-btn"
+            class="w-full inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-4 px-8 rounded-xl shadow-glow-emerald hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 min-h-[50px] text-base cursor-pointer"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
+            </svg>
+            <span>Consultar requerimiento por WhatsApp</span>
+          </button>
+
+          <p class="text-xs text-slate-400 text-center">
+            Tus datos se transmiten directamente a través de WhatsApp. Sin spam ni almacenamiento invasivo.
+          </p>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── SCRIPT DE CONVERSIÓN WHATSAPP Y HONEYPOT ──────────────────────── -->
+  <script is:inline>
+    // @ts-nocheck
+    document.addEventListener("DOMContentLoaded", () => {
+      const WA_PHONE = "50499000000";
+
+      function openWhatsApp(customText) {
+        const cleanText = encodeURIComponent(customText || "Hola, me comunico desde el sitio web de LaPon Tech Solutions. Me gustaría cotizar un proyecto para mi negocio.");
+        const targetUrl = `https://wa.me/${WA_PHONE}?text=${cleanText}`;
+        window.open(targetUrl, "_blank", "noopener,noreferrer");
+      }
+
+      // 1. Botón Hero WhatsApp
+      const heroWaBtn = document.getElementById("hero-wa-btn");
+      if (heroWaBtn) {
+        heroWaBtn.addEventListener("click", () => {
+          openWhatsApp("Hola, estuve viendo sus servicios en LaPon Tech Solutions y me gustaría cotizar una solución para mi negocio.");
+        });
+      }
+
+      // 2. Botón Directo en Sección de Contacto
+      const directWaBtn = document.getElementById("direct-wa-chat-btn");
+      if (directWaBtn) {
+        directWaBtn.addEventListener("click", () => {
+          openWhatsApp("Hola, me gustaría hacerles una consulta directa sobre desarrollo web o sistemas para mi negocio.");
+        });
+      }
+
+      // 3. Botones de "Cotizar este paquete" en las Cards de Servicios
+      const selectButtons = document.querySelectorAll(".select-service-btn");
+      const serviceSelect = document.getElementById("service_select");
+      const contactSection = document.getElementById("contacto");
+
+      selectButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const val = btn.getAttribute("data-service-val");
+          if (serviceSelect && val) {
+            serviceSelect.value = val;
+          }
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+            const messageField = document.getElementById("user_message");
+            messageField?.focus();
+          }
+        });
+      });
+
+      // 4. Formulario de Contacto Interactivo con Honeypot
+      const form = document.getElementById("contact-form");
+      const honeypot = document.getElementById("b_field");
+      const formError = document.getElementById("form-error");
+
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          if (honeypot && honeypot.value.trim() !== "") {
+            console.warn("Bot detectado y neutralizado.");
+            return;
+          }
+
+          const userName = document.getElementById("user_name")?.value.trim() || "";
+          const businessName = document.getElementById("business_name")?.value.trim() || "No especificado";
+          const serviceVal = serviceSelect?.value || "";
+          const serviceText = serviceSelect?.options[serviceSelect.selectedIndex]?.text || serviceVal;
+          const message = document.getElementById("user_message")?.value.trim() || "";
+
+          if (!userName || !serviceVal || !message) {
+            if (formError) {
+              formError.textContent = "Por favor completa tu nombre, el servicio de tu interés y un breve detalle de lo que necesitas.";
+              formError.classList.remove("hidden");
+            }
+            return;
+          }
+
+          if (formError) {
+            formError.classList.add("hidden");
+          }
+
+          const formattedMessage = 
+            `¡Hola LaPon Tech Solutions! Me comunico desde su sitio web:\n\n` +
+            `• Nombre: ${userName}\n` +
+            `• Negocio/Proyecto: ${businessName}\n` +
+            `• Servicio de interés: ${serviceText}\n` +
+            `• Requerimientos o dudas: ${message}`;
+
+          openWhatsApp(formattedMessage);
+        });
+      }
+    });
+  </script>
+
+</Layout>

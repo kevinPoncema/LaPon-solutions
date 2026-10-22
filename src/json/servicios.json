@@ -1,0 +1,266 @@
+{
+  "empresa": {
+    "nombre": "LaPon Tech Solutions",
+    "nombre_comercial": "LaPon",
+    "ubicacion": "San Pedro Sula, Cortés, Honduras",
+    "cobertura": ["San Pedro Sula", "Valle de Sula", "Tegucigalpa", "Honduras"],
+    "telefono": "+50499000000",
+    "correo": "contacto@lapon.solutions",
+    "whatsapp_link": "https://wa.me/50499000000",
+    "eslogan": "Tecnología que Impulsa Negocios · Páginas Web, Sistemas & Asesoría"
+  },
+  "hero": {
+    "badge": "Desarrollo Web & Asesoría Tecnológica para Negocios",
+    "titulo_principal": "Páginas web, sistemas a medida y tecnología que",
+    "titulo_destacado": "hacen crecer tu negocio",
+    "subtitulo": "Creamos páginas web rápidas y adaptadas a celulares, sistemas sencillos para controlar tu inventario o facturación, y automatizaciones para ahorrar tiempo. Ayudamos tanto al pequeño negocio local que recién inicia en internet como a la empresa que busca ordenar sus operaciones sin complicaciones técnicas ni mensualidades forzosas.",
+    "cta_whatsapp_texto": "Consultar mi proyecto por WhatsApp",
+    "cta_servicios_texto": "Ver servicios y soluciones",
+    "estadisticas": [
+      {
+        "valor": "Rápida",
+        "etiqueta": "Carga ágil en móviles y computadoras"
+      },
+      {
+        "valor": "100%",
+        "etiqueta": "Tuyo: dominio, cuentas y código a tu nombre"
+      },
+      {
+        "valor": "Cero",
+        "etiqueta": "Sin cuotas mensuales obligatorias"
+      },
+      {
+        "valor": "Directo",
+        "etiqueta": "Trato personal con los fundadores de principio a fin"
+      }
+    ]
+  },
+  "por_que_nosotros": {
+    "titulo": "¿Por qué trabajar con LaPon Tech Solutions?",
+    "subtitulo": "La diferencia entre un servicio con intermediarios que usan palabras raras y trabajar mano a mano con quienes construyen tu solución.",
+    "comparativa": [
+      {
+        "aspecto": "Carga y Experiencia de tus Clientes",
+        "nosotros": "Páginas y sistemas ligeros que cargan al instante en cualquier teléfono o computadora, para que tus clientes no se cansen de esperar y se vayan a la competencia.",
+        "otros": "Páginas recargadas con complementos pesados que tardan en responder y hacen perder ventas."
+      },
+      {
+        "aspecto": "Cuentas Claras y a tu Nombre",
+        "nosotros": "Total transparencia: el dominio, el sistema y las cuentas quedan 100% a nombre de tu negocio. Sin alquileres forzosos ni retención de contraseñas.",
+        "otros": "Te atan con mensualidades obligatorias de 'mantenimiento' o no te entregan los accesos para que dependas de ellos."
+      },
+      {
+        "aspecto": "Cero Complicaciones Técnicas",
+        "nosotros": "Te hablamos claro y en tu idioma. Nos encargamos de la parte difícil y te explicamos lo que necesitas saber de forma sencilla para tomar buenas decisiones.",
+        "otros": "Usan tecnicismos y palabras complicadas para confundirte o justificar cobros adicionales innecesarios."
+      },
+      {
+        "aspecto": "Soluciones Reales para tu Negocio",
+        "nosotros": "Creamos lo que tu negocio necesita de verdad: desde una web para que te encuentren en Google Maps hasta un sistema para ordenar tu inventario y ventas.",
+        "otros": "Intentan forzar tu negocio a entrar en una plantilla genérica que no resuelve tus verdaderas necesidades."
+      }
+    ]
+  },
+  "servicios": [
+    {
+      "id": "presencia-digital",
+      "popular": true,
+      "titulo": "Página Web Profesional & Presencia en Google Maps",
+      "subtitulo": "Haz que tus clientes te encuentren fácil en internet, celulares y Google Maps.",
+      "descripcion": "Diseñamos y creamos una página web clara, moderna y rápida para tu negocio, adaptada para que se vea perfecta en cualquier teléfono móvil. Además, optimizamos tu ficha en Google Maps para que la gente de tu zona te encuentre y te contacte al instante.",
+      "puntos_clave": [
+        "Página web moderna, clara y optimizada para teléfonos móviles y computadoras",
+        "Configuración y optimización de tu negocio en Google Maps para que te ubiquen fácil",
+        "Botón directo a tu WhatsApp y formulario para que los clientes te pidan cotizaciones en un toque",
+        "Configuración del dominio web a tu nombre (el registro anual lo pagas directo al proveedor a precio real)",
+        "Entrega completa: eres el dueño legal de tu página web y de todos sus accesos"
+      ],
+      "servicio_form_val": "presencia-digital",
+      "para_quien": "Ideal para tiendas, talleres, clínicas, restaurantes o empresas que quieren conseguir clientes por internet."
+    },
+    {
+      "id": "facturacion-inventario",
+      "popular": false,
+      "titulo": "Sistemas a Medida, Facturación & Control de Inventario",
+      "subtitulo": "Controla tus ventas, inventario y facturación sin pagar mensualidades caras por cada usuario.",
+      "descripcion": "Si las hojas de Excel se te volvieron un dolor de cabeza o los programas comerciales te cobran cuotas mensuales carísimas en dólares por cada empleado, desarrollamos un sistema a la medida de tu negocio: control de stock en bodega, punto de venta (POS) y facturación ágil.",
+      "puntos_clave": [
+        "Control exacto de inventario (Kardex): sabe en todo momento qué entra, qué sale y qué tienes en existencia",
+        "Punto de venta (POS) rápido para cobrar en mostrador con lector de código de barras e impresora térmica",
+        "Alertas automáticas de producto agotado o stock mínimo para no perder ventas",
+        "Módulo de facturación adaptado a los requisitos fiscales locales",
+        "Capacitación paso a paso con paciencia para que tú y tus colaboradores aprendan a usarlo fácilmente"
+      ],
+      "servicio_form_val": "facturacion-inventario",
+      "para_quien": "Para negocios comerciales, distribuidores, ferreterías y tiendas que quieren evitar descuadres y pérdidas de mercadería."
+    },
+    {
+      "id": "automatizaciones",
+      "popular": false,
+      "titulo": "Automatización de Procesos & WhatsApp para Negocios",
+      "subtitulo": "Elimina el trabajo repetitivo de copiar datos a mano y atiende más rápido a tus clientes.",
+      "descripcion": "Conectamos las aplicaciones y herramientas que usas a diario para automatizar las tareas repetitivas de tu negocio: desde enviar confirmaciones y estados de cuenta automáticos por WhatsApp, hasta sincronizar pedidos y cotizaciones directo a tus hojas de cálculo sin que tengas que tipear todo dos veces.",
+      "puntos_clave": [
+        "Avisos y mensajes automáticos por WhatsApp o correo cuando entra un nuevo cliente o solicitud de cotización",
+        "Respuestas y confirmaciones rápidas para no dejar esperando a los clientes y que no se vayan a la competencia",
+        "Sincronización automática de datos entre formularios web, correo y hojas de cálculo (Google Sheets / Excel)",
+        "Recordatorios automáticos de cobro y avisos de facturas por vencer",
+        "Ahorro de horas de trabajo administrativo para que te concentres en vender y atender a tus clientes"
+      ],
+      "servicio_form_val": "automatizaciones",
+      "para_quien": "Para negocios que reciben muchas consultas diarias por chat y pierden tiempo pasando datos a mano."
+    },
+    {
+      "id": "asesoria-tecnica",
+      "popular": false,
+      "titulo": "Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)",
+      "subtitulo": "¿Dudas con la tecnología de tu negocio? Te asesoramos en software y equipos físicos sin enredos.",
+      "descripcion": "Un asesor de confianza al que puedes llamar o escribir cuando tengas cualquier problema técnico: desde qué computadoras, portátiles o impresoras comprar para tu negocio sin gastar de más, hasta solucionar fallos en sistemas lentos, copias de seguridad de tus archivos importantes o mover tu sistema a la nube.",
+      "puntos_clave": [
+        "Asesoría honesta en compra de equipos: te recomendamos qué computadoras comprar según tu presupuesto real",
+        "Diagnóstico y solución para computadoras lentas, fallos de sistema o programas que se traban",
+        "Copias de seguridad (backups) automáticas para proteger la información y facturas de tu negocio",
+        "Revisión, mejoras o arreglos para páginas web existentes y recuperación de accesos perdidos",
+        "Soporte cercano por llamada o WhatsApp con los fundadores técnicos: te explicamos en español claro"
+      ],
+      "servicio_form_val": "asesoria-tecnica",
+      "para_quien": "Para dueños y administradores que quieren tener un equipo informático de respaldo sin pagar salarios de planta."
+    }
+  ],
+  "sobre_nosotros": {
+    "badge": "Propósito & Fundadores",
+    "titulo_principal": "Tecnología que impulsa negocios",
+    "subtitulo": "En LaPon Tech Solutions creemos que la tecnología no debería ser un privilegio reservado para las grandes empresas. Las pequeñas y medianas empresas también merecen acceso a herramientas digitales que les permitan crecer, optimizar sus procesos y competir en un mercado cada vez más tecnológico.",
+    "parrafos": [
+      "Nacimos con una idea clara: hacer que el acceso a soluciones tecnológicas sea más sencillo, accesible y transparente. Combinamos conocimientos en programación, diseño de sistemas y desarrollo de soluciones digitales para ayudar a los negocios a transformar sus ideas y necesidades en herramientas útiles, funcionales y adaptadas a su realidad.",
+      "Más que ofrecer servicios tecnológicos, buscamos construir relaciones de confianza con nuestros clientes. Escuchamos sus necesidades, proponemos soluciones con sentido práctico y trabajamos con un compromiso claro: que cada inversión en tecnología aporte valor real a su negocio.",
+      "Nuestro propósito es acercar la tecnología a quienes quieren crecer, ayudándoles a dar el siguiente paso en su transformación digital."
+    ],
+    "fundadores_titulo": "Dos fundadores, una visión compartida",
+    "fundadores_subtitulo": "David Flores Lagos y Kevin D. Ponce, técnicos en programación, somos los fundadores de LaPon Tech Solutions. Compartimos una sólida base técnica, interés por el diseño de sistemas y una visión de negocio orientada a resolver problemas reales mediante la tecnología.",
+    "fundadores": [
+      {
+        "nombre": "David Flores Lagos",
+        "cargo": "Co-Fundador · Técnico en Programación",
+        "enfoque": "Diseño de Sistemas, Lógica de Negocio & Bases de Datos",
+        "descripcion": "Apasionado por el análisis y la estructura de sistemas. Se asegura de que cada base de datos y proceso del negocio quede bien organizado, seguro y fácil de entender para quienes lo usan a diario."
+      },
+      {
+        "nombre": "Kevin D. Ponce",
+        "cargo": "Co-Fundador · Técnico en Programación",
+        "enfoque": "Desarrollo Web Ágil, Automatización & Soporte Técnico",
+        "descripcion": "Especialista en crear páginas web de carga rápida, conectar herramientas con WhatsApp y resolver dudas técnicas sin palabras raras para que el cliente aproveche al máximo su tecnología."
+      }
+    ],
+    "principios": [
+      {
+        "titulo": "Cero Licencias Obligatorias",
+        "descripcion": "Total transparencia: el dominio, el sistema y las cuentas quedan a tu nombre. Sin cuotas mensuales forzosas ni sorpresas."
+      },
+      {
+        "titulo": "Trato Directo y Cercano",
+        "descripcion": "Hablas directamente con quienes programan tu solución. Sin intermediarios ni comerciales que prometen cosas que no son posibles."
+      },
+      {
+        "titulo": "Soluciones que de Verdad Sirven",
+        "descripcion": "Diseñado para cómo funciona tu negocio en la vida real, ya sea una tienda de barrio, un taller o una distribuidora en crecimiento."
+      }
+    ]
+  },
+  "metodologia": {
+    "titulo": "Un proceso simple, transparente y sin sorpresas",
+    "subtitulo": "De tu idea a la solución funcionando en 4 pasos claros.",
+    "pasos": [
+      {
+        "numero": "01",
+        "nombre": "Conversación Inicial",
+        "descripcion": "Hablamos por WhatsApp, llamada o en persona para conocer tu negocio, qué necesitas resolver y cuál es la solución más práctica y económica, sin compromiso."
+      },
+      {
+        "numero": "02",
+        "nombre": "Propuesta & Presupuesto Claro",
+        "descripcion": "Te presentamos un plan sencillo con lo que se va a hacer, tiempos de entrega y el costo cerrado por nuestro trabajo, sin letra pequeña ni cobros sorpresa."
+      },
+      {
+        "numero": "03",
+        "nombre": "Desarrollo & Revisiones Contigo",
+        "descripcion": "Construimos tu página web o sistema paso a paso, mostrándote avances periódicos para que des tu visto bueno y comprobemos juntos que todo funciona como quieres."
+      },
+      {
+        "numero": "04",
+        "nombre": "Lanzamiento, Entrega & Capacitación",
+        "descripcion": "Ponemos a funcionar tu herramienta para que quede operativa y te enseñamos con paciencia a usarla. La entrega es 100% tuya con todas tus contraseñas y accesos."
+      }
+    ]
+  },
+  "garantias": {
+    "titulo": "Nuestros compromisos contigo",
+    "items": [
+      {
+        "titulo": "Garantía de Calidad y Carga Ágil",
+        "descripcion": "Probamos tu página o sistema en teléfonos móviles y computadoras para asegurar que funcione rápido y sin trabas antes de entregártelo."
+      },
+      {
+        "titulo": "Trato Directo de Principio a Fin",
+        "descripcion": "Hablas y trabajas directamente con los fundadores técnicos. Atención cercana y respuestas rápidas a tus consultas."
+      },
+      {
+        "titulo": "Acompañamiento Post-Entrega",
+        "descripcion": "Cuentas con nuestro respaldo durante las primeras semanas tras la entrega para resolver cualquier duda y asegurarnos de que todo marche perfecto."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "pregunta": "¿Quién es el dueño de la página web o del sistema?",
+      "respuesta": "Tú eres el dueño absoluto. El dominio, las cuentas, los accesos y el código quedan 100% a nombre de tu negocio. Sin ataduras ni mensualidades obligatorias por nuestra parte."
+    },
+    {
+      "pregunta": "¿Cómo se pagan el nombre de la página (dominio) y el servidor?",
+      "respuesta": "Con total transparencia: el registro anual del dominio o el servidor se pagan directamente al proveedor oficial a precio real. Nosotros te asesoramos para elegir la opción más económica y confiable, sin comisiones ocultas ni cobros inflados."
+    },
+    {
+      "pregunta": "¿El sistema de inventario o la página web son difíciles de usar?",
+      "respuesta": "Para nada. Los diseñamos pensando en la simplicidad, para que cualquier persona en tu tienda o negocio pueda usarlo fácilmente desde un celular o computadora. Además, te capacitamos paso a paso con paciencia."
+    },
+    {
+      "pregunta": "¿Cuánto tiempo tarda en estar lista una página web o sistema?",
+      "respuesta": "Una página web suele estar lista en 1 a 2 semanas. Un sistema a medida de inventario o facturación toma entre 2 y 4 semanas, mostrándote avances continuos para que des tu visto bueno antes de publicar."
+    },
+    {
+      "pregunta": "¿Ofrecen soporte técnico después de entregar el trabajo?",
+      "respuesta": "Sí. Cuentas con nuestro acompañamiento durante las primeras semanas tras la entrega para resolver cualquier duda. Además, puedes llamarnos o escribirnos por WhatsApp cuando necesites ayuda o mejoras."
+    },
+    {
+      "pregunta": "¿Atienden negocios fuera de San Pedro Sula?",
+      "respuesta": "Nuestra base operativa está en San Pedro Sula y atendemos todo el Valle de Sula (Choloma, Villanueva, El Progreso, Puerto Cortés), Tegucigalpa y a nivel nacional, tanto de forma presencial como remota."
+    }
+  ],
+  "contacto_whatsapp": {
+    "titulo": "¿Tienes una idea o proyecto en mente para tu negocio?",
+    "subtitulo": "Escríbenos sin compromiso. Te responderemos en menos de 24 horas con una orientación clara, honesta y sin tecnicismos.",
+    "telefono": "50499000000",
+    "select_opciones": [
+      {
+        "valor": "presencia-digital",
+        "texto": "Página Web Profesional & Presencia en Google Maps"
+      },
+      {
+        "valor": "facturacion-inventario",
+        "texto": "Sistema a Medida, Facturación & Control de Inventario"
+      },
+      {
+        "valor": "automatizaciones",
+        "texto": "Automatización de Procesos & WhatsApp para Negocios"
+      },
+      {
+        "valor": "asesoria-tecnica",
+        "texto": "Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)"
+      },
+      {
+        "valor": "otra-consulta",
+        "texto": "Otra consulta o proyecto para mi negocio"
+      }
+    ]
+  }
+}

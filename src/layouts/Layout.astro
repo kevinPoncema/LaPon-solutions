@@ -1,0 +1,46 @@
+---
+// Archivo: src/layouts/Layout.astro
+import SEO from "../components/SEO.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const { title, description, canonical, ogImage } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <SEO title={title} description={description} canonical={canonical} ogImage={ogImage} />
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-slate-950 overflow-x-hidden">
+    <!-- Skip to main content accessibility link -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-emerald-500 focus:text-slate-950 focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold focus:shadow-xl focus:outline-none"
+    >
+      Saltar al contenido principal
+    </a>
+
+    <!-- Global ambient lighting effects -->
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-indigo-900/15 via-emerald-900/10 to-transparent blur-3xl rounded-full"></div>
+      <div class="absolute top-[35%] -left-64 w-[600px] h-[600px] bg-emerald-950/10 blur-[140px] rounded-full"></div>
+      <div class="absolute top-[65%] -right-64 w-[600px] h-[600px] bg-indigo-950/15 blur-[140px] rounded-full"></div>
+    </div>
+
+    <Header />
+
+    <main id="main-content" class="flex-grow pt-20">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

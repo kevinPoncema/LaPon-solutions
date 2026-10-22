@@ -1,0 +1,170 @@
+---
+// Archivo: src/components/SEO.astro
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  type?: string;
+}
+
+const siteUrl = "https://lapon.solutions";
+const companyName = "LaPon Tech Solutions";
+
+const {
+  title = "LaPon Tech Solutions | Software a Medida y Automatización B2B en San Pedro Sula",
+  description = "Agencia tecnológica B2B en San Pedro Sula, Honduras fundada por David Flores y Kevin Ponce. Sistemas de facturación e inventario, software a medida y automatizaciones operativas para PYMEs.",
+  canonical = Astro.url.pathname,
+  ogImage = "/icons/logo.svg",
+  type = "website",
+} = Astro.props;
+
+const canonicalURL = new URL(canonical, siteUrl).toString();
+const fullOgImageUrl = ogImage.startsWith("http") ? ogImage : new URL(ogImage, siteUrl).toString();
+
+const schemaJson = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#organization`,
+      "name": companyName,
+      "alternateName": ["LaPon Tech Solutions", "LaPon Tech Solution", "LaPon"],
+      "url": `${siteUrl}/`,
+      "logo": `${siteUrl}/icons/logo.svg`,
+      "image": fullOgImageUrl,
+      "description": "Firma de consultoría y desarrollo tecnológico B2B en San Pedro Sula, Honduras. Especialistas en sistemas empresariales, facturación, inventario y automatización de procesos para PYMEs.",
+      "priceRange": "$$",
+      "telephone": "+50499000000",
+      "email": "contacto@lapon.solutions",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "San Pedro Sula",
+        "addressLocality": "San Pedro Sula",
+        "addressRegion": "Cortés",
+        "postalCode": "21101",
+        "addressCountry": "HN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 15.5042,
+        "longitude": -88.0250
+      },
+      "areaServed": [
+        "San Pedro Sula",
+        "Valle de Sula",
+        "Tegucigalpa",
+        "Honduras"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "David Flores Lagos",
+          "jobTitle": "Co-Fundador & Técnico en Programación"
+        },
+        {
+          "@type": "Person",
+          "name": "Kevin D. Ponce",
+          "jobTitle": "Co-Fundador & Técnico en Programación"
+        }
+      ],
+      "serviceType": [
+        "Páginas Web Profesionales & Presencia en Google Maps",
+        "Sistemas a Medida, Facturación & Control de Inventario",
+        "Automatización de Procesos & WhatsApp para Negocios",
+        "Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Desarrollo de Software, Páginas Web y Asesoría",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Página Web Profesional & Presencia en Google Maps",
+              "description": "Páginas web modernas, rápidas y adaptadas a celulares con optimización en Google Maps y botón directo a WhatsApp."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sistemas a Medida, Facturación & Control de Inventario",
+              "description": "Control de inventario, punto de venta (POS) y facturación para negocios sin cobros mensuales por usuario."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatización de Procesos & WhatsApp para Negocios",
+              "description": "Avisos automáticos de pedidos, confirmaciones por WhatsApp y sincronización con hojas de cálculo para ahorrar tiempo."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)",
+              "description": "Asesoría honesta en compra de computadoras, solución de fallos técnicos, copias de seguridad y soporte cercano."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": `${siteUrl}/`,
+      "name": "LaPon Tech Solutions | San Pedro Sula",
+      "publisher": {
+        "@id": `${siteUrl}/#organization`
+      },
+      "inLanguage": "es-HN"
+    }
+  ]
+};
+---
+
+<!-- Metadatos Básicos -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Metaetiquetas Geográficas Obligatorias (San Pedro Sula, Honduras) -->
+<meta name="geo.region" content="HN-CR" />
+<meta name="geo.placename" content="San Pedro Sula" />
+<meta name="geo.position" content="15.5042;-88.0250" />
+<meta name="ICBM" content="15.5042, -88.0250" />
+
+<!-- Control de Indexación para Motores de Búsqueda -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+<!-- OpenGraph / Redes Sociales -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullOgImageUrl} />
+<meta property="og:site_name" content={companyName} />
+<meta property="og:locale" content="es_HN" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={fullOgImageUrl} />
+
+<!-- Google Fonts Preconnect & Font Styling -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(schemaJson)} />
