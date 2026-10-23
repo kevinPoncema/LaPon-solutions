@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lapon.solutions/</loc>
+    <loc>https://lapontech.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lapon.solutions/servicios</loc>
+    <loc>https://lapontech.com/servicios</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

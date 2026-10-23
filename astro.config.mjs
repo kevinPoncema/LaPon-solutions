@@ -3,6 +3,6 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lapon.solutions',
+  site: 'https://lapontech.com',
   integrations: [tailwind()],
 });
