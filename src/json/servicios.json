@@ -137,19 +137,19 @@
       "Nuestro propósito es acercar la tecnología a quienes quieren crecer, ayudándoles a dar el siguiente paso en su transformación digital."
     ],
     "fundadores_titulo": "Dos fundadores, una visión compartida",
-    "fundadores_subtitulo": "David Flores Lagos y Kevin D. Ponce, técnicos en programación, somos los fundadores de LaPon Tech Solutions. Compartimos una sólida base técnica, interés por el diseño de sistemas y una visión de negocio orientada a resolver problemas reales mediante la tecnología.",
+    "fundadores_subtitulo": "David Flores Lagos y Kevin D. Ponce, técnicos en informática orientada a la programación, somos los fundadores de LaPon Tech Solutions. Compartimos una sólida base técnica, interés por el diseño de sistemas y una visión de negocio orientada a resolver problemas reales mediante la tecnología.",
     "fundadores": [
       {
         "nombre": "David Flores Lagos",
-        "cargo": "Co-Fundador · Técnico en Programación",
-        "enfoque": "Diseño de Sistemas, Lógica de Negocio & Bases de Datos",
-        "descripcion": "Apasionado por el análisis y la estructura de sistemas. Se asegura de que cada base de datos y proceso del negocio quede bien organizado, seguro y fácil de entender para quienes lo usan a diario."
+        "cargo": "Co-Fundador · Técnico en Informática Orientada a la Programación",
+        "enfoque": "Soporte Técnico, Atención al Cliente & Diseño Web",
+        "descripcion": "Especialista en atención personalizada, soporte técnico y diseño de páginas e interfaces web atractivas y funcionales. Se asegura de brindar un trato directo y transparente, resolviendo las dudas de cada cliente y ayudándole a dar el salto digital con total confianza."
       },
       {
         "nombre": "Kevin D. Ponce",
-        "cargo": "Co-Fundador · Técnico en Programación",
-        "enfoque": "Desarrollo Web Ágil, Automatización & Soporte Técnico",
-        "descripcion": "Especialista en crear páginas web de carga rápida, conectar herramientas con WhatsApp y resolver dudas técnicas sin palabras raras para que el cliente aproveche al máximo su tecnología."
+        "cargo": "Co-Fundador · Técnico en Informática Orientada a la Programación",
+        "enfoque": "Diseño de Sistemas, Bases de Datos & Infraestructura",
+        "descripcion": "Especialista en arquitectura de software, diseño de bases de datos seguras e infraestructura técnica. Transforma las necesidades y procesos operativos de las empresas en sistemas a medida rápidos, estables y preparados para escalar."
       }
     ],
     "principios": [
@@ -225,7 +225,7 @@
     },
     {
       "pregunta": "¿Cuánto tiempo tarda en estar lista una página web o sistema?",
-      "respuesta": "Una página web suele estar lista en 1 a 2 semanas. Un sistema a medida de inventario o facturación toma entre 2 y 4 semanas, mostrándote avances continuos para que des tu visto bueno antes de publicar."
+      "respuesta": "Una página web suele estar lista en 1 semana o menos. Un sistema a medida toma de 1 a 3 meses; todo dependiendo siempre de la escala del proyecto y de qué tan rápido nos faciliten la información necesaria."
     },
     {
       "pregunta": "¿Ofrecen soporte técnico después de entregar el trabajo?",
@@ -233,7 +233,7 @@
     },
     {
       "pregunta": "¿Atienden negocios fuera de San Pedro Sula?",
-      "respuesta": "Nuestra base operativa está en San Pedro Sula y atendemos todo el Valle de Sula (Choloma, Villanueva, El Progreso, Puerto Cortés), Tegucigalpa y a nivel nacional, tanto de forma presencial como remota."
+      "respuesta": "Nuestra base operativa está en San Pedro Sula, pero siempre podemos atenderte por llamada o WhatsApp sin importar en qué zona esté tu negocio, realizando todo el proceso 100% en línea de manera ágil y cómoda."
     }
   ],
   "contacto_whatsapp": {
