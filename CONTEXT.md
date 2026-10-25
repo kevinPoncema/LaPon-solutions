@@ -1,19 +1,19 @@
-# 📘 LaPonTech Solutions — Documento de Contexto y Guía Estratégica
+# 📘 LaPonTech Solutions — Documento Maestro de Contexto y Guía Estratégica
 
 > **Propósito de este documento:**  
-> Servir como manual de referencia definitivo sobre el modelo de negocio, el perfil de clientes objetivo, la filosofía de comunicación y las pautas técnicas de **LaPon Tech Solutions** (`lapontech.com`). Todo cambio futuro en la web, campañas publicitarias o nuevos módulos debe alinearse con los principios aquí documentados.
+> Servir como manual de referencia unificado sobre el modelo de negocio híbrido (**PYMEs + Marca Blanca para Agencias**), la filosofía de comunicación, la arquitectura **SEO + GEO** y la seguridad **anti-scraping** de **LaPon Tech Solutions** (`lapontech.com`).
 
 ---
 
 ## 🗂️ Documentación Segmentada en `/docs`
 
-Para facilitar la lectura y consulta rápida de temas específicos, este contexto se encuentra dividido en los siguientes documentos semánticos:
-
-- 🏢 **[docs/01-empresa-y-fundadores.md](./docs/01-empresa-y-fundadores.md)**: Identidad corporativa, cobertura geográfica y roles de Kevin Ponce y David Flores.
-- 🎯 **[docs/02-clientes-objetivo-y-mercado.md](./docs/02-clientes-objetivo-y-mercado.md)**: Buyer personas (PYMEs, comercios locales), dolores reales y contexto de compra en Honduras.
-- 🗣️ **[docs/03-guia-de-tono-y-redaccion.md](./docs/03-guia-de-tono-y-redaccion.md)**: Guía de estilo, copywriting sin tecnicismos y tabla de términos permitidos/prohibidos.
-- 📦 **[docs/04-portafolio-de-servicios.md](./docs/04-portafolio-de-servicios.md)**: Fichas oficiales de los 4 servicios, badges, tiempos de entrega y CTAs.
-- 🛠️ **[docs/05-arquitectura-tecnica-y-seo.md](./docs/05-arquitectura-tecnica-y-seo.md)**: Stack de ingeniería (Astro + Tailwind), Open Graph para WhatsApp y pipeline CI/CD.
+- 🏢 **[docs/01-empresa-y-fundadores.md](./docs/01-empresa-y-fundadores.md)**: Identidad corporativa, cobertura geográfica, mantenimiento opcional y roles de Kevin Ponce y David Flores.
+- 🎯 **[docs/02-clientes-objetivo-y-mercado.md](./docs/02-clientes-objetivo-y-mercado.md)**: Segmentación híbrida (Comercios, Medianas Empresas y Agencias en Marca Blanca).
+- 🗣️ **[docs/03-guia-de-tono-y-redaccion.md](./docs/03-guia-de-tono-y-redaccion.md)**: Los 6 principios de redacción (cero ataques a agencias, SEO+GEO natural, claridad en DNS/correos externos y orden contextual).
+- 📦 **[docs/04-portafolio-de-servicios.md](./docs/04-portafolio-de-servicios.md)**: Fichas oficiales de los 4 servicios para negocios, métricas del Hero y línea de Marca Blanca.
+- 🛠️ **[docs/05-arquitectura-tecnica-y-seo.md](./docs/05-arquitectura-tecnica-y-seo.md)**: Stack Astro + Tailwind, Triple Schema JSON-LD, `/llms.txt`, `robots.txt` y CI/CD.
+- 🤝 **[docs/06-alianzas-y-marca-blanca-agencias.md](./docs/06-alianzas-y-marca-blanca-agencias.md)**: Modelo comercial B2B para agencias de marketing/diseño y plantilla oficial de contacto.
+- 🛡️ **[docs/07-seguridad-anti-scraping-y-geo.md](./docs/07-seguridad-anti-scraping-y-geo.md)**: Protección JS de correo y WhatsApp contra bots de spam + configuración WAF en Cloudflare.
 - 📚 **[docs/README.md](./docs/README.md)**: Índice general y mapa de navegación.
 
 ---
@@ -23,133 +23,42 @@ Para facilitar la lectura y consulta rápida de temas específicos, este context
 | Concepto | Detalle Oficial |
 | :--- | :--- |
 | **Nombre Comercial** | **LaPon Tech Solutions** (o **LaPonTech**) |
-| **Dominio Oficial** | [`lapontech.com`](https://lapontech.com) |
-| **Correo Corporativo** | `contacto@lapontech.com` |
-| **Base Operativa** | San Pedro Sula, Cortés, Honduras |
-| **Cobertura Territorial** | • Presencial: San Pedro Sula y todo el Valle de Sula (Choloma, Villanueva, El Progreso, Puerto Cortés).<br>• Remota / Nacional: Tegucigalpa y todo Honduras a través de WhatsApp, llamadas y videollamadas, con un proceso 100% digitalizado. |
-| **Canal Principal de Ventas** | WhatsApp directo con los fundadores |
+| **Dominio Oficial** | [`https://lapontech.com`](https://lapontech.com) |
+| **Correo Corporativo** | `contacto@lapontech.com` *(protegido con JS en web y escrito `contacto [arroba] lapontech [punto] com` para IAs)* |
+| **Base Operativa** | San Pedro Sula, Cortés, Honduras (CP 21101) |
+| **Cobertura Territorial** | • **Presencial:** San Pedro Sula y Valle de Sula (Choloma, Villanueva, El Progreso, Puerto Cortés, La Lima).<br>• **Remota / Nacional:** Tegucigalpa y los 18 departamentos de Honduras por WhatsApp, correo y videollamada. |
+| **Modelo Comercial** | Pago por desarrollo con entrega total de código, datos y dominio `.com`. **Mantenimiento, soporte prioritario y hosting administrado 100% opcionales** con tarifas fijas. |
 
 ### Fundadores y Roles
-- **Kevin D. Ponce**  
-  *Título Oficial:* Técnico en Informática Orientada a la Programación  
-  *Roles Clave:* Co-Fundador, Diseño de Sistemas, Bases de Datos e Infraestructura Tecnológica.
-- **David Flores Lagos**  
-  *Título Oficial:* Técnico en Informática Orientada a la Programación  
-  *Roles Clave:* Co-Fundador, Soporte Técnico, Atención al Cliente y Diseño Web.
+- **Kevin D. Ponce** — *Director Técnico & Co-Fundador · Técnico en Informática Orientada a la Programación*  
+  Arquitectura de Sistemas, Bases de Datos, Automatizaciones, Despliegue en Servidores, Configuración de DNS/Correos (`SPF, DKIM, DMARC`) y Alianzas de Marca Blanca con Agencias.
+- **David Flores Lagos** — *Co-Fundador · Técnico en Informática Orientada a la Programación*  
+  Diseño Web Mobile-First optimizado para conversión y SEO/GEO, Atención al Cliente, Capacitación Práctica y Soporte Técnico de Equipos.
 
 ---
 
-## 2. 🎯 Foco de Clientes Objetivo (Buyer Personas)
+## 2. 🎯 Enfoque Comercial Híbrido
 
-El foco principal de LaPonTech **NO** son las grandes corporaciones con departamentos de TI sofisticados, sino **pequeñas y medianas empresas (PYMEs)** y comercios locales que sufren problemas operativos reales.
-
-### Segmento 1: Pequeños Comercios y Negocios Familiares (Foco #1)
-- **Tipos de negocio:** Ferreterías, farmacias de barrio, tiendas de repuestos, distribuidoras, talleres automotrices, bodegas de abarrotes, restaurantes, tiendas de ropa y servicios profesionales locales.
-- **Puntos de dolor (Pain Points):**
-  - Manejan el inventario y las cuentas en cuadernos de papel o en hojas de Excel desordenadas que se corrompen o nadie sabe usar bien.
-  - Pierden ventas porque los clientes preguntan precios por WhatsApp o Instagram y nadie contesta a tiempo o el catálogo está desactualizado.
-  - Desconfianza en "los programas de computadora" porque alguna vez les vendieron sistemas lentos, difíciles de entender o con cobros mensuales sorpresa.
-- **Lo que buscan:**
-  - Que funcione fácil desde el celular o una computadora sencilla.
-  - Que su equipo aprenda a usarlo en 10 minutos sin cursos complicados.
-  - Que los clientes puedan ver productos y pedir directamente por WhatsApp.
-  - **Saber exactamente cuánto van a pagar sin letras pequeñas.**
-
-### Segmento 2: Medianas Empresas en Crecimiento (Foco Secundario)
-- **Tipos de negocio:** Empresas de logística local, comercializadoras con varios puntos de venta, clínicas, talleres industriales o firmas de servicios con 5 a 30 empleados.
-- **Puntos de dolor:**
-  - El software tradicional en la nube (SaaS) les cobra suscripciones mensuales abusivas por cada empleado o caja registradora conectada.
-  - No son dueños de su información ni de su base de datos ("software secuestrado"). Si dejan de pagar la renta mensual, pierden el acceso a su operación.
-- **Lo que buscan:**
-  - **Soberanía digital:** Un sistema propio, instalado en su entorno, donde ellos mandan sobre sus datos.
-  - Adaptabilidad a sus reglas de negocio particulares, no obligarse a cambiar sus procesos para encajar en una plantilla genérica.
+1. **Comercios y PYMEs (B2C/B2B directo):** Negocios que buscan páginas web rápidas que faciliten aparecer en Google y en IAs (ChatGPT, Gemini, Perplexity), sistemas hechos a la medida de su flujo operativo sin licencias mensuales obligatorias, automatizaciones con WhatsApp y soporte transparente en servidores/equipos.
+2. **Agencias de Marketing, Diseño y Publicidad (Modalidad Marca Blanca):** Operamos como su **brazo técnico externo** para resolver desarrollo web/landings con GEO, infraestructura/DNS/correos corporativos y automatizaciones de campañas con WhatsApp/CRM, ofreciendo **tarifas preferenciales para agencias y un descuento introductorio en sus primeros encargos**, respetando siempre al 100% su relación con el cliente final.
 
 ---
 
-## 3. 🗣️ Guía de Tono de Voz y Redacción (Copywriting)
+## 3. 🗣️ Reglas Críticas de Redacción y UX
 
-### ⚠️ Regla de Oro: Lenguaje Sencillo, Directo y sin Tecnicismos Innecesarios
-Los dueños de negocios pequeños y medianos **no son ingenieros de software** ni les interesa la jerga técnica. Su prioridad es **vender más, ahorrar tiempo y evitar dolores de cabeza**.
-
-> **Principio Fundamental:**  
-> Habla de **resultados del negocio**, no de herramientas de programación.
-
-| ❌ Evitar (Jerga Técnica / Confusa) | ✅ Usar (Lenguaje Sencillo y Directo) |
-| :--- | :--- |
-| "Arquitectura JAMstack con Astro y Tailwind CSS" | *"Páginas ultrarrápidas que cargan en 1 segundo en el celular de tu cliente."* |
-| "Monolito modular desacoplado con APIs RESTful" | *"Sistemas diseñados exactamente para la forma en que trabaja tu negocio."* |
-| "Endpoints de integración con WhatsApp Cloud API" | *"Tus clientes eligen sus productos y te mandan el pedido listo a tu WhatsApp con un clic."* |
-| "Optimización SEO On-Page 100/100 en Google PageSpeed" | *"Tu página aparece rápido y no hace esperar a los clientes que te buscan."* |
-| "Esquema relacional PostgreSQL con replicación" | *"Tu inventario y tus ventas guardados de forma segura y accesible siempre."* |
-| "Cero costos mensuales" / "Cero recurrencia" *(Engañoso)* | *"Sin rentas forzosas de software: tú eres dueño de tu sistema y no pagas alquileres mensuales obligatorios."* |
-| "Soporte 24/7 en tiempo real" *(Falso / Irreal)* | *"Trato directo con los ingenieros fundadores por WhatsApp en horario hábil, sin intermediarios."* |
+1. **No criticar a agencias ni consultoras:** En la sección comparativa (`#comparativa`), las columnas se titulan **Nuestro Enfoque en LaPonTech** vs. **El Problema Frecuente**, exponiendo problemas técnicos comunes sin atacar a otros profesionales.
+2. **SEO + GEO explicado con naturalidad:** Explicamos que estructuramos las páginas en el formato que leen Google y las inteligencias artificiales (ChatGPT, Gemini, Perplexity), facilitando que comprendan el negocio y haciendo más probable que lo muestren al responder consultas, sin prometer posiciones garantizadas.
+3. **DNS y Correos Corporativos sobre Proveedores Externos:** Dejamos claro que enrutamos el dominio y configuramos los sellos de seguridad (`SPF, DKIM, DMARC`) conectándolo con plataformas especializadas externas (Google Workspace, Microsoft 365, Zoho) para garantizar máxima entregabilidad en bandeja principal (sin usar servidores SMTP propios caseros).
+4. **Esencia adaptable de los servicios:** Tanto en Sistemas a Medida como en Automatizaciones dejamos explícito que nos adaptamos a lo que el cliente necesite y que los puntos listados son ejemplos reales, no límites cerrados.
+5. **Contexto de nombres propios:** Antes de la sección `#nosotros`, nos referimos a *"los ingenieros fundadores que desarrollan tu proyecto"* o *"Dirección Técnica"* para que el visitante no lea los nombres "Kevin y David" sin contexto previo.
 
 ---
 
-## 4. 💡 Pilares de Posicionamiento de LaPonTech
+## 4. 🛡️ Seguridad Anti-Scraping + Visibilidad GEO
 
-### 1. Sin Rentas Forzosas de Software
-- **Mensaje Clave:** No cobramos suscripciones obligatorias por usar tu propia herramienta. El negocio es dueño de su sistema.
-- **Claridad Comercial:** Se deja claro que el software es propio. Si el cliente desea contratar pólizas opcionales de mantenimiento, soporte técnico prioritario o respaldos en la nube, es una decisión libre y voluntaria, nunca una imposición para seguir operando.
-
-### 2. Soberanía Digital y Propiedad de los Datos
-- **Mensaje Clave:** La base de datos, el código y la información son 100% del cliente. No hay software secuestrado ni candados ocultos.
-
-### 3. Velocidad Real vs. Plantillas Pesadas de WordPress
-- **Mensaje Clave:** En Honduras, la mayoría de clientes navegan con datos móviles prepago. Una página tradicional con decenas de plugins tarda 8 a 15 segundos en abrir. Nuestras páginas abren en menos de 1 segundo, asegurando que las visitas no se vayan antes de comprar.
-
-### 4. Trato Directo con los Fundadores
-- **Mensaje Clave:** Respuestas rápidas, honestas y de tú a tú por WhatsApp con Kevin y David, sin ejecutivos de ventas que no entienden el problema ni sistemas de tickets impersonales.
-
----
-
-## 5. 📦 Portafolio de Servicios Oficiales
-
-### Servicio 1: Páginas Web Profesionales & Catálogos Digitales
-- **Badges:** `⚡ Carga Instantánea` · `📲 Enfoque en WhatsApp` · `🎯 100% Tu Dominio`
-- **Para quién es:** Negocios que venden por redes sociales y pierden clientes porque no tienen sus productos, fotos y precios ordenados en un solo lugar.
-- **Qué incluye:**
-  - Carga en menos de 1 segundo en celulares.
-  - Botón de pedido o cotización directa a WhatsApp.
-  - Catálogo interactivo claro, organizado por categorías.
-  - Nombre de dominio `.com` y accesos registrados 100% a nombre del cliente.
-- **Tiempo de entrega:** **1 semana o menos** (sujeto a la entrega oportuna de fotos y datos por parte del cliente).
-
-### Servicio 2: Desarrollo de Software & Sistemas a Medida
-- **Badges:** `📦 Soluciones a Medida` · `🔒 Código y Datos Propios` · `🚫 Cero Mensualidades Forzosas`
-- **Para quién es:** Negocios que superaron las libretas o Excel y necesitan automatizar su flujo específico (inventario, caja, pedidos, cobranza).
-- **Qué incluye:**
-  - Control de stock e inventarios (Kardex, alertas de productos bajos).
-  - Puntos de venta (POS) y cobro en mostrador.
-  - Paneles administrativos con reportes claros de ventas.
-  - Acceso desde computadoras, tablets o celulares en red local o en la nube.
-- **Tiempo de entrega:** **De 1 a 3 meses**, según el alcance y la complejidad del proyecto.
-
-### Servicio 3: Automatización de Procesos & WhatsApp para Negocios
-- **Para quién es:** Negocios con tareas repetitivas que consumen horas de su personal (confirmaciones manuales, copiado de datos entre planillas, avisos de entrega).
-- **Qué incluye:** Notificaciones automáticas de pedidos a clientes y empleados por WhatsApp, integración con hojas de cálculo y flujos automáticos.
-
-### Servicio 4: Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)
-- **Para quién es:** Dueños de negocio que necesitan comprar equipos informáticos, reparar fallos de red o computadoras lentas sin que les vendan piezas innecesarias.
-- **Qué incluye:** Diagnóstico honesto, configuración de copias de seguridad automáticas y soporte técnico preventivo.
-
----
-
-## 6. ⏱️ Compromisos de Tiempos y Expectativas de Soporte
-
-- **Páginas Web y Catálogos:** **≤ 7 días hábiles** desde la recepción completa del material.
-- **Software a Medida:** **1 a 3 meses**, estructurado en entregas por fases funcionales demostrables.
-- **Atención y Soporte:** Directo por WhatsApp de lunes a viernes en horario hábil. Sin promesas falsas de guardia nocturna 24/7, garantizando honestidad y calidad de vida tanto para el cliente como para el equipo fundador.
-
----
-
-## 7. 🛠️ Stack Técnico y Estándares de Ingeniería
-
-Aunque el cliente no ve el código, la arquitectura técnica garantiza que las promesas de velocidad y economía se cumplan:
-
-| Componente | Tecnología Seleccionada | Razón Estratégica |
-| :--- | :--- | :--- |
-| **Framework Web** | [Astro](https://astro.build/) (Static Site Generation - SSG) | Cero JavaScript pesado en cliente. Entrega HTML puro ultrarrápido ideal para redes móviles de Honduras. |
-| **Diseño y Estilos** | [Tailwind CSS](https://tailwindcss.com/) | Cero estilos redundantes; CSS purgado y minificado al máximo. |
-| **Alojamiento Web** | GitHub Pages (`lapontech.com`) | Costo de infraestructura \$0 para la landing page, alta disponibilidad global en CDN y despliegue automático mediante GitHub Actions. |
-| **Open Graph & SEO** | Metadatos estándar en `src/components/SEO.astro` | Imagen oficial en `https://lapontech.com/logo-completo.png` (1024x517 px, 171 KB), Schema.org `ProfessionalService` geolocalizado en San Pedro Sula. |
+- **Cero correos ni números en texto plano en el HTML estático:**
+  - Los enlaces de correo (`.js-protected-email`) y de WhatsApp (`.js-protected-wa`) se hidratan automáticamente en el navegador mediante JavaScript (`DOMContentLoaded`).
+  - Los bots recolectores de spam por expresiones regulares obtienen **0 coincidencias** tanto de correos como de teléfonos (`+504` / `wa.me`).
+- **Visibilidad completa para Agentes de IA:**
+  - Archivo [`public/llms.txt`](./public/llms.txt) y [`public/robots.txt`](./public/robots.txt) configurados para `GPTBot`, `OAI-SearchBot`, `ClaudeBot`, `PerplexityBot` y `Google-Extended`.
+  - Esquema triple validado en [`src/components/SEO.astro`](./src/components/SEO.astro) (`ProfessionalService`, `WebSite`, `WebPage` con `SpeakableSpecification`).

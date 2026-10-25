@@ -1,85 +1,99 @@
 # 📦 Portafolio de Servicios y Entregables — LaPonTech Solutions
 
-Documento semántico que detalla cada una de las 4 líneas de servicio oficiales de **LaPon Tech Solutions**, sus insignias (badges), beneficios clave, tiempos de entrega y llamados a la acción (CTAs).
+Documento semántico que detalla las 4 líneas de servicio oficiales para empresas/PYMEs y la línea B2B de **Marca Blanca para Agencias** de **LaPon Tech Solutions**, sincronizadas con [`src/json/servicios.json`](../src/json/servicios.json).
 
 ---
 
-## 1. Servicio 1: Páginas Web Profesionales & Catálogos Digitales
+## 1. Tarjetas de Métricas del Hero (`hero.estadisticas`)
 
-El producto de entrada de alta conversión para negocios que quieren digitalizar su catálogo y recibir pedidos por WhatsApp.
+| Valor Principal | Subtítulo (`etiqueta`) | Detalle (`detalle`) |
+| :--- | :--- | :--- |
+| **`Velocidad`** | Optimizado para Celulares | Sitios ligeros pensados para abrir rápido con datos móviles |
+| **`100%`** | Propiedad de tu Proyecto | Sin alquileres obligatorios y con mantenimiento opcional |
+| **`Ágil`** | Desarrollo Veloz | Entregas claras según el alcance de cada proyecto |
+| **`Directo`** | Trato con Ingeniería | Comunicación clara por WhatsApp o correo con los fundadores |
+
+---
+
+## 2. Servicio 1: Páginas Web Profesionales & Catálogos Digitales (`#presencia-digital`)
 
 - **Badges Oficiales:**
-  - `⚡ Carga Instantánea`
+  - `🔍 Mejor Visibilidad en Google e IA (SEO + GEO)`
   - `📲 Enfoque en WhatsApp`
   - `🎯 100% Tu Dominio`
-- **Título de la Tarjeta:** Páginas Web Profesionales & Catálogos Digitales
-- **Bajada Destacada:** *Facilita que tus clientes conozcan tus productos o servicios y te pidan cotizaciones por WhatsApp en segundos.*
+- **Subtítulo:** *Facilita que tus clientes conozcan lo que ofreces, te ubiquen mejor en buscadores e IA y te contacten por WhatsApp.*
 - **Descripción:**  
-  Diseñamos páginas web y catálogos interactivos ultrarrápidos, limpios y optimizados para celulares. El complemento perfecto para tus redes sociales: organiza tus productos, precios y datos clave en un solo lugar accesible las 24 horas, eliminando la pérdida de ventas por mensajes sin responder.
-- **Viñetas de Beneficios:**
-  - **Abre en menos de 1 segundo en celulares:** Carga instantánea para que tus visitas no se vayan antes de ver tu oferta.
-  - **Botón y pedidos directos a WhatsApp:** Tus clientes seleccionan lo que desean y te envían el mensaje con la consulta o pedido listo.
-  - **Catálogo claro y ordenado:** Presentación impecable de tus productos, fotos, precios y horarios sin depender de que revisen decenas de publicaciones.
-  - **Control y propiedad total:** El nombre de dominio y todos los accesos quedan registrados 100% a nombre de tu negocio.
-- **Tiempo de Entrega:** **1 semana o menos** (sujeto a la entrega de datos y fotos por parte del cliente).
-- **Llamado a la Acción (CTA):** *Cotizar página o catálogo →* (Abre WhatsApp con mensaje preconfigurado).
+  Diseñamos páginas web profesionales y catálogos interactivos optimizados para celulares, cuidando desde la base el SEO y GEO. Además de ordenar tus productos, servicios y precios en un solo lugar, construimos tu sitio con la estructura que leen Google y las inteligencias artificiales (como ChatGPT, Gemini o Perplexity), facilitando que reconozcan tu negocio y sea mucho más probable que te muestren cuando alguien busque lo que ofreces.
+- **Puntos Clave:**
+  - **Más fácil de encontrar en Google e IA (SEO + GEO):** Estructuramos tu web en el formato que leen ChatGPT, Gemini, Perplexity y Google, ayudando a que comprendan qué vendes y sea más probable que te tomen en cuenta al responder a posibles clientes.
+  - **Botón y pedidos directos a WhatsApp:** Tus visitas revisan tu catálogo o servicios y te envían el mensaje con su consulta o pedido listo en un toque.
+  - **Navegación fluida en celulares:** Diseño ligero pensado para abrir rápido y sin trabas incluso con conexiones de datos móviles.
+  - **Control total y mantenimiento opcional:** Tu dominio (`.com`) queda a tu nombre y tú decides si lo administras o contratas nuestro soporte opcional.
+- **Llamado a la Acción (CTA):** *Cotizar página o catálogo →*
 
 ---
 
-## 2. Servicio 2: Desarrollo de Software & Sistemas a Medida
-
-La solución para negocios cuya operativa superó a las libretas de papel y a las hojas de cálculo desordenadas.
+## 3. Servicio 2: Desarrollo de Software & Sistemas a Medida (`#facturacion-inventario`)
 
 - **Badges Oficiales:**
   - `📦 Soluciones a Medida`
   - `🔒 Código y Datos Propios`
-  - `🚫 Cero Mensualidades Forzosas`
-- **Título de la Tarjeta:** Desarrollo de Software & Sistemas a Medida
-- **Bajada Destacada:** *Construimos herramientas digitales adaptadas al flujo exacto de tu negocio, sin atarte a suscripciones eternas.*
+  - `🚫 Sin Rentas Forzosas`
+- **Subtítulo:** *Construimos la herramienta digital que tu operación necesite, adaptada a tus reglas y sin suscripciones obligatorias.*
 - **Descripción:**  
-  Si las libretas, las hojas de cálculo desordenadas o los programas genéricos ya te quedan cortos, creamos la solución que tu operativa necesita. Diseñamos sistemas limpios y rápidos para resolver tu cuello de botella: desde paneles administrativos y control de inventario/bodega, hasta puntos de venta (POS) o automatizaciones de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.
-- **Viñetas de Beneficios:**
-  - **Hecho a la medida de tu proceso:** Desarrollamos funciones pensadas para tu forma de trabajar, sin pagar por botones o módulos que nunca vas a usar.
-  - **Ejemplos de lo que construimos:** Control de stock (Kardex), registro de cobros en mostrador, paneles de seguimiento de pedidos o cotizadores automáticos.
-  - **Propiedad total del sistema:** El software y la base de datos son 100% tuyos, sin pagar rentas mensuales abusivas por cada empleado o usuario.
-  - **Fácil de usar desde el celular o computadora:** Interfaces directas y rápidas para que tu equipo aprenda a usarlo en minutos y sin enredos.
-- **Tiempo de Entrega:** **De 1 a 3 meses** (según la escala, cantidad de módulos y la rapidez en la entrega de la información operativa).
-- **Llamado a la Acción (CTA):** *Cotizar desarrollo a medida →* (Abre WhatsApp con mensaje preconfigurado).
+  Cuando las libretas, las hojas de Excel desordenadas o los programas genéricos se quedan cortos, diseñamos el sistema que tu negocio requiere. Nos adaptamos a tu flujo de trabajo real; lo que listamos aquí son ejemplos prácticos de lo que podemos desarrollar a tu medida.
+- **Puntos Clave:**
+  - **100% adaptable a tu necesidad:** Programamos las funciones que tu empresa requiere hoy y dejamos la base lista por si deseas ampliarlo después.
+  - **Ejemplos frecuentes:** Control de inventario y bodega, registro de ventas y caja (POS), control de cuentas por cobrar, seguimiento de órdenes o cotizadores internos.
+  - **Propiedad del sistema:** Entregamos la herramienta funcionando sin exigir el pago de licencias mensuales por cada empleado.
+  - **Mantenimiento opcional:** Incluimos capacitación inicial y, si deseas delegar el soporte o actualizaciones futuras, contamos con planes opcionales claros.
+- **Llamado a la Acción (CTA):** *Cotizar desarrollo a medida →*
 
 ---
 
-## 3. Servicio 3: Automatización de Procesos & WhatsApp para Negocios
-
-Ahorro de horas de trabajo manual en tareas administrativas repetitivas.
+## 4. Servicio 3: Automatización Operativa & Mensajes por WhatsApp (`#automatizaciones`)
 
 - **Badges Oficiales:**
-  - `🤖 Ahorro de Horas Manuales`
-  - `💬 WhatsApp Comercial`
+  - `🤖 A Medida de tu Proceso`
+  - `💬 WhatsApp & Campañas`
   - `🔄 Datos Sincronizados`
-- **Título de la Tarjeta:** Automatización de Procesos & WhatsApp para Negocios
-- **Bajada Destacada:** *Conecta tus ventas, pedidos y confirmaciones para que tu negocio funcione sin errores humanos.*
-- **Qué incluye:**
-  - Notificaciones automáticas de pedidos a clientes y empleados por WhatsApp.
-  - Sincronización instantánea de ventas con hojas de cálculo o bases de datos internas.
-  - Avisos automáticos de existencias bajas de productos clave para evitar desabastecimiento.
-- **Tiempo de Entrega:** **3 a 10 días hábiles**.
-- **Llamado a la Acción (CTA):** *Automatizar mi negocio →*
+- **Subtítulo:** *Elimina tareas manuales repetitivas y conecta tus canales de venta exactamente como tu negocio lo necesite.*
+- **Descripción:**  
+  Conectamos tus herramientas digitales para que las tareas repetitivas se ejecuten solas, rápido y sin errores humanos. Nos adaptamos a lo que tu operación o tus campañas necesiten automatizar; los siguientes puntos no son lo único que hacemos, sino ejemplos reales de lo que podemos implementar para ti:
+- **Puntos Clave:**
+  - **Ejemplo — Avisos y entrega de prospectos por WhatsApp:** Envío automático de confirmaciones de pedido o entrega inmediata de clientes potenciales desde tus formularios o campañas publicitarias.
+  - **Ejemplo — Sincronización con hojas de cálculo o sistemas:** Registro automático de cada venta, contacto o formulario para no copiar datos a mano dos veces.
+  - **Ejemplo — Seguimiento y recordatorios de cobro:** Mensajes programados sobre cuentas o facturas por vencer para mejorar tu recaudación.
+  - **Ejemplo — Alertas operativas a medida:** Notificaciones automáticas cuando un producto clave en bodega está por agotarse o cuando se requiere una aprobación.
+- **Llamado a la Acción (CTA):** *Consultar mi automatización →*
 
 ---
 
-## 4. Servicio 4: Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)
-
-Acompañamiento honesto para que el dueño no gaste dinero en equipos equivocados.
+## 5. Servicio 4: Asesoría Técnica, Servidores & Equipos (`#asesoria-tecnica`)
 
 - **Badges Oficiales:**
-  - `🛠️ Soporte Local`
-  - `💻 Compra Inteligente`
+  - `🌐 Servidores, DNS & Correos`
+  - `💻 Equipos & Soporte`
   - `🔒 Copias de Seguridad`
-- **Título de la Tarjeta:** Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)
-- **Bajada Destacada:** *Asesoría honesta para adquirir los equipos correctos y mantener tu operación técnica al 100%.*
-- **Qué incluye:**
-  - Recomendaciones reales en la compra de computadoras, impresoras térmicas y lectores de código de barra según el presupuesto.
-  - Diagnóstico y aceleración de computadoras lentas o con virus en San Pedro Sula.
-  - Configuración de copias de seguridad automáticas de los archivos y ventas del negocio.
-- **Tiempo de Entrega:** Diagnósticos en **24 a 48 horas**.
-- **Llamado a la Acción (CTA):** *Solicitar diagnóstico de equipos →*
+- **Subtítulo:** *Configuración profesional de dominios, correos corporativos, servidores y soporte de equipos para empresas y agencias.*
+- **Descripción:**  
+  Resolvemos la parte técnica e infraestructura de tu negocio con total transparencia. Conectamos y configuramos profesionalmente tu dominio con proveedores líderes de correo e infraestructura para asegurar máxima estabilidad, o te asesoramos en la mejora y compra de equipos de cómputo sin gastos innecesarios.
+- **Puntos Clave:**
+  - **Configuración de DNS y correos corporativos:** Enrutamos tu dominio y configuramos los sellos de seguridad (`SPF, DKIM, DMARC`) conectándolo con plataformas especializadas externas (como Google Workspace, Microsoft 365 o Zoho) para garantizar que tus correos lleguen a la bandeja principal y no a spam.
+  - **Alojamiento web administrado opcional:** Despliegue de páginas y sistemas en servidores optimizados con tarifas claras y fijas para evitar saturación o sobrecostos de renovación.
+  - **Equipos y soporte local:** Recomendación honesta para compra de computadoras e impresoras, y mejora de equipos lentos en San Pedro Sula.
+  - **Respaldo de información:** Configuración de copias de seguridad automáticas para proteger tus bases de datos y archivos críticos.
+- **Llamado a la Acción (CTA):** *Consultar asistencia técnica →*
+
+---
+
+## 6. Línea B2B: Brazo Técnico en Marca Blanca para Agencias (`#agencias`)
+
+- **Badge Principal:** `🤝 Servicio Técnico B2B · Modalidad Marca Blanca`
+- **Título:** *Tu Brazo Técnico Externo para Agencias de Marketing y Diseño*
+- **3 Áreas:**
+  1. `🚀 Landings & GEO` — Desarrollo Web y Landings de Conversión
+  2. `🌐 Infraestructura & DNS` — Asistencia Técnica, Servidores y DNS
+  3. `⚡ Leads en Tiempo Real` — Automatización de Campañas y Prospectos
+- **Condición Especial de Apertura:** Tarifas preferenciales para agencias aliadas y descuento introductorio en primeros encargos según tamaño y complejidad del proyecto.
+- **Detalle completo:** Ver [`docs/06-alianzas-y-marca-blanca-agencias.md`](./06-alianzas-y-marca-blanca-agencias.md).

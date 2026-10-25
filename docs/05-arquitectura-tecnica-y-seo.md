@@ -1,79 +1,60 @@
-# 🛠️ Arquitectura Técnica, SEO y Despliegue — LaPonTech Solutions
+# 🛠️ Arquitectura Técnica, SEO, GEO y Despliegue — LaPonTech Solutions
 
-Documento semántico que documenta las decisiones de ingeniería de software, estándares de rendimiento, configuración de metadatos (Open Graph / Twitter Cards) y pipeline de despliegue continuo de **LaPon Tech Solutions**.
+Documento semántico que documenta las decisiones de ingeniería, optimización para buscadores tradicionales (**SEO**) y motores generativos de IA (**GEO**), seguridad anti-scraping y despliegue continuo de **LaPon Tech Solutions** (`lapontech.com`).
 
 ---
 
 ## 1. Stack Tecnológico de la Landing Page
 
-La web corporativa (`lapontech.com`) está construida bajo una estricta política de **rendimiento extremo y cero fricción**:
-
 ```mermaid
 graph LR
-    A["Astro v4 (Static Mode)"] --> B["HTML Estático Puro (Zero Client JS)"]
+    A["Astro v4 (Static Mode)"] --> B["HTML Estático + Hidratación Anti-Scraping"]
     C["Tailwind CSS"] --> D["CSS Purgado y Minificado"]
-    B --> E["Compilación en ./dist/"]
-    D --> E
-    E --> F["GitHub Pages (lapontech.com)"]
+    E["JSON Centralizado (servicios.json)"] --> A
+    B --> F["Compilación en ./dist/"]
+    D --> F
+    F --> G["GitHub Pages + Proxy Cloudflare (lapontech.com)"]
 ```
 
 | Componente | Tecnología | Justificación Técnica |
 | :--- | :--- | :--- |
-| **Generador de Sitios** | [Astro v4](https://astro.build/) | Modo `output: "static"`. Genera páginas estáticas puras que no ejecutan JavaScript innecesario en el navegador del cliente. |
-| **Framework de Estilos** | [Tailwind CSS](https://tailwindcss.com/) | Utilidades atómicas compiladas; genera un archivo CSS minificado ultraligero sin librerías externas de diseño. |
-| **Iconografía** | SVGs Puros Inline | Iconos vectoriales integrados directamente en el marcado HTML sin librerías de iconos externas (`react-icons`, `font-awesome`, etc.) que agreguen peso. |
-| **Alojamiento y CDN** | [GitHub Pages](https://pages.github.com/) | Infraestructura global con CDN distribuida Fastly/GitHub, costo \$0 de servidor para la landing, soporte HTTPS nativo y registro CNAME en `lapontech.com`. |
+| **Generador de Sitios** | [Astro v4](https://astro.build/) | Modo `output: "static"`. Genera páginas estáticas ultraligeras ideales para conexiones de datos móviles en Honduras. |
+| **Fuente de Datos Única** | [`src/json/servicios.json`](../src/json/servicios.json) | Centraliza textos, servicios, sección de agencias, comparativa, fundadores y FAQs para mantener coherencia entre la UI y el Schema.org. |
+| **Framework de Estilos** | [Tailwind CSS](https://tailwindcss.com/) | Utilidades atómicas compiladas en un único CSS minificado sin librerías pesadas de terceros. |
+| **Alojamiento y Red** | GitHub Pages + Cloudflare Proxy | Despliegue automático con GitHub Actions y protección de red mediante el proxy de Cloudflare en `lapontech.com`. |
 
 ---
 
-## 2. Pipeline de Despliegue Automático (CI/CD)
+## 2. Arquitectura SEO + GEO (Generative Engine Optimization)
 
-El despliegue se gestiona mediante GitHub Actions en el archivo [`.github/workflows/deploy.yml`](file:///home/kevin/Documentos/webs/LaPon%20solutions/.github/workflows/deploy.yml):
+### A. Triple Schema.org JSON-LD ([`src/components/SEO.astro`](../src/components/SEO.astro))
+Para cumplir con los estándares de validación de Google y facilitar la extracción de entidades por modelos de IA, [`src/components/SEO.astro`](../src/components/SEO.astro) inyecta **3 bloques `<script type="application/ld+json">` independientes** (cada uno con un `@type` string de nivel superior):
+1. **`ProfessionalService` (`#organization`):**
+   - Incluye geolocalización en San Pedro Sula (`15.5042, -88.0250`), `postalCode: 21101`, `areaServed` (San Pedro Sula, Choloma, Villanueva, El Progreso, Puerto Cortés, La Lima, Tegucigalpa, Cortés, Honduras), `audience` (Comercios, PYMEs y Agencias de Marketing y Diseño), `knowsAbout`, `founder` (David Flores Lagos y Kevin D. Ponce) y `hasOfferCatalog`.
+   - *Seguridad:* No expone `email` ni `telephone` en texto plano para evitar que bots recolectores de spam los extraigan del JSON-LD.
+2. **`WebSite` (`#website`):**
+   - Define la entidad del sitio en idioma `es-HN` vinculada a `#organization`.
+3. **`WebPage` (`#webpage`):**
+   - Incluye `SpeakableSpecification` apuntando a `["h1", "#servicios h2", "#comparativa h2", "#agencias h2", "#faq details"]` para asistentes de voz y motores de respuesta.
+   - *Nota de cumplimiento Google (Agosto 2023):* No se utiliza `FAQPage` JSON-LD porque Google restringió ese tipo de resultado enriquecido exclusivamente a sitios gubernamentales y de salud.
 
-- **Disparador:** Cada `push` directo a la rama **`main`**.
-- **Etapa 1: Build:**
-  - Instala dependencias con `npm ci` o `npm install`.
-  - Ejecuta `npm run build` utilizando la acción oficial `withastro/action@v3`.
-  - Sube el directorio `dist/` como artefacto de GitHub Pages.
-- **Etapa 2: Deploy:**
-  - Despliega el artefacto en el entorno `github-pages` utilizando `actions/deploy-pages@v4`.
-- **Dominio Personalizado:** Configurado mediante el archivo [`public/CNAME`](file:///home/kevin/Documentos/webs/LaPon%20solutions/public/CNAME) apuntando a `lapontech.com`.
+### B. Archivo [`public/llms.txt`](../public/llms.txt) para Agentes de IA
+Archivo en formato Markdown estructurado siguiendo el estándar `llms.txt` en la raíz del dominio (`https://lapontech.com/llms.txt`) para que **ChatGPT, Perplexity, Claude y Gemini** comprendan de inmediato:
+- Identidad, ubicación y cobertura presencial/remota en Honduras.
+- Los 4 servicios para PYMEs y la modalidad de **Marca Blanca para Agencias**.
+- El correo oficial escrito de forma semántica anti-regex (`contacto [arroba] lapontech [punto] com`).
+
+### C. Permisos Explícitos para Crawlers de IA en [`public/robots.txt`](../public/robots.txt)
+Autoriza explícitamente la indexación a `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-Web`, `anthropic-ai`, `PerplexityBot`, `Perplexity-User`, `Google-Extended` y `Applebot-Extended`, e indica la ruta del `Sitemap`.
 
 ---
 
 ## 3. Configuración de Open Graph, Redes Sociales y WhatsApp
 
-Ubicación del componente central: [`src/components/SEO.astro`](file:///home/kevin/Documentos/webs/LaPon%20solutions/src/components/SEO.astro).
-
-### Reglas Críticas para WhatsApp y Meta
-1. **Formato Raster Obligatorio:** WhatsApp y Facebook **no admiten SVG** para la previsualización del enlace.
-2. **Imagen Oficial:** [`public/logo-completo.png`](file:///home/kevin/Documentos/webs/LaPon%20solutions/public/logo-completo.png) y [`public/logo-completo.jpg`](file:///home/kevin/Documentos/webs/LaPon%20solutions/public/logo-completo.jpg):
-   - **Dimensiones:** 1024 × 517 px (relación ~1.98:1 compatible con tarjetas horizontales grandes).
-   - **Peso:** 171 KB (PNG) y 82 KB (JPG) (muy por debajo del límite de 300 KB recomendado por Meta para carga rápida en redes móviles).
-   - **Fondo:** `#080e1d` (slate-950 institucional de la marca con isotipo esmeralda y texto completo "LaPon Tech Solutions").
-3. **Etiquetas Requeridas en `<head>`:**
-   ```html
-   <meta property="og:site_name" content="LaPon Tech Solutions" />
-   <meta property="og:type" content="website" />
-   <meta property="og:url" content="https://lapontech.com/" />
-   <meta property="og:title" content="LaPonTech | Páginas Web Rápidas y Software a Medida en San Pedro Sula" />
-   <meta property="og:description" content="Creamos páginas web ultrarrápidas, catálogos digitales para WhatsApp y software a medida para tu negocio sin mensualidades forzosas en Honduras." />
-   <meta property="og:image" content="https://lapontech.com/logo-completo.png" />
-   <meta property="og:image:url" content="https://lapontech.com/logo-completo.png" />
-   <meta property="og:image:secure_url" content="https://lapontech.com/logo-completo.png" />
-   <meta property="og:image:type" content="image/png" />
-   <meta property="og:image:width" content="1024" />
-   <meta property="og:image:height" content="517" />
-   <meta property="og:image:alt" content="LaPon Tech Solutions - Logotipo Oficial de la Empresa" />
-   <link rel="image_src" href="https://lapontech.com/logo-completo.png" />
-   ```
-4. **Twitter Cards:**
-   ```html
-   <meta name="twitter:card" content="summary_large_image" />
-   <meta name="twitter:image" content="https://lapontech.com/logo-completo.png" />
-   ```
-5. **Schema.org JSON-LD:**
-   - Tipo `@type: ProfessionalService` con geolocalización en San Pedro Sula (`15.5042, -88.0250`), `postalCode: 21101`, datos de contacto oficial (`contacto@lapontech.com`) y listado de los fundadores Kevin D. Ponce y David Flores Lagos.
+1. **Imagen Oficial:** [`public/logo-completo.png`](../public/logo-completo.png) (`1024 × 517 px`, ~171 KB).
+2. **Títulos y Descripciones Optimizados:**
+   - **Title (60 caracteres):** `LaPonTech | Páginas Web, Sistemas a Medida y Marca Blanca`
+   - **Description (156 caracteres):** `Páginas web rápidas, sistemas a medida sin rentas forzosas y brazo técnico en marca blanca para agencias en San Pedro Sula y Honduras. ¡Cotiza por WhatsApp!`
 
 ---
 
@@ -81,31 +62,36 @@ Ubicación del componente central: [`src/components/SEO.astro`](file:///home/kev
 
 ```text
 /
-├── .github/workflows/deploy.yml   # Workflow de CI/CD para GitHub Pages
-├── docs/                          # Documentación segmentada del negocio y arquitectura
+├── .github/workflows/deploy.yml                 # Workflow de CI/CD para GitHub Pages
+├── docs/                                        # Documentación estratégica y técnica segmentada
 │   ├── 01-empresa-y-fundadores.md
 │   ├── 02-clientes-objetivo-y-mercado.md
 │   ├── 03-guia-de-tono-y-redaccion.md
 │   ├── 04-portafolio-de-servicios.md
 │   ├── 05-arquitectura-tecnica-y-seo.md
+│   ├── 06-alianzas-y-marca-blanca-agencias.md   # Modelo B2B White-Label para agencias
+│   ├── 07-seguridad-anti-scraping-y-geo.md      # Protección JS de correo/WhatsApp y WAF
 │   └── README.md
-├── public/                        # Archivos estáticos directos
-│   ├── CNAME                      # Dominio lapontech.com para GitHub Pages
-│   ├── _headers                   # Encabezados de caché y seguridad HTTP
-│   ├── logo-completo.png          # Imagen Open Graph oficial
-│   ├── logo-completo.jpg          # Copia ultraligera para redes
-│   └── icons/                     # Isotipos y logos vectoriales
+├── public/
+│   ├── CNAME                                    # Dominio lapontech.com
+│   ├── _headers                                 # Encabezados de seguridad y caché
+│   ├── llms.txt                                 # Contexto estructurado para motores de IA (GEO)
+│   ├── robots.txt                               # Directivas para buscadores y crawlers de IA
+│   ├── logo-completo.png                        # Imagen Open Graph oficial (1024x517)
+│   └── icons/                                   # Isotipos vectoriales y PNG
 ├── src/
 │   ├── components/
-│   │   ├── Header.astro           # Barra de navegación superior
-│   │   ├── Footer.astro           # Pie de página y canales de contacto
-│   │   └── SEO.astro              # Generador de metadatos OpenGraph y Schema.org
+│   │   ├── Header.astro                         # Navegación con ancla a #agencias
+│   │   ├── Footer.astro                         # Pie de página + script de hidratación de correo
+│   │   └── SEO.astro                            # Metadatos OpenGraph + Triple Schema.org JSON-LD
+│   ├── json/
+│   │   └── servicios.json                       # Contenido centralizado de toda la landing
 │   ├── layouts/
-│   │   └── Layout.astro           # Estructura HTML base y fondos ambientales
+│   │   └── Layout.astro                         # Estructura HTML base (lang="es-HN")
 │   └── pages/
-│       ├── index.astro            # Landing page principal (Bento Grid)
-│       ├── servicios.astro        # Redirección canónica a /#servicios
-│       └── 404.astro              # Página de error amigable
-├── CONTEXT.md                     # Resumen unificado del contexto
-└── README.md                      # Portada del repositorio en GitHub
+│       ├── index.astro                          # Landing page principal + hidratación WhatsApp
+│       ├── servicios.astro                      # Redirección limpia a /#servicios
+│       └── 404.astro                            # Página 404 personalizada
+├── CONTEXT.md                                   # Resumen maestro unificado del proyecto
+└── README.md                                    # Documentación general del repositorio
 ```

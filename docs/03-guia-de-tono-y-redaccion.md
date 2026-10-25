@@ -1,63 +1,49 @@
 # 🗣️ Guía de Tono de Voz y Redacción (Copywriting) — LaPonTech Solutions
 
-Documento semántico que establece las pautas de redacción, lenguaje, estilo y términos permitidos y prohibidos para cualquier comunicación de **LaPon Tech Solutions** (sitio web, anuncios, mensajes de WhatsApp, propuestas y documentación).
+Documento semántico que establece las pautas de redacción, estilo y criterios comerciales para toda comunicación de **LaPon Tech Solutions** (`lapontech.com`), adaptada a nuestro enfoque híbrido (PYMEs y Agencias en Marca Blanca).
 
 ---
 
-## 1. Principio Fundamental: Hablar en el Idioma del Comerciante
+## 1. Los 6 Principios de Redacción de LaPonTech
 
+### 1. Exponer Problemas Frecuentes, NUNCA atacar a Agencias o Consultoras
 > [!IMPORTANT]
-> **Cero Tecnicismos Innecesarios:**  
-> Un dueño de ferretería o farmacia no sabe ni necesita saber qué es *Astro*, *Tailwind CSS*, *Static Site Generation*, *Serverless*, *PostgreSQL* o *APIs REST*.  
-> **A él le importa vender más, evitar pérdidas en su bodega y que el sistema no se congele a mitad de una venta.**
+> Como ofrecemos **servicio técnico en Marca Blanca para agencias de marketing y diseño**, jamás debemos usar frases que ataquen o hablen mal de "las agencias" o "las consultoras".
+- ❌ **Evitar:** *"Otras agencias o consultoras te engañan, te secuestran el dominio o te venden plantillas basura."*
+- ✅ **Usar:** *"El Problema Frecuente: Sitios sobrecargados que tardan demasiado en abrir con datos móviles / Falta de acceso directo a las configuraciones del dominio o base de datos."*
 
-Nuestra comunicación debe ser:
-1. **Directa y al grano:** Sin rodeos corporativos vacíos ni frases rimbombantes.
-2. **Cercana y honesta:** Tono profesional pero accesible, como un asesor de confianza.
-3. **Centrada en beneficios prácticos:** Cada característica técnica debe traducirse en un beneficio tangible para el bolsillo o el tiempo del dueño.
+### 2. Explicar el SEO y GEO con Palabras Simples y sin Prometer de Más
+Debemos destacar que nuestras páginas ayudan a que tanto Google como los modelos de Inteligencia Artificial (**ChatGPT, Gemini, Perplexity**) encuentren y entiendan el negocio, pero **sin prometer resultados garantizados** que suenen irreales:
+- ❌ **Evitar:** *"Garantizamos que ChatGPT y Google te pondrán de primero siempre."*
+- ✅ **Usar:** *"Construimos tu sitio con la estructura que leen Google y las inteligencias artificiales (como ChatGPT, Gemini o Perplexity), facilitando que comprendan qué ofrece tu negocio y sea mucho más probable que te tomen en cuenta cuando alguien busque tus servicios."*
 
----
+### 3. Evitar Promesas Rígidas de Tiempos o Milisegundos
+Para no prometer de más en proyectos de distinta escala, usamos términos de agilidad y fluidez realistas:
+- ❌ **Evitar:** *"Abre en menos de 1 segundo garantizado"* o *"Entregado siempre en 1 semana sin falta"*.
+- ✅ **Usar:** *"Velocidad · Optimizado para Celulares (Sitios ligeros pensados para abrir rápido con datos móviles)"* y *"Ágil · Desarrollo Veloz (Entregas claras según el alcance y tamaño de cada proyecto)"*.
 
-## 2. Diccionario de Términos: Qué Decir vs. Qué Evitar
+### 4. Dejar Claro que los Listados son Ejemplos y nos Adaptamos al Cliente
+En **Sistemas a Medida** y **Automatizaciones con WhatsApp**, el cliente debe entender la esencia del servicio: no vendemos un paquete cerrado de 4 funciones, sino que construimos lo que su operación necesite:
+- ✅ **Usar:** *"Nos adaptamos a lo que tu operación necesite automatizar o controlar. Lo que listamos aquí no es lo único que hacemos, sino ejemplos reales de lo que podemos implementar para ti."*
 
-### A. Rendimiento y Tecnología Web
-- ❌ **Evitar:** "Construido sobre arquitectura Astro con Tailwind CSS logrando 100/100 en Google PageSpeed y 0 KB de JavaScript en cliente."
-- ✅ **Usar:** "Tu página web abre en menos de 1 segundo en el celular de tus clientes, sin las caídas ni la lentitud de las plantillas viejas de internet."
+### 5. Aclarar la Configuración de DNS y Correos sobre Proveedores Externos como Ventaja Comercial
+Al explicar la configuración de correos corporativos (`SPF, DKIM, DMARC`), debemos dejar claro que conectamos su dominio con proveedores externos líderes y no usamos servidores SMTP propios caseros, presentándolo como una garantía de calidad y entregabilidad:
+- ✅ **Usar:** *"Enrutamos tu dominio y configuramos los sellos de seguridad (SPF, DKIM, DMARC) conectándolo con plataformas especializadas externas (como Google Workspace, Microsoft 365 o Zoho) para garantizar que tus correos lleguen a la bandeja principal y no a spam."*
 
-### B. Canales de Venta y Automatización
-- ❌ **Evitar:** "Integración de webhooks con la API de WhatsApp Cloud y sincronización bidireccional."
-- ✅ **Usar:** "Tus clientes revisan tus productos organizados, eligen lo que desean y te envían el pedido listo a tu WhatsApp con un solo clic."
-
-### C. Alquileres de Software vs. Propiedad
-- ❌ **Evitar:** "Cero cuotas mensuales" o "Gratis para siempre". *(Es engañoso y perjudica cuando el cliente desea contratar soporte opcional).*
-- ✅ **Usar:** "Sin rentas forzosas de software: tú eres el dueño de tu sistema y no pagas alquileres abusivos mensuales por cada empleado o usuario. Tú decides si contratas nuestras pólizas opcionales de soporte y respaldo."
-
-### D. Soberanía Digital y Bases de Datos
-- ❌ **Evitar:** "Gestor relacional de base de datos desacoplado con aislamiento multi-tenant y exportación SQL."
-- ✅ **Usar:** "Soberanía digital: acceso total a tu base de datos y a la lógica a medida de tu negocio, desplegado en tu propia infraestructura y sin software secuestrado."
-
-### E. Soporte y Atención
-- ❌ **Evitar:** "Mesa de ayuda 24/7 con SLAs en tiempo real e inteligencia artificial generativa." *(Es una promesa falsa que nadie cumple).*
-- ✅ **Usar:** "Trato directo con los ingenieros fundadores por WhatsApp en horario hábil, sin secretarias ni ejecutivos de cuenta que no entienden de tecnología."
+### 6. Orden Contextual de los Nombres de los Fundadores
+Un visitante que lee la parte superior de la página (`Hero`, `Servicios`, `Comparativa`, `Agencias`) **todavía no ha llegado a la sección `#nosotros`**, por lo que no sabe quiénes son *"Kevin y David"*:
+- ❌ **Evitar antes de `#nosotros`:** *"Hablas directo con Kevin y David."*
+- ✅ **Usar antes de `#nosotros`:** *"Conversas directamente por WhatsApp o correo con los ingenieros fundadores que desarrollan tu proyecto"* o *"con Dirección Técnica"*.
+- ✅ **Usar dentro de `#nosotros`:** Presentar formalmente a **Kevin D. Ponce** y **David Flores Lagos** con sus cargos y especialidades.
 
 ---
 
-## 3. Matriz de Equivalencias Rápidas
+## 2. Matriz de Equivalencias Rápidas
 
-| Concepto Técnico | Traducción Comercial en LaPonTech |
+| Concepto Técnico | Cómo lo Comunicamos en LaPonTech |
 | :--- | :--- |
-| **Frontend ultra optimizado** | Página rápida que no hace esperar al cliente |
-| **Punto de venta (POS)** | Registro y cobro rápido en mostrador |
-| **Control de inventario Kardex** | Control de existencias para que no te falte ni te sobre mercadería |
-| **Dashboard analítico** | Panel con reportes claros de lo que más vendes cada día |
-| **Base de datos propia** | Tu información bajo tu control, no en manos de un tercero |
-| **Deploy en infraestructura propia** | Tu sistema instalado en tu computadora o en tu propio servidor seguro |
-
----
-
-## 4. Estructura de Mensajes Efectivos en la Web
-
-Cada sección o tarjeta debe responder estas 3 preguntas en menos de 5 segundos de lectura:
-1. **¿Qué problema me resuelve?** (Ej. *¿Cansado de que el inventario no cuadre?*)
-2. **¿Cómo lo hace de forma sencilla?** (Ej. *Diseñamos un sistema que registra entradas y salidas en un clic desde tu computadora o celular.*)
-3. **¿Cuál es el siguiente paso sin compromiso?** (Ej. *Cotizar por WhatsApp → Respuesta en horario hábil.*)
+| **SEO + GEO (Generative Engine Optimization)** | Estructura limpia que facilita que Google y modelos de IA (ChatGPT, Gemini, Perplexity) comprendan tu negocio y sea más probable que te muestren |
+| **Sin rentas forzosas** | Eres 100% dueño de tu proyecto; el mantenimiento, soporte o hosting administrado son planes opcionales con tarifas fijas |
+| **Autenticación SPF, DKIM y DMARC** | Sellos de seguridad sobre proveedores externos especializados (Google Workspace, Microsoft 365, Zoho) para que tus correos no caigan en spam |
+| **Webhooks y flujos de automatización** | Conexión automática de tus ventas, formularios y avisos por WhatsApp o hojas de control según lo que tu negocio necesite |
+| **Servicio White-Label B2B** | Tu brazo técnico externo en modalidad marca blanca: ejecutamos la ingeniería respetando al 100% la relación con tus clientes |

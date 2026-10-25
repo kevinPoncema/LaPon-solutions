@@ -1,77 +1,76 @@
 # 🎯 Clientes Objetivo y Análisis de Mercado — LaPonTech Solutions
 
-Documento semántico que describe el perfil psicográfico, los dolores cotidianos, la realidad comercial y los criterios de compra de los clientes a los que sirve **LaPon Tech Solutions**.
+Documento semántico que describe el enfoque comercial híbrido (**B2C para Comercios/PYMEs** y **B2B en Marca Blanca para Agencias**), los dolores cotidianos y los criterios de decisión de los clientes de **LaPon Tech Solutions**.
 
 ---
 
 ## 1. El Contexto Comercial en Honduras
 
-La mayoría de los negocios en Honduras operan bajo estas realidades:
-1. **Conexiones Móviles Prepago:** Clientes finales y dueños navegan principalmente en sus teléfonos móviles usando datos celulares (paquetes Tigo/Claro). Si una página tarda más de 3 segundos en abrir, el usuario la cierra y se va a la competencia.
-2. **Cultura de Compra por WhatsApp:** El hondureño promedio no compra rellenando carritos de compras complejos con pasarelas de pago que piden tarjeta de crédito; prefiere ver las fotos y precios, presionar un botón y consultar directamente a WhatsApp para acordar entrega o pago en efectivo/transferencia.
-3. **Desconfianza por Malas Experiencias:** Muchos comerciantes han sido estafados por "agencias" que les cobraron caro por webs en WordPress que nunca funcionaron bien o por sistemas con cuotas mensuales sorpresa por cada usuario agregado.
+La mayoría de los negocios y agencias en Honduras operan bajo estas realidades:
+1. **Conexiones Móviles con Datos:** Los usuarios finales navegan principalmente desde teléfonos celulares usando datos móviles. Si una página está sobrecargada y tarda demasiado en abrir, el visitante la cierra antes de consultar.
+2. **Cultura de Conversión por WhatsApp:** El comprador local prefiere ver productos o servicios claros, tocar un botón y conversar directamente por WhatsApp para cerrar su pedido o cotización.
+3. **Cansancio de Suscripciones Forzosas y Cuellos de Botella Técnicos:** Los comercios buscan ser dueños de sus herramientas sin pagar rentas mensuales obligatorias por usuario, mientras que las agencias de marketing necesitan un respaldo de ingeniería confiable sin asumir costos fijos de planilla.
 
 ---
 
-## 2. Segmentación de Clientes
+## 2. Segmentación Híbrida de Clientes
 
-### Segmento A: Pequeños Comercios y Negocios Familiares (Foco Principal — 70%)
+### Segmento A: Pequeños Comercios y Negocios en Crecimiento (PYMEs)
 - **Sectores Típicos:**
-  - Ferreterías de colonia y suministros de construcción.
-  - Farmacias independientes y droguerías de barrio.
-  - Venta de repuestos para autos y motocicletas.
-  - Talleres mecánicos y de refrigeración.
-  - Bodegas de abarrotes y distribuidoras de alimentos.
-  - Restaurantes, cafeterías y negocios de comida rápida.
-  - Tiendas de ropa, calzado o accesorios que venden por redes sociales.
-- **Dolores Reales (Pain Points):**
-  - **Inventario ciego:** No saben con certeza qué productos se están agotando hasta que el cliente llega a pedirlo y no hay.
-  - **Cuentas por cobrar en cuadernos:** Anotan créditos ("fiados") en libretas que se pierden, se manchan o se rompen.
-  - **Pérdida de ventas en WhatsApp:** El cliente pide precios por mensaje, el dueño tarda 2 horas en responder con fotos sueltas, y para cuando contesta, el cliente ya compró en otro lugar.
-  - **Miedo al software tradicional:** Creen que para usar un sistema necesitan ser "expertos en computación" o comprar computadoras de última generación.
+  - Ferreterías, farmacias, tiendas de repuestos automotrices y talleres.
+  - Bodegas de abarrotes, distribuidoras, restaurantes, cafeterías y tiendas con venta por redes sociales.
+  - Clínicas médicas, laboratorios, despachos contables y servicios profesionales.
+- **Problemas Frecuentes que Resolvemos:**
+  - **Pérdida de clientes por no tener catálogo claro ni presencia en buscadores/IA:** Dependen solo de responder mensajes manuales en redes sociales y no aparecen cuando alguien busca sus servicios en Google o en inteligencias artificiales (ChatGPT, Gemini, Perplexity).
+  - **Desorden operativo en cuadernos o Excel:** No tienen claridad inmediata de qué mercadería está por agotarse o qué facturas pendientes están por vencer.
+  - **Tareas repetitivas manuales:** Pierden horas enviando confirmaciones o recordatorios de cobro uno por uno y copiando datos dos veces.
 - **Lo que les Convence de LaPonTech:**
-  - La herramienta se aprende a usar en 10 minutos.
-  - Funciona rápido en la computadora que ya tienen o en el celular.
-  - No pagan cuotas mensuales por usar su propio sistema.
-  - El catálogo web permite al cliente elegir productos y mandar el pedido ordenado al WhatsApp del negocio.
+  - Páginas web rápidas pensadas para celulares y estructuradas con **SEO + GEO** para facilitar que Google y las IAs reconozcan su negocio.
+  - Sistemas hechos exactamente a la medida de su flujo de trabajo.
+  - **Propiedad del 100% y mantenimiento opcional:** Pagan por su desarrollo y deciden libremente si lo administran por su cuenta o contratan soporte opcional.
 
-### Segmento B: Medianas Empresas en Expansión (Foco Secundario — 30%)
+### Segmento B: Medianas Empresas en Expansión
 - **Sectores Típicos:**
-  - Distribuidoras locales con 2 o más sucursales en el Valle de Sula.
-  - Clínicas médicas y laboratorios con varios consultorios.
-  - Despachos contables o agencias de servicios con 5 a 30 empleados.
-  - Empresas de transporte o talleres industriales.
-- **Dolores Reales:**
-  - **El alquiler del software (SaaS) se volvió insostenible:** El proveedor internacional les cobra \$50 a \$200 mensuales *por cada usuario*, sangrando el flujo de caja.
-  - **Software secuestrado:** Si quieren cambiarse de programa, el proveedor anterior no les da acceso a la base de datos de sus clientes e histórico de ventas.
-  - **Rigidez:** Las aplicaciones genéricas les obligan a cambiar su forma de trabajar porque no se pueden personalizar.
+  - Distribuidoras con varias sucursales en el Valle de Sula, empresas de logística o firmas con 5 a 30 empleados.
+- **Problemas Frecuentes que Resolvemos:**
+  - **Licencias mensuales acumulativas (SaaS):** Proveedores que cobran mensualidades obligatorias por cada empleado conectado y suspenden el acceso si dejan de pagar.
+  - **Falta de control sobre sus datos y dominios:** Dificultad para acceder a su propia base de datos o configurar sus correos corporativos para que no caigan en spam.
 - **Lo que les Convence de LaPonTech:**
-  - **Soberanía digital:** El código y la base de datos son 100% de la empresa, desplegados en su propia infraestructura.
-  - Lógica adaptada a su flujo exacto de compras, inventario Kardex y autorización de pedidos.
-  - Pólizas de mantenimiento y soporte opcionales y transparentes, nunca forzosas.
+  - Control total sobre su base de datos, código y dominio `.com`.
+  - Configuración profesional de DNS y correos corporativos (`SPF, DKIM, DMARC`) sobre proveedores externos especializados (Google Workspace, Microsoft 365, Zoho).
+
+### Segmento C: Agencias de Marketing, Diseño y Publicidad (Modalidad Marca Blanca — B2B)
+- **Perfil:** Directores o fundadores de agencias de marketing digital, estudios de diseño gráfico, agencias de publicidad y consultores de pauta.
+- **Problemas Frecuentes que Resolvemos:**
+  - **Cuellos de botella técnicos:** Tienen campañas publicitarias o diseños listos, pero carecen de un ingeniero interno para programar landings ultrarrápidas, configurar DNS/correos o conectar webhooks con WhatsApp/CRM.
+  - **Costos fijos elevados:** No desean contratar programadores en planilla fija para proyectos puntuales.
+  - **Temor a que el proveedor técnico compita con ellos:** Necesitan un socio técnico que respete al 100% su autoría comercial y su relación con el cliente final.
+- **Lo que les Convence de LaPonTech:**
+  - **Ejecución 100% en Marca Blanca:** Operamos detrás de escena con total discreción y respeto por sus clientes.
+  - **Tarifas preferenciales para agencias y descuento introductorio** en los primeros encargos para maximizar su margen comercial con riesgo mínimo.
 
 ---
 
-## 3. Barreras de Entrada que Rompe LaPonTech
+## 3. Problemas Frecuentes vs. Nuestro Enfoque
 
 ```mermaid
 graph TD
-    subgraph Barreras["Barreras Típicas del Mercado"]
-        B1["Precios ocultos y alquileres eternos"]
-        B2["Sistemas lentos e interfaces enredadas"]
-        B3["Páginas que tardan 10s en cargar"]
-        B4["Intermediarios que no resuelven"]
+    subgraph Problemas["El Problema Frecuente en el Mercado"]
+        P1["Sitios pesados que tardan en abrir con datos móviles"]
+        P2["Licencias mensuales obligatorias por usuario"]
+        P3["Falta de acceso a dominios, DNS o bases de datos"]
+        P4["Soporte lento con múltiples intermediarios"]
     end
 
-    subgraph Solucion["La Respuesta de LaPonTech"]
-        S1["Sin rentas forzosas: eres dueño de tu sistema"]
-        S2["Diseño limpio y fácil desde PC o celular"]
-        S3["Carga instantánea en menos de 1 segundo"]
-        S4["Trato directo con Kevin y David por WhatsApp"]
+    subgraph Enfoque["Nuestro Enfoque en LaPonTech"]
+        E1["Sitios ligeros con estructura SEO + GEO para buscadores e IA"]
+        E2["100% propiedad del cliente con mantenimiento opcional"]
+        E3["Credenciales, código y datos documentados a tu nombre"]
+        E4["Trato directo por WhatsApp o correo con los ingenieros fundadores"]
     end
 
-    B1 --> S1
-    B2 --> S2
-    B3 --> S3
-    B4 --> S4
+    P1 --> E1
+    P2 --> E2
+    P3 --> E3
+    P4 --> E4
 ```
