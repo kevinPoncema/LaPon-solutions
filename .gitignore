@@ -21,3 +21,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# local agent skills and audit artifacts
+.agent/
+FULL-AUDIT-REPORT.md
+ACTION-PLAN.md

@@ -8,15 +8,15 @@
     "telefono_clean": "50499000000",
     "correo": "contacto@lapontech.com",
     "whatsapp_link": "https://wa.me/50499000000",
-    "eslogan": "Páginas Web Rápidas y Sistemas para Negocios sin Rentas Forzosas"
+    "eslogan": "Páginas Web Rápidas y Sistemas a Medida para Negocios sin Rentas Forzosas"
   },
   "hero": {
-    "badge": "Páginas Web Rápidas & Sistemas para Negocios · San Pedro Sula",
-    "titulo_principal": "Páginas web rápidas y sistemas para tu negocio",
+    "badge": "Páginas Web Rápidas & Sistemas a Medida · Honduras",
+    "titulo_principal": "Páginas web rápidas y sistemas a medida para tu negocio",
     "titulo_destacado": "sin rentas forzosas",
-    "subtitulo": "Creamos páginas web que abren en menos de 1 segundo en cualquier celular y sistemas fáciles para controlar inventario, ventas y facturación. Sin mensualidades abusivas: eres dueño total de tu sistema y de la información de tu negocio.",
+    "subtitulo": "Creamos páginas web que abren en menos de 1 segundo en celulares y sistemas fáciles para ordenar tus ventas, inventario o procesos. Sin mensualidades abusivas: pagas por tu herramienta y eres dueño total de tu sistema y de tu información.",
     "cta_whatsapp_texto": "Solicitar Diagnóstico Gratuito por WhatsApp",
-    "cta_microtexto": "Sin compromiso • Respuesta en horario hábil",
+    "cta_microtexto": "Sin compromiso • Respuesta directa en horario hábil",
     "cta_comparativa_texto": "Ver Comparativa para Negocios",
     "estadisticas": [
       {
@@ -30,7 +30,7 @@
         "detalle": "Sin software secuestrado ni rentas forzosas"
       },
       {
-        "valor": "7-10 Días",
+        "valor": "≤ 7 Días",
         "etiqueta": "Tu Página Web Lista",
         "detalle": "Catálogo digital y botón directo a WhatsApp"
       },
@@ -48,32 +48,32 @@
       {
         "criterio": "Velocidad en Celulares",
         "badge": "⚡ Carga en < 1 segundo",
-        "nosotros": "Páginas y sistemas ultrarrápidos que abren al instante incluso con datos móviles lentos, para que tus clientes no se cansen de esperar y te compren rápido.",
-        "otros": "Páginas pesadas y lentas que tardan más de 5 segundos en abrir, se traban en celulares o se caen cuando entran clientes."
+        "nosotros": "Páginas y sistemas ligeros que abren al instante incluso con datos móviles prepago. Tus clientes ven lo que ofreces rápido y te escriben sin esperar.",
+        "otros": "Páginas pesadas que tardan más de 8 segundos en abrir en el celular, se traban y hacen que el cliente cierre la ventana."
       },
       {
         "criterio": "Costos y Mensualidades",
         "badge": "🚫 Sin Rentas Forzosas",
-        "nosotros": "Sin rentas forzosas de software: no te cobramos suscripciones abusivas por usar tu propio sistema. Eres dueño de tu operación y decides si contratas nuestras pólizas opcionales de soporte y respaldo.",
-        "otros": "Suscripciones mensuales obligatorias e interminables que aumentan de precio cada año y te obligan a pagar para no perder tu sistema."
+        "nosotros": "No te cobramos alquileres mensuales obligatorios por usar tu propio sistema. Eres dueño de tu herramienta y tú decides si contratas pólizas opcionales de soporte.",
+        "otros": "Suscripciones mensuales obligatorias por cada usuario o caja que suben de precio cada año. Si dejas de pagar, te cortan el acceso."
       },
       {
         "criterio": "Propiedad de tu Información",
-        "badge": "🔒 Soberanía Total de tus Datos",
-        "nosotros": "Soberanía digital: acceso total a tu base de datos y a la lógica a medida de tu negocio, desplegado en tu propia infraestructura y sin software secuestrado.",
-        "otros": "Plataformas cerradas o agencias que se quedan con tus accesos y te impiden cambiarte si no estás satisfecho."
+        "badge": "🔒 Tus Datos son 100% Tuyos",
+        "nosotros": "Tu base de datos de clientes, ventas e inventario queda bajo tu control total, instalada en tu equipo o servidor propio. Nunca retenemos tus contraseñas.",
+        "otros": "Plataformas cerradas o agencias que se quedan con tus claves y no te entregan tus datos si deseas cambiar de proveedor."
       },
       {
         "criterio": "Atención y Respuestas",
         "badge": "🤝 Trato Directo con Fundadores",
-        "nosotros": "Trato directo con los ingenieros fundadores por WhatsApp, sin intermediarios ni ejecutivos de cuenta. Respuestas claras y soluciones técnicas directas en horario hábil.",
-        "otros": "Te atienden ejecutivos de ventas que no saben de programación o sistemas de tickets que tardan días en responder."
+        "nosotros": "Hablas directo por WhatsApp con Kevin y David, los ingenieros fundadores. Recibes respuestas claras, honestas y sin rodeos en horario hábil.",
+        "otros": "Te atienden vendedores que no conocen la parte técnica o sistemas de tickets que tardan días en contestar."
       },
       {
         "criterio": "Facilidad y Estabilidad",
         "badge": "🛡️ Fácil de Usar y Seguro",
-        "nosotros": "Herramientas hechas a la medida exacta de tu negocio: fáciles de aprender para cualquier persona de tu equipo, seguras y sin fallos extraños.",
-        "otros": "Programas complicados llenos de botones que no usas o plantillas genéricas que no se adaptan a cómo vendes."
+        "nosotros": "Herramientas diseñadas a la medida exacta de tu negocio. Cualquier persona de tu equipo aprende a usarlas en minutos desde celular o computadora.",
+        "otros": "Programas complicados llenos de menús que nunca usas o plantillas genéricas que no se adaptan a tu forma de vender."
       }
     ]
   },
@@ -84,12 +84,12 @@
       "titulo": "Páginas Web Profesionales & Catálogos Digitales",
       "subtitulo": "Facilita que tus clientes conozcan tus productos o servicios y te pidan cotizaciones por WhatsApp en segundos.",
       "badges": ["⚡ Carga Instantánea", "📲 Enfoque en WhatsApp", "🎯 100% Tu Dominio"],
-      "descripcion": "Diseñamos páginas web y catálogos interactivos ultrarrápidos, limpios y optimizados para celulares. El complemento perfecto para tus redes sociales: organiza tus productos, precios y datos clave en un solo lugar accesible las 24 horas, eliminando la pérdida de ventas por mensajes sin responder.",
+      "descripcion": "Diseñamos páginas web profesionales y catálogos interactivos rápidos, limpios y optimizados para celulares. Es el complemento ideal para tus redes sociales: organiza tus productos, servicios, precios y ubicación en un solo enlace disponible las 24 horas. Así evitas perder clientes por mensajes sin responder.",
       "puntos_clave": [
         "Abre en menos de 1 segundo en celulares: Carga instantánea para que tus visitas no se vayan antes de ver tu oferta.",
-        "Botón y pedidos directos a WhatsApp: Tus clientes seleccionan lo que desean y te envían el mensaje con la consulta o pedido listo.",
-        "Catálogo claro y ordenado: Presentación impecable de tus productos, fotos, precios y horarios sin depender de que revisen decenas de publicaciones.",
-        "Control y propiedad total: El nombre de dominio y todos los accesos quedan registrados 100% a nombre de tu negocio."
+        "Botón y pedidos directos a WhatsApp: Tus clientes eligen lo que necesitan y te envían el mensaje con la consulta o pedido listo.",
+        "Catálogo y servicios bien ordenados: Presentación clara de tus fotos, precios y horarios sin que el cliente tenga que buscar entre decenas de publicaciones.",
+        "Control y propiedad total: El nombre de dominio (.com) y todos los accesos quedan registrados 100% a nombre de tu negocio."
       ],
       "cta_texto": "Cotizar página o catálogo →",
       "servicio_form_val": "presencia-digital",
@@ -101,12 +101,12 @@
       "titulo": "Desarrollo de Software & Sistemas a Medida",
       "subtitulo": "Construimos herramientas digitales adaptadas al flujo exacto de tu negocio, sin atarte a suscripciones eternas.",
       "badges": ["📦 Soluciones a Medida", "🔒 Código y Datos Propios", "🚫 Cero Mensualidades Forzosas"],
-      "descripcion": "Si las libretas, las hojas de cálculo desordenadas o los programas genéricos ya te quedan cortos, creamos la solución que tu operativa necesita. Diseñamos sistemas limpios y rápidos para resolver tu cuello de botella: desde paneles administrativos y control de inventario/bodega, hasta puntos de venta (POS) o automatizaciones de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.",
+      "descripcion": "Si los cuadernos, las hojas de Excel desordenadas o los programas genéricos ya te quedan cortos, creamos la solución exacta que tu operación necesita. Diseñamos sistemas rápidos y claros para resolver tu cuello de botella: desde control de inventario y bodega, hasta puntos de venta (POS), paneles administrativos o seguimiento de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.",
       "puntos_clave": [
-        "Hecho a la medida de tu proceso: Desarrollamos funciones pensadas para tu forma de trabajar, sin pagar por botones o módulos que nunca vas a usar.",
-        "Ejemplos de lo que construimos: Control de stock (Kardex), registro de cobros en mostrador, paneles de seguimiento de pedidos o cotizadores automáticos.",
-        "Propiedad total del sistema: El software y la base de datos son 100% tuyos, sin pagar rentas mensuales abusivas por cada empleado o usuario.",
-        "Fácil de usar desde el celular o computadora: Interfaces directas y rápidas para que tu equipo aprenda a usarlo en minutos y sin enredos."
+        "Hecho a la medida de tu proceso: Desarrollamos solo las funciones pensadas para tu forma de trabajar, sin botones de adorno que nadie usa.",
+        "Ejemplos de lo que construimos: Control de existencias y bodega, registro de cobros en mostrador, cuentas por cobrar, seguimiento de pedidos o cotizadores.",
+        "Propiedad total del sistema: El programa y la base de datos son 100% tuyos, sin pagar rentas mensuales abusivas por cada empleado o usuario.",
+        "Fácil de usar en celular o computadora: Pantallas limpias y directas para que tu equipo aprenda a usarlo en minutos y sin enredos."
       ],
       "cta_texto": "Cotizar desarrollo a medida →",
       "servicio_form_val": "facturacion-inventario",
@@ -118,12 +118,12 @@
       "titulo": "Automatización Operativa & Mensajes por WhatsApp",
       "subtitulo": "Elimina tareas manuales repetitivas y atiende a tus clientes en segundos.",
       "badges": ["🤖 Cero Tareas Manuales", "⚡ Respuestas Inmediatas", "📊 Todo Sincronizado"],
-      "descripcion": "Conectamos tu negocio para que tareas repetitivas se hagan solas: confirmaciones automáticas por WhatsApp cuando recibes una solicitud, sincronización de pedidos y recordatorios automáticos de cobro.",
+      "descripcion": "Conectamos tu negocio para que las tareas repetitivas se hagan solas y sin errores humanos. Configuramos confirmaciones automáticas por WhatsApp cuando recibes un pedido, sincronización de ventas con tus hojas de control y recordatorios automáticos de cobro.",
       "puntos_clave": [
-        "Avisos automáticos por WhatsApp cuando entra un nuevo pedido o cotización",
-        "Sincronización directa con hojas de cálculo o tu sistema sin copiar datos a mano",
-        "Recordatorios automáticos de facturas pendientes para que tus clientes te paguen a tiempo",
-        "Ahorro de horas de trabajo diario para ti y tus colaboradores"
+        "Avisos automáticos por WhatsApp a clientes y empleados cuando entra un nuevo pedido o cotización.",
+        "Sincronización directa con hojas de cálculo o tu sistema para no copiar datos a mano dos veces.",
+        "Recordatorios automáticos de cuentas o facturas pendientes para que tus clientes te paguen a tiempo.",
+        "Alertas tempranas cuando un producto clave en bodega está por agotarse."
       ],
       "cta_texto": "Cotizar automatización →",
       "servicio_form_val": "automatizaciones",
@@ -135,12 +135,12 @@
       "titulo": "Asesoría en Computadoras, Equipos & Sistemas",
       "subtitulo": "Respaldo y soporte de confianza para tus equipos, redes y programas.",
       "badges": ["💻 Diagnóstico Honesto", "🛡️ Copias de Seguridad", "🤝 Trato con Fundadores"],
-      "descripcion": "Te orientamos con total honestidad para que no gastes de más: desde qué computadoras comprar para tu negocio, hasta solucionar máquinas lentas, copias de seguridad de datos importantes y soporte directo.",
+      "descripcion": "Te orientamos con total honestidad para que inviertas bien y no gastes de más en piezas o equipos innecesarios. Te ayudamos a elegir qué computadoras comprar, aceleramos máquinas lentas y configuramos copias de seguridad para proteger la información de tu negocio.",
       "puntos_clave": [
-        "Recomendaciones honestas de compra de computadoras según tu presupuesto real",
-        "Diagnóstico y solución para computadoras lentas o programas que se traban",
-        "Copias de seguridad (backups) automáticas para proteger facturas y archivos críticos",
-        "Trato directo con los ingenieros fundadores por llamada o WhatsApp en horario hábil"
+        "Recomendaciones honestas para comprar computadoras, impresoras térmicas y lectores de barra según tu presupuesto.",
+        "Diagnóstico y solución para computadoras lentas, fallos de red local o programas que se traban.",
+        "Copias de seguridad automáticas para proteger tus facturas, inventarios y archivos importantes.",
+        "Trato directo con los ingenieros fundadores por WhatsApp o visita presencial en San Pedro Sula."
       ],
       "cta_texto": "Consultar asesoría técnica →",
       "servicio_form_val": "asesoria-tecnica",
@@ -150,43 +150,43 @@
   "sobre_nosotros": {
     "badge": "Propósito & Fundadores",
     "titulo_principal": "Tecnología práctica y transparente para tu negocio",
-    "subtitulo": "En LaPonTech creemos que la tecnología debe ser una herramienta para vender más y trabajar con tranquilidad, no un gasto mensual eterno ni un dolor de cabeza lleno de palabras difíciles.",
+    "subtitulo": "En LaPonTech creemos que la tecnología debe ayudarte a vender más y trabajar con tranquilidad. No debe ser un gasto mensual eterno ni un dolor de cabeza lleno de palabras difíciles.",
     "principios": [
       {
         "titulo": "Sin Rentas Forzosas de Software",
-        "descripcion": "No te cobramos suscripciones abusivas por usar tu propio sistema. Eres dueño de tu operación y decides si contratas nuestras pólizas opcionales de soporte y respaldo.",
+        "descripcion": "No te cobramos suscripciones abusivas por usar tu propio sistema. Eres dueño de tu herramienta y tú decides si contratas pólizas opcionales de soporte.",
         "badge": "🚫 Cero Rentas"
       },
       {
         "titulo": "Tus Datos y Sistema son Tuyos",
-        "descripcion": "Soberanía digital: acceso total a tu base de datos y a la lógica a medida de tu negocio, desplegado en tu propia infraestructura y sin software secuestrado.",
+        "descripcion": "Tienes control total sobre tu base de datos, tu sistema y tus contraseñas. Todo queda instalado en tu equipo o servidor propio, sin software secuestrado.",
         "badge": "🔒 Acceso Total"
       },
       {
         "titulo": "Velocidad Real que Vende",
-        "descripcion": "Páginas y sistemas que cargan en menos de 1 segundo en cualquier celular, para que tus clientes no se cansen de esperar y compren rápido.",
+        "descripcion": "Páginas y sistemas que abren en menos de 1 segundo en cualquier celular. Tus clientes no se cansan de esperar y te compran más rápido.",
         "badge": "⚡ Carga en < 1s"
       },
       {
         "titulo": "Trato Directo y Claro",
-        "descripcion": "Trato directo con los ingenieros fundadores por WhatsApp, sin intermediarios ni ejecutivos de cuenta. Respuestas claras y soluciones directas en horario hábil.",
+        "descripcion": "Hablas directo con los ingenieros fundadores por WhatsApp, sin intermediarios ni vendedores. Respuestas claras y soluciones directas en horario hábil.",
         "badge": "🤝 Sin Intermediarios"
       }
     ],
     "fundadores_titulo": "Dos ingenieros técnicos, una visión compartida",
-    "fundadores_subtitulo": "David Flores Lagos y Kevin D. Ponce, técnicos en informática orientada a la programación, somos los fundadores de LaPonTech. Diseñamos herramientas útiles, estables y hechas a la medida de tu realidad.",
+    "fundadores_subtitulo": "David Flores Lagos y Kevin D. Ponce somos los fundadores de LaPonTech en San Pedro Sula. Diseñamos herramientas útiles, estables y hechas a la medida de la realidad de tu negocio.",
     "fundadores": [
       {
         "nombre": "David Flores Lagos",
         "cargo": "Co-Fundador · Técnico en Informática Orientada a la Programación",
         "enfoque": "Soporte Técnico, Atención al Cliente & Diseño Web",
-        "descripcion": "Especialista en atención personalizada, soporte técnico y diseño de páginas web fáciles de usar. Trato directo, comunicación clara y soluciones rápidas a tus consultas en horario hábil."
+        "descripcion": "Especialista en atención cercana, soporte técnico y diseño de páginas web fáciles de usar. Te acompaña paso a paso con comunicación clara y soluciones rápidas en horario hábil."
       },
       {
         "nombre": "Kevin D. Ponce",
         "cargo": "Co-Fundador · Técnico en Informática Orientada a la Programación",
         "enfoque": "Diseño de Sistemas, Bases de Datos & Infraestructura",
-        "descripcion": "Especialista en la estructura de sistemas, bases de datos seguras y organización de software. Crea sistemas estables que ordenan tu operación y crecen con tu negocio."
+        "descripcion": "Especialista en el desarrollo de sistemas a medida y bases de datos seguras. Construye herramientas rápidas y estables que ordenan tu inventario, tus cobros y tu operación."
       }
     ]
   },
@@ -197,22 +197,22 @@
       {
         "numero": "01",
         "nombre": "Conversación Inicial",
-        "descripcion": "Hablamos por WhatsApp o llamada para conocer tu negocio, qué necesitas resolver y cuál es la opción más económica y práctica, sin compromiso."
+        "descripcion": "Hablamos por WhatsApp o llamada para entender tu negocio y qué deseas resolver. Te recomendamos la opción más práctica y económica sin compromiso."
       },
       {
         "numero": "02",
         "nombre": "Presupuesto Claro y Cerrado",
-        "descripcion": "Te presentamos un plan sencillo con lo que incluye, tiempos de entrega y el precio cerrado por nuestro trabajo. Sin cobros sorpresa ni letra pequeña."
+        "descripcion": "Te entregamos un plan sencillo con lo que incluye, fechas de entrega y precio fijo cerrado. Sin cobros sorpresa ni letra pequeña."
       },
       {
         "numero": "03",
         "nombre": "Construcción y Revisiones Contigo",
-        "descripcion": "Desarrollamos tu página o sistema mostrándote avances periódicos para que des tu visto bueno y comprobemos juntos que todo funciona fácil y a tu gusto."
+        "descripcion": "Desarrollamos tu página o sistema mostrándote avances reales en tu celular o computadora. Así comprobamos juntos que todo funcione fácil y a tu gusto."
       },
       {
         "numero": "04",
         "nombre": "Entrega, Accesos & Capacitación",
-        "descripcion": "Ponemos a funcionar la herramienta, te entregamos todas tus contraseñas y accesos, y te enseñamos con paciencia a usarla para que tengas autonomía total."
+        "descripcion": "Dejamos tu herramienta funcionando, te entregamos todas tus claves a tu nombre y capacitamos con paciencia a tu equipo para que tengan autonomía total."
       }
     ]
   },
@@ -221,47 +221,47 @@
     "items": [
       {
         "titulo": "Carga Rápida Garantizada",
-        "descripcion": "Probamos tu página o sistema en teléfonos móviles para asegurar que cargue en menos de 1 segundo y funcione fluido antes de entregártelo."
+        "descripcion": "Probamos tu página o sistema en teléfonos móviles reales para asegurar que abra en menos de 1 segundo antes de entregártelo."
       },
       {
         "titulo": "Trato Directo con Fundadores",
-        "descripcion": "Hablas y trabajas directamente con los fundadores técnicos por WhatsApp en horario hábil. Sin intermediarios comerciales ni secretarias."
+        "descripcion": "Hablas y trabajas directamente con Kevin y David por WhatsApp en horario hábil. Sin vendedores intermediarios ni secretarias."
       },
       {
         "titulo": "Acompañamiento Post-Entrega",
-        "descripcion": "Cuentas con nuestro respaldo durante las primeras semanas tras la entrega para resolver cualquier duda y asegurarnos de que todo marche perfecto."
+        "descripcion": "Cuentas con nuestro respaldo durante las primeras semanas tras la entrega para resolver dudas y asegurar que todo tu equipo trabaje cómodo."
       }
     ]
   },
   "faq": [
     {
       "pregunta": "¿Quién es el dueño de la página web o del sistema?",
-      "respuesta": "Soberanía digital: acceso total a tu base de datos y a la lógica a medida de tu negocio, desplegado en tu propia infraestructura y sin software secuestrado. Tú eres el dueño absoluto. Sin rentas forzosas de software ni suscripciones abusivas."
+      "respuesta": "Tú eres el dueño absoluto desde el primer día. Te entregamos el sistema instalado, tu base de datos completa, tu dominio web (.com) registrado a tu nombre y todas las contraseñas. En LaPonTech no cobramos rentas mensuales forzosas por usar tu propio programa ni retenemos tus datos."
     },
     {
       "pregunta": "¿Cómo se pagan el dominio web y el servidor?",
-      "respuesta": "Con total transparencia: el registro anual del dominio o el servidor se pagan directamente al proveedor oficial a precio real y a tu nombre. Te asesoramos para elegir la opción más económica y confiable, sin comisiones ocultas ni cobros inflados."
+      "respuesta": "Con total transparencia. El registro anual del dominio (.com) o el servidor se pagan directamente al proveedor oficial a precio real y a nombre de tu negocio. Nosotros te asesoramos para elegir la opción más económica y segura, sin comisiones ocultas ni cobros inflados."
     },
     {
       "pregunta": "¿El sistema a medida o la página web son difíciles de usar?",
-      "respuesta": "Para nada. Los diseñamos pensando en la simplicidad y en el usuario real, para que cualquier persona en tu tienda o empresa pueda usarlo fácilmente desde un celular o computadora. Además, te capacitamos paso a paso."
+      "respuesta": "Para nada. Los diseñamos pensando en dueños y empleados que buscan rapidez y simplicidad, sin palabras técnicas. Cualquier persona en tu negocio aprende a usarlos en minutos desde un celular o computadora, y además te incluimos capacitación paso a paso."
     },
     {
-      "pregunta": "¿Cuánto tiempo tarda en estar lista una página web o sistema?",
-      "respuesta": "Una página web suele estar lista en 1 semana o menos (7-10 días). Un sistema a medida toma de 1 a 3 meses; todo dependiendo siempre de la escala del proyecto y de qué tan rápido nos faciliten la información necesaria."
+      "pregunta": "¿Cuánto tiempo tarda en estar lista una página web o un sistema a medida?",
+      "respuesta": "Una página web profesional o catálogo digital está lista en 1 semana o menos (5 a 7 días hábiles tras recibir tus fotos y datos). Un sistema de software a medida toma de 1 a 3 meses según las funciones requeridas, entregándote avances periódicos para tu revisión."
     },
     {
       "pregunta": "¿Ofrecen soporte técnico después de entregar el trabajo?",
-      "respuesta": "Sí. Cuentas con acompañamiento garantizado tras la entrega para resolver dudas. Eres libre de operar por tu cuenta o contratar pólizas opcionales de soporte y respaldo cuando lo requieras."
+      "respuesta": "Sí. Incluimos acompañamiento garantizado durante las primeras semanas después de la entrega para resolver cualquier duda. Luego eres libre de operar por tu cuenta sin pagos mensuales, o contratar pólizas opcionales de soporte y copias de seguridad cuando lo necesites."
     },
     {
-      "pregunta": "¿Atienden negocios fuera de San Pedro Sula?",
-      "respuesta": "Nuestra base operativa está en San Pedro Sula, pero siempre podemos atenderte por llamada o WhatsApp sin importar en qué zona esté tu negocio, realizando todo el proceso 100% en línea de manera ágil y cómoda."
+      "pregunta": "¿Para qué tipo de negocios trabajan y en qué zonas de Honduras atienden?",
+      "respuesta": "Atendemos comercios, negocios familiares y PYMEs como ferreterías, farmacias, tiendas de repuestos, talleres, bodegas, distribuidoras, restaurantes, clínicas y firmas de servicios. Trabajamos de forma presencial en San Pedro Sula y el Valle de Sula (Choloma, Villanueva, El Progreso y Puerto Cortés), y 100% en línea por WhatsApp y videollamada en Tegucigalpa y toda Honduras."
     }
   ],
   "contacto_whatsapp": {
     "titulo": "¿Tienes un proyecto o necesitas ordenar tu negocio?",
-    "subtitulo": "Escríbenos directamente por WhatsApp. Te responderemos en horario hábil con una orientación clara, honesta y sin palabras complicadas.",
+    "subtitulo": "Escríbenos directamente por WhatsApp. Kevin y David te responderemos en horario hábil con una orientación clara, honesta y sin palabras complicadas.",
     "telefono": "50499000000",
     "select_opciones": [
       {

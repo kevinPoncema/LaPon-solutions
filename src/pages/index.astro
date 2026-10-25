@@ -6,8 +6,8 @@ import serviciosData from "../json/servicios.json";
 
 const { empresa, hero, por_que_nosotros, servicios, sobre_nosotros, metodologia, garantias, faq, contacto_whatsapp } = serviciosData;
 
-const pageTitle = "LaPonTech | Páginas Web Rápidas y Software a Medida en San Pedro Sula";
-const pageDescription = "Creamos páginas web ultrarrápidas, catálogos digitales para WhatsApp y software a medida sin mensualidades forzosas para tu negocio en Honduras.";
+const pageTitle = "LaPonTech | Páginas Web y Sistemas a Medida en Honduras";
+const pageDescription = "Páginas web rápidas, catálogos con WhatsApp y sistemas a medida sin rentas mensuales en San Pedro Sula y Honduras. 100% tuyos. ¡Cotiza por WhatsApp!";
 
 const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIComponent("Hola LaPonTech, quisiera solicitar un diagnóstico gratuito para mi negocio.")}`;
 ---
@@ -100,10 +100,10 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
           🛠️ Soluciones para Negocios
         </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-          Servicios Pensados para Dar Resultados
+          Servicios y Soluciones para tu Negocio
         </h2>
         <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-          Diseñamos herramientas útiles y sencillas adaptadas a cómo opera tu negocio en la vida real. Rápidas, fáciles de usar y 100% de tu propiedad.
+          Diseñamos páginas web para captar clientes, sistemas a medida para ordenar tu operación, automatizaciones por WhatsApp y asesoría en equipos. Rápidos, fáciles de usar y 100% de tu propiedad.
         </p>
       </div>
 
@@ -242,13 +242,13 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
                 </p>
               </div>
 
-              <!-- Con Agencias Tradicionales / WordPress -->
+              <!-- Con Programas Alquilados / Agencias Tradicionales -->
               <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
                   <svg class="w-4 h-4 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span>Agencias Tradicionales / WordPress</span>
+                  <span>Programas Alquilados / Agencias Tradicionales</span>
                 </p>
                 <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   {item.otros}
@@ -367,6 +367,28 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
         ))}
       </div>
 
+      <!-- Garantías Comerciales para el Dueño de Negocio -->
+      <div class="mb-10">
+        <h3 class="text-lg sm:text-xl font-bold text-white text-center mb-6">
+          {garantias.titulo}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {garantias.items.map((g) => (
+            <div class="bg-slate-950/70 border border-emerald-500/20 rounded-2xl p-5 flex flex-col justify-between">
+              <div>
+                <h4 class="text-sm sm:text-base font-bold text-emerald-400 mb-1.5 flex items-center gap-2">
+                  <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{g.titulo}</span>
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{g.descripcion}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <!-- Cuentas Claras sobre Dominio e Infraestructura -->
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left shadow-sm">
         <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center flex-shrink-0 shadow-md">
@@ -375,9 +397,9 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
           </svg>
         </div>
         <div>
-          <h4 class="font-bold text-white text-base mb-1">Cuentas claras sobre dominio y servidores</h4>
+          <h4 class="font-bold text-white text-base mb-1">Cuentas claras sobre tu nombre web (.com)</h4>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            El nombre de tu dominio y el servidor se contratan directamente a tu nombre al proveedor oficial a precio real. Te asesoramos técnicamente sin comisiones ocultas ni cobros inflados.
+            Tu dirección web (.com) se registra directamente a tu nombre con el proveedor oficial a precio real. Te ayudamos a configurarlo paso a paso sin comisiones ocultas ni cobros inflados.
           </p>
         </div>
       </div>
@@ -541,7 +563,7 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
         </div>
 
         <!-- Canal 2: Formulario de Contacto -->
-        <form id="contact-form" class="space-y-6" novalidate>
+        <form id="contact-form" data-wa-phone={empresa.telefono_clean} class="space-y-6" novalidate>
           <!-- Honeypot invisible -->
           <div class="hidden" style="display:none !important;" aria-hidden="true">
             <label for="b_field">No llenar este campo:</label>
@@ -663,7 +685,8 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
   <script is:inline>
     // @ts-nocheck
     document.addEventListener("DOMContentLoaded", () => {
-      const WA_PHONE = "50499000000";
+      const form = document.getElementById("contact-form");
+      const WA_PHONE = form?.getAttribute("data-wa-phone") || "50499000000";
 
       function openWhatsApp(customText) {
         const cleanText = encodeURIComponent(customText || "Hola LaPonTech, quisiera solicitar un diagnóstico gratuito para mi negocio.");
@@ -672,7 +695,6 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
       }
 
       // Formulario de Contacto Interactivo con Honeypot
-      const form = document.getElementById("contact-form");
       const honeypot = document.getElementById("b_field");
       const formError = document.getElementById("form-error");
       const serviceSelect = document.getElementById("service_select");

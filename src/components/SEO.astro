@@ -1,5 +1,7 @@
 ---
 // Archivo: src/components/SEO.astro
+import serviciosData from "../json/servicios.json";
+
 export interface Props {
   title?: string;
   description?: string;
@@ -12,8 +14,8 @@ const siteUrl = "https://lapontech.com";
 const companyName = "LaPon Tech Solutions";
 
 const {
-  title = "LaPon Tech Solutions | Software a Medida y Automatización B2B en San Pedro Sula",
-  description = "Agencia tecnológica B2B en San Pedro Sula, Honduras fundada por David Flores y Kevin Ponce. Sistemas de facturación e inventario, software a medida y automatizaciones operativas para PYMEs.",
+  title = "LaPonTech | Páginas Web y Sistemas a Medida en Honduras",
+  description = "Páginas web rápidas, catálogos con WhatsApp y sistemas a medida sin rentas mensuales en San Pedro Sula y Honduras. 100% tuyos. ¡Cotiza por WhatsApp!",
   canonical = Astro.url.pathname,
   ogImage = "/logo-completo.png",
   type = "website",
@@ -22,108 +24,130 @@ const {
 const canonicalURL = new URL(canonical, siteUrl).toString();
 const fullOgImageUrl = ogImage.startsWith("http") ? ogImage : new URL(ogImage, siteUrl).toString();
 
-const schemaJson = {
+const organizationSchema = {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "ProfessionalService",
+  "@id": `${siteUrl}/#organization`,
+  "name": companyName,
+  "alternateName": ["LaPonTech", "LaPon Tech", "LaPon Tech Solution"],
+  "slogan": "Páginas web rápidas y sistemas a medida para tu negocio en Honduras sin rentas forzosas",
+  "url": `${siteUrl}/`,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/logo-completo.png`,
+    "width": 1024,
+    "height": 517
+  },
+  "image": fullOgImageUrl,
+  "description": "Creamos páginas web ultrarrápidas con catálogo de pedidos para WhatsApp y sistemas a medida de inventario, facturación y punto de venta (POS) para comercios y PYMEs en San Pedro Sula y toda Honduras, sin mensualidades forzosas.",
+  "priceRange": "$$",
+  "telephone": serviciosData.empresa.telefono,
+  "email": serviciosData.empresa.correo,
+  "openingHoursSpecification": [
     {
-      "@type": "ProfessionalService",
-      "@id": `${siteUrl}/#organization`,
-      "name": companyName,
-      "alternateName": ["LaPon Tech Solutions", "LaPon Tech Solution", "LaPon"],
-      "url": `${siteUrl}/`,
-      "logo": `${siteUrl}/logo-completo.png`,
-      "image": fullOgImageUrl,
-      "description": "Firma de consultoría y desarrollo tecnológico B2B en San Pedro Sula, Honduras. Especialistas en sistemas empresariales, facturación, inventario y automatización de procesos para PYMEs.",
-      "priceRange": "$$",
-      "telephone": "+50499000000",
-      "email": "contacto@lapontech.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "San Pedro Sula",
-        "addressLocality": "San Pedro Sula",
-        "addressRegion": "Cortés",
-        "postalCode": "21101",
-        "addressCountry": "HN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 15.5042,
-        "longitude": -88.0250
-      },
-      "areaServed": [
-        "San Pedro Sula",
-        "Valle de Sula",
-        "Tegucigalpa",
-        "Honduras"
-      ],
-      "founder": [
-        {
-          "@type": "Person",
-          "name": "David Flores Lagos",
-          "jobTitle": "Co-Fundador & Técnico en Informática Orientada a la Programación"
-        },
-        {
-          "@type": "Person",
-          "name": "Kevin D. Ponce",
-          "jobTitle": "Co-Fundador & Técnico en Informática Orientada a la Programación"
-        }
-      ],
-      "serviceType": [
-        "Páginas Web Profesionales & Catálogos Digitales",
-        "Desarrollo de Software & Sistemas a Medida",
-        "Automatización de Procesos & WhatsApp para Negocios",
-        "Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios de Desarrollo de Software, Páginas Web y Asesoría",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Páginas Web Profesionales & Catálogos Digitales",
-              "description": "Páginas web modernas y catálogos digitales interactivos optimizados para celulares con botón directo a WhatsApp."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Desarrollo de Software & Sistemas a Medida",
-              "description": "Desarrollo de sistemas a la medida de tu proceso: inventario, punto de venta (POS) y paneles administrativos sin rentas mensuales."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Automatización de Procesos & WhatsApp para Negocios",
-              "description": "Avisos automáticos de pedidos, confirmaciones por WhatsApp y sincronización con hojas de cálculo para ahorrar tiempo."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Asesoría Tecnológica Integral (Computadoras, Programas & Equipos)",
-              "description": "Asesoría honesta en compra de computadoras, solución de fallos técnicos, copias de seguridad y soporte cercano."
-            }
-          }
-        ]
-      }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "San Pedro Sula",
+    "addressLocality": "San Pedro Sula",
+    "addressRegion": "Cortés",
+    "postalCode": "21101",
+    "addressCountry": "HN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 15.5042,
+    "longitude": -88.0250
+  },
+  "areaServed": [
+    { "@type": "City", "name": "San Pedro Sula" },
+    { "@type": "City", "name": "Choloma" },
+    { "@type": "City", "name": "Villanueva" },
+    { "@type": "City", "name": "El Progreso" },
+    { "@type": "City", "name": "Puerto Cortés" },
+    { "@type": "City", "name": "La Lima" },
+    { "@type": "City", "name": "Tegucigalpa" },
+    { "@type": "AdministrativeArea", "name": "Cortés" },
+    { "@type": "Country", "name": "Honduras" }
+  ],
+  "audience": {
+    "@type": "BusinessAudience",
+    "name": "Pequeñas y Medianas Empresas (PYMEs) y Comercios en Honduras",
+    "audienceType": "Ferreterías, farmacias, tiendas de repuestos, distribuidoras, bodegas, talleres, restaurantes, tiendas de ropa y clínicas"
+  },
+  "knowsAbout": [
+    "Diseño de páginas web en San Pedro Sula",
+    "Catálogos digitales con pedidos por WhatsApp",
+    "Sistemas de inventario y facturación en Honduras",
+    "Software de punto de venta (POS) sin mensualidades",
+    "Desarrollo de software a medida para PYMEs",
+    "Automatización de WhatsApp para negocios",
+    "Soporte técnico y asesoría de computadoras en San Pedro Sula"
+  ],
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "David Flores Lagos",
+      "jobTitle": "Co-Fundador · Técnico en Informática Orientada a la Programación (Atención al Cliente, Diseño Web y Soporte Técnico)"
     },
     {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      "url": `${siteUrl}/`,
-      "name": "LaPon Tech Solutions | San Pedro Sula",
-      "publisher": {
-        "@id": `${siteUrl}/#organization`
-      },
-      "inLanguage": "es-HN"
+      "@type": "Person",
+      "name": "Kevin D. Ponce",
+      "jobTitle": "Co-Fundador · Técnico en Informática Orientada a la Programación (Diseño de Sistemas, Bases de Datos e Infraestructura)"
     }
-  ]
+  ],
+  "serviceType": serviciosData.servicios.map((s) => s.titulo),
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Soluciones Digitales para Comercios y PYMEs en Honduras",
+    "itemListElement": serviciosData.servicios.map((s) => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": s.titulo,
+        "description": s.descripcion,
+        "provider": { "@id": `${siteUrl}/#organization` },
+        "areaServed": { "@type": "Country", "name": "Honduras" }
+      }
+    }))
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  "url": `${siteUrl}/`,
+  "name": "LaPon Tech Solutions | Páginas Web y Sistemas sin Mensualidades en Honduras",
+  "publisher": {
+    "@id": `${siteUrl}/#organization`
+  },
+  "inLanguage": "es-HN"
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonicalURL}#webpage`,
+  "url": canonicalURL,
+  "name": title,
+  "description": description,
+  "isPartOf": {
+    "@id": `${siteUrl}/#website`
+  },
+  "about": {
+    "@id": `${siteUrl}/#organization`
+  },
+  "inLanguage": "es-HN",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "#servicios h2", "#comparativa h2", "#faq details"]
+  }
 };
 ---
 
@@ -180,5 +204,7 @@ const schemaJson = {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<!-- Schema.org JSON-LD -->
-<script type="application/ld+json" set:html={JSON.stringify(schemaJson)} />
+<!-- Schema.org JSON-LD (Validado bajo reglas Agentic-SEO-Skill) -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />

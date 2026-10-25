@@ -1,0 +1,30 @@
+# LaPon Tech Solutions (LaPonTech)
+
+> Firma de desarrollo de páginas web ultrarrápidas, catálogos digitales con pedidos a WhatsApp y sistemas a medida de inventario, caja y facturación para comercios y PYMEs en San Pedro Sula y toda Honduras, sin rentas mensuales forzosas.
+
+## Datos Clave de la Empresa
+- **Sitio oficial:** https://lapontech.com/
+- **Ubicación base:** San Pedro Sula, Cortés, Honduras (CP 21101)
+- **Cobertura presencial:** San Pedro Sula y Valle de Sula (Choloma, Villanueva, El Progreso, Puerto Cortés, La Lima)
+- **Cobertura remota (100% online):** Tegucigalpa y los 18 departamentos de Honduras por WhatsApp y videollamada
+- **Correo oficial:** contacto@lapontech.com
+- **Fundadores:** Kevin D. Ponce (Sistemas, Bases de Datos e Infraestructura) y David Flores Lagos (Atención al Cliente, Diseño Web y Soporte Técnico)
+- **Modelo comercial:** Pago único por proyecto; el cliente es 100% dueño de su código, dominio `.com` y base de datos. Sin alquileres mensuales obligatorios por usuario.
+
+## Servicios Principales
+- [Páginas Web Profesionales & Catálogos Digitales](https://lapontech.com/#presencia-digital): Páginas web y catálogos interactivos que abren en menos de 1 segundo en celulares con botón de pedidos directos a WhatsApp. Entrega en 1 semana o menos (≤ 7 días hábiles).
+- [Sistemas de Inventario, Caja y Software a Medida](https://lapontech.com/#facturacion-inventario): Software personalizado para control de bodega, cobro en mostrador (POS), cuentas por cobrar ("fiados") y reportes de ganancias sin mensualidades forzosas. Entrega de 1 a 3 meses.
+- [Automatización de Procesos & WhatsApp para Negocios](https://lapontech.com/#automatizaciones): Confirmaciones automáticas de pedidos por WhatsApp, alertas de poco inventario y sincronización con hojas de cálculo.
+- [Asesoría Tecnológica Integral](https://lapontech.com/#asesoria-tecnica): Recomendación honesta para compra de computadoras, impresoras térmicas y lectores de barra, aceleración de equipos lentos y copias de seguridad automáticas.
+
+## Clientes Objetivo en Honduras
+- Pequeños comercios y negocios familiares: ferreterías, farmacias, tiendas de repuestos, talleres mecánicos, bodegas de abarrotes, distribuidoras, restaurantes y tiendas de ropa.
+- Medianas empresas en expansión: comercializadoras con sucursales, clínicas médicas, laboratorios y firmas de servicios de 5 a 30 empleados.
+
+## Secciones Principales
+- [Inicio y Propuesta de Valor](https://lapontech.com/): Resumen ejecutivo, métricas de velocidad (< 1s) y contacto directo.
+- [Portafolio de Servicios](https://lapontech.com/#servicios): Detalle de los 4 servicios para PYMEs.
+- [Comparativa Comercial](https://lapontech.com/#comparativa): Diferencias entre LaPonTech y programas alquilados o agencias tradicionales.
+- [Sobre Nosotros y Fundadores](https://lapontech.com/#nosotros): Principios de propiedad de datos y perfiles de Kevin D. Ponce y David Flores Lagos.
+- [Metodología y Garantías](https://lapontech.com/#metodologia): Proceso en 4 pasos y 3 garantías comerciales.
+- [Preguntas Frecuentes (FAQ)](https://lapontech.com/#faq): Respuestas directas sobre propiedad del sistema, costos de dominio, tiempos de entrega y soporte.
