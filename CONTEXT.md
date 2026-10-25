@@ -5,6 +5,19 @@
 
 ---
 
+## 🗂️ Documentación Segmentada en `/docs`
+
+Para facilitar la lectura y consulta rápida de temas específicos, este contexto se encuentra dividido en los siguientes documentos semánticos:
+
+- 🏢 **[docs/01-empresa-y-fundadores.md](./docs/01-empresa-y-fundadores.md)**: Identidad corporativa, cobertura geográfica y roles de Kevin Ponce y David Flores.
+- 🎯 **[docs/02-clientes-objetivo-y-mercado.md](./docs/02-clientes-objetivo-y-mercado.md)**: Buyer personas (PYMEs, comercios locales), dolores reales y contexto de compra en Honduras.
+- 🗣️ **[docs/03-guia-de-tono-y-redaccion.md](./docs/03-guia-de-tono-y-redaccion.md)**: Guía de estilo, copywriting sin tecnicismos y tabla de términos permitidos/prohibidos.
+- 📦 **[docs/04-portafolio-de-servicios.md](./docs/04-portafolio-de-servicios.md)**: Fichas oficiales de los 4 servicios, badges, tiempos de entrega y CTAs.
+- 🛠️ **[docs/05-arquitectura-tecnica-y-seo.md](./docs/05-arquitectura-tecnica-y-seo.md)**: Stack de ingeniería (Astro + Tailwind), Open Graph para WhatsApp y pipeline CI/CD.
+- 📚 **[docs/README.md](./docs/README.md)**: Índice general y mapa de navegación.
+
+---
+
 ## 1. 🏢 Identidad de la Empresa y Datos Generales
 
 | Concepto | Detalle Oficial |

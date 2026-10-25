@@ -6,9 +6,15 @@ Repositorio oficial del sitio web de **LaPon Tech Solutions** ([lapontech.com](h
 
 ## 📖 Documentación y Contexto Estratégico
 
-Para comprender en detalle el enfoque de clientes, la propuesta de valor, las reglas de redacción sin tecnicismos y el portafolio de servicios, consulta el manual completo en:
+Para comprender en detalle el enfoque de clientes, la propuesta de valor, las reglas de redacción sin tecnicismos y el portafolio de servicios, consulta nuestra documentación segmentada en:
 
-👉 **[CONTEXT.md](./CONTEXT.md)**
+- 📚 **[Centro de Documentación (docs/)](./docs/README.md)** (Índice general)
+- 🏢 **[01. Empresa y Fundadores](./docs/01-empresa-y-fundadores.md)**
+- 🎯 **[02. Clientes Objetivo y Mercado](./docs/02-clientes-objetivo-y-mercado.md)**
+- 🗣️ **[03. Guía de Tono y Redacción](./docs/03-guia-de-tono-y-redaccion.md)**
+- 📦 **[04. Portafolio de Servicios](./docs/04-portafolio-de-servicios.md)**
+- 🛠️ **[05. Arquitectura Técnica y SEO](./docs/05-arquitectura-tecnica-y-seo.md)**
+- 📘 **[Resumen Unificado (CONTEXT.md)](./CONTEXT.md)**
 
 ---
 
