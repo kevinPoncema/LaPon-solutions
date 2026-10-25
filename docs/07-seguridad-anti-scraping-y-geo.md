@@ -22,11 +22,11 @@ Documento técnico que detalla cómo **LaPon Tech Solutions** protege su correo 
   4. **JSON-LD limpio:** Se omite la propiedad `"email"` en texto plano dentro del bloque `<script type="application/ld+json">`.
 
 ### B. Protección del Teléfono y Enlaces de WhatsApp (`wa.me`)
-- **Dónde se aplica:** [`src/pages/index.astro`](../src/pages/index.astro) y [`src/components/SEO.astro`](../src/components/SEO.astro).
+- **Dónde se aplica:** [`src/components/Footer.astro`](../src/components/Footer.astro), [`src/pages/index.astro`](../src/pages/index.astro), [`src/pages/404.astro`](../src/pages/404.astro) y [`src/components/SEO.astro`](../src/components/SEO.astro).
 - **Cómo funciona:**
-  1. **Fragmentación en 3 bloques:** El número limpio se divide en el frontmatter de Astro en tres partes (`data-wa-p1="504"`, `data-wa-p2="9900"`, `data-wa-p3="0000"`) dentro de `#contact-form`.
-  2. **Cero `wa.me/` estático en el HTML:** Todos los botones de WhatsApp usan `href="#contacto"`, la clase `.js-protected-wa` y el atributo `data-wa-text` con el mensaje preconfigurado de cada sección.
-  3. **Hidratación en navegador:** Al ejecutarse `DOMContentLoaded` en un navegador real, el script reconstruye `"https://" + "wa" + ".me/" + (p1 + p2 + p3)` e inyecta el `href` real en todos los botones `.js-protected-wa`.
+  1. **Fragmentación en 3 bloques:** El número limpio se divide en el frontmatter de Astro en tres partes (`data-wa-p1="504"`, `data-wa-p2="9900"`, `data-wa-p3="0000"`) dentro de `#site-footer` y `#contact-form`.
+  2. **Cero `wa.me/` estático en el HTML:** Todos los botones de WhatsApp usan `href="#contacto"` (o `href="/#contacto"`), la clase `.js-protected-wa` y el atributo `data-wa-text` con el mensaje preconfigurado de cada sección.
+  3. **Hidratación unificada en navegador:** Al ejecutarse `DOMContentLoaded` en un navegador real, el script centralizado en `Footer.astro` reconstruye `"https://" + "wa" + ".me/" + (p1 + p2 + p3)` e inyecta el `href` real en todos los botones `.js-protected-wa` de cualquier página, además de hidratar todos los enlaces `.js-protected-email`.
 
 ---
 

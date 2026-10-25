@@ -6,7 +6,7 @@ const pageTitle = "404 - Página no encontrada | LaPon Tech Solutions";
 const pageDescription = "Parece que esta dirección cambió o ya no existe. Vuelve al inicio de LaPon Tech Solutions para conocer nuestras páginas web y sistemas para negocios.";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} noindex={true}>
   <div class="min-h-[70vh] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
     <!-- Luz ambiental de fondo -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none" aria-hidden="true"></div>
@@ -44,7 +44,7 @@ const pageDescription = "Parece que esta dirección cambió o ya no existe. Vuel
       </div>
 
       <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-400">
-        ¿Buscabas cotizar un proyecto para tu negocio? <a href="/#contacto" class="text-emerald-400 hover:underline font-semibold">Escríbenos directo por WhatsApp</a>
+        ¿Buscabas cotizar un proyecto para tu negocio? <a href="/#contacto" data-wa-text="Hola LaPonTech, quisiera cotizar un proyecto para mi negocio." class="js-protected-wa text-emerald-400 hover:underline font-semibold">Escríbenos directo por WhatsApp</a>
       </div>
 
     </div>

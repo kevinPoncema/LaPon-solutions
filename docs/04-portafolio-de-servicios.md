@@ -38,15 +38,15 @@ Documento semántico que detalla las 4 líneas de servicio oficiales para empres
 - **Badges Oficiales:**
   - `📦 Soluciones a Medida`
   - `🔒 Código y Datos Propios`
-  - `🚫 Sin Rentas Forzosas`
-- **Subtítulo:** *Construimos la herramienta digital que tu operación necesite, adaptada a tus reglas y sin suscripciones obligatorias.*
+  - `🛠️ Soporte Opcional`
+- **Subtítulo:** *Construimos herramientas digitales adaptadas al flujo exacto de tu negocio, sin atarte a suscripciones obligatorias.*
 - **Descripción:**  
-  Cuando las libretas, las hojas de Excel desordenadas o los programas genéricos se quedan cortos, diseñamos el sistema que tu negocio requiere. Nos adaptamos a tu flujo de trabajo real; lo que listamos aquí son ejemplos prácticos de lo que podemos desarrollar a tu medida.
+  Si los cuadernos, las hojas de Excel desordenadas o los programas genéricos ya te quedan cortos, creamos la solución que tu operación necesita. Diseñamos sistemas claros para resolver tu cuello de botella: desde control de inventario y bodega, hasta puntos de venta (POS), paneles administrativos o seguimiento de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.
 - **Puntos Clave:**
-  - **100% adaptable a tu necesidad:** Programamos las funciones que tu empresa requiere hoy y dejamos la base lista por si deseas ampliarlo después.
-  - **Ejemplos frecuentes:** Control de inventario y bodega, registro de ventas y caja (POS), control de cuentas por cobrar, seguimiento de órdenes o cotizadores internos.
-  - **Propiedad del sistema:** Entregamos la herramienta funcionando sin exigir el pago de licencias mensuales por cada empleado.
-  - **Mantenimiento opcional:** Incluimos capacitación inicial y, si deseas delegar el soporte o actualizaciones futuras, contamos con planes opcionales claros.
+  - **Hecho a la medida de tu proceso:** Desarrollamos las funciones pensadas para tu forma de trabajar, sin módulos innecesarios que nadie usa.
+  - **Ejemplos de lo que construimos:** Control de existencias y bodega, registro de cobros en mostrador, cuentas por cobrar, seguimiento de pedidos o cotizadores.
+  - **Propiedad del sistema sin rentas forzosas:** El programa y la base de datos son tuyos; las pólizas de mantenimiento y actualizaciones posteriores son opcionales.
+  - **Práctico desde celular o computadora:** Pantallas limpias e intuitivas con capacitación incluida para que tu equipo se adapte con facilidad.
 - **Llamado a la Acción (CTA):** *Cotizar desarrollo a medida →*
 
 ---
@@ -54,30 +54,30 @@ Documento semántico que detalla las 4 líneas de servicio oficiales para empres
 ## 4. Servicio 3: Automatización Operativa & Mensajes por WhatsApp (`#automatizaciones`)
 
 - **Badges Oficiales:**
-  - `🤖 A Medida de tu Proceso`
-  - `💬 WhatsApp & Campañas`
-  - `🔄 Datos Sincronizados`
-- **Subtítulo:** *Elimina tareas manuales repetitivas y conecta tus canales de venta exactamente como tu negocio lo necesite.*
+  - `🤖 Menos Trabajo Manual`
+  - `⚡ Flujos Automáticos`
+  - `📊 Todo Conectado`
+- **Subtítulo:** *Elimina tareas manuales repetitivas y agiliza la entrega de prospectos y pedidos.*
 - **Descripción:**  
-  Conectamos tus herramientas digitales para que las tareas repetitivas se ejecuten solas, rápido y sin errores humanos. Nos adaptamos a lo que tu operación o tus campañas necesiten automatizar; los siguientes puntos no son lo único que hacemos, sino ejemplos reales de lo que podemos implementar para ti:
+  Si en tu negocio o campaña pierden horas haciendo el mismo trabajo manual todos los días, lo automatizamos a tu medida para reducir errores humanos. Nos adaptamos a cualquier flujo que necesites agilizar: tú nos cuentas qué proceso te quita tiempo y nosotros lo conectamos.
 - **Puntos Clave:**
-  - **Ejemplo — Avisos y entrega de prospectos por WhatsApp:** Envío automático de confirmaciones de pedido o entrega inmediata de clientes potenciales desde tus formularios o campañas publicitarias.
-  - **Ejemplo — Sincronización con hojas de cálculo o sistemas:** Registro automático de cada venta, contacto o formulario para no copiar datos a mano dos veces.
-  - **Ejemplo — Seguimiento y recordatorios de cobro:** Mensajes programados sobre cuentas o facturas por vencer para mejorar tu recaudación.
-  - **Ejemplo — Alertas operativas a medida:** Notificaciones automáticas cuando un producto clave en bodega está por agotarse o cuando se requiere una aprobación.
-- **Llamado a la Acción (CTA):** *Consultar mi automatización →*
+  - **Automatizamos lo que necesites:** Analizamos tu flujo de trabajo y conectamos tus herramientas para ahorrar tiempo operativo.
+  - **Ejemplo en campañas y prospectos:** Integración de formularios web y anuncios con WhatsApp, hojas de cálculo o CRMs mediante webhooks.
+  - **Ejemplo en atención y pedidos:** Avisos y confirmaciones automáticas por WhatsApp al recibir un nuevo pedido, cita o solicitud.
+  - **Ejemplo en cobros y bodega:** Recordatorios automáticos de pagos pendientes o alertas cuando un producto clave está por agotarse.
+- **Llamado a la Acción (CTA):** *Cotizar automatización →*
 
 ---
 
 ## 5. Servicio 4: Asesoría Técnica, Servidores & Equipos (`#asesoria-tecnica`)
 
 - **Badges Oficiales:**
-  - `🌐 Servidores, DNS & Correos`
-  - `💻 Equipos & Soporte`
-  - `🔒 Copias de Seguridad`
-- **Subtítulo:** *Configuración profesional de dominios, correos corporativos, servidores y soporte de equipos para empresas y agencias.*
+  - `💻 Diagnóstico Honesto`
+  - `🌐 Configuración DNS`
+  - `🛡️ Copias de Seguridad`
+- **Subtítulo:** *Respaldo técnico confiable para tus equipos, servidores, dominios y conexión de correos corporativos.*
 - **Descripción:**  
-  Resolvemos la parte técnica e infraestructura de tu negocio con total transparencia. Conectamos y configuramos profesionalmente tu dominio con proveedores líderes de correo e infraestructura para asegurar máxima estabilidad, o te asesoramos en la mejora y compra de equipos de cómputo sin gastos innecesarios.
+  Te orientamos con total transparencia para resolver requerimientos técnicos de hardware o infraestructura web. Desde qué computadoras adquirir y cómo optimizar equipos lentos, hasta migración de servidores web, configuración de dominios (DNS) y conexión técnica de tus correos corporativos con proveedores líderes.
 - **Puntos Clave:**
   - **Configuración de DNS y correos corporativos:** Enrutamos tu dominio y configuramos los sellos de seguridad (`SPF, DKIM, DMARC`) conectándolo con plataformas especializadas externas (como Google Workspace, Microsoft 365 o Zoho) para garantizar que tus correos lleguen a la bandeja principal y no a spam.
   - **Alojamiento web administrado opcional:** Despliegue de páginas y sistemas en servidores optimizados con tarifas claras y fijas para evitar saturación o sobrecostos de renovación.

@@ -45,7 +45,7 @@ Archivo en formato Markdown estructurado siguiendo el estándar `llms.txt` en la
 - El correo oficial escrito de forma semántica anti-regex (`contacto [arroba] lapontech [punto] com`).
 
 ### C. Permisos Explícitos para Crawlers de IA en [`public/robots.txt`](../public/robots.txt)
-Autoriza explícitamente la indexación a `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-Web`, `anthropic-ai`, `PerplexityBot`, `Perplexity-User`, `Google-Extended` y `Applebot-Extended`, e indica la ruta del `Sitemap`.
+Autoriza explícitamente la indexación a `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `PerplexityBot`, `Google-Extended` y `Applebot-Extended`, e indica la ruta del `Sitemap`.
 
 ---
 
@@ -77,13 +77,14 @@ Autoriza explícitamente la indexación a `GPTBot`, `OAI-SearchBot`, `ChatGPT-Us
 │   ├── _headers                                 # Encabezados de seguridad y caché
 │   ├── llms.txt                                 # Contexto estructurado para motores de IA (GEO)
 │   ├── robots.txt                               # Directivas para buscadores y crawlers de IA
+│   ├── sitemap.xml                              # Mapa del sitio XML oficial
 │   ├── logo-completo.png                        # Imagen Open Graph oficial (1024x517)
-│   └── icons/                                   # Isotipos vectoriales y PNG
+│   └── icons/                                   # Isotipos vectoriales y variantes oficiales (logo.svg, logo.png, logo-emerald.png, logo-original.png)
 ├── src/
 │   ├── components/
 │   │   ├── Header.astro                         # Navegación con ancla a #agencias
-│   │   ├── Footer.astro                         # Pie de página + script de hidratación de correo
-│   │   └── SEO.astro                            # Metadatos OpenGraph + Triple Schema.org JSON-LD
+│   │   ├── Footer.astro                         # Pie de página + hidratación unificada anti-scraping (correo y WhatsApp)
+│   │   └── SEO.astro                            # Metadatos OpenGraph + Triple Schema.org JSON-LD sincronizado con servicios.json
 │   ├── json/
 │   │   └── servicios.json                       # Contenido centralizado de toda la landing
 │   ├── layouts/

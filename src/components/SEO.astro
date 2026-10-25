@@ -8,10 +8,11 @@ export interface Props {
   canonical?: string;
   ogImage?: string;
   type?: string;
+  noindex?: boolean;
 }
 
 const siteUrl = "https://lapontech.com";
-const companyName = "LaPon Tech Solutions";
+const companyName = serviciosData.empresa.nombre;
 
 const {
   title = "LaPonTech | Páginas Web, Sistemas a Medida y Marca Blanca",
@@ -19,18 +20,22 @@ const {
   canonical = Astro.url.pathname,
   ogImage = "/logo-completo.png",
   type = "website",
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(canonical, siteUrl).toString();
 const fullOgImageUrl = ogImage.startsWith("http") ? ogImage : new URL(ogImage, siteUrl).toString();
+const robotsDirective = noindex
+  ? "noindex, follow"
+  : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${siteUrl}/#organization`,
   "name": companyName,
-  "alternateName": ["LaPonTech", "LaPon Tech", "LaPon Tech Solution"],
-  "slogan": "Páginas web rápidas y sistemas a medida para tu negocio en Honduras sin rentas forzosas",
+  "alternateName": [serviciosData.empresa.nombre_comercial, "LaPon Tech", "LaPon Tech Solution"],
+  "slogan": serviciosData.empresa.eslogan,
   "url": `${siteUrl}/`,
   "logo": {
     "@type": "ImageObject",
@@ -39,7 +44,7 @@ const organizationSchema = {
     "height": 517
   },
   "image": fullOgImageUrl,
-  "description": "Creamos páginas web ultrarrápidas con catálogo de pedidos para WhatsApp y sistemas a medida de inventario, facturación y punto de venta (POS) para comercios y PYMEs en San Pedro Sula y toda Honduras, sin mensualidades forzosas.",
+  "description": serviciosData.hero.subtitulo,
   "priceRange": "$$",
   "openingHoursSpecification": [
     {
@@ -87,32 +92,41 @@ const organizationSchema = {
     "Configuración de servidores, DNS y correos corporativos (SPF, DKIM, DMARC)",
     "Asesoría tecnológica y mantenimiento opcional para empresas"
   ],
-  "founder": [
-    {
-      "@type": "Person",
-      "name": "David Flores Lagos",
-      "jobTitle": "Co-Fundador · Técnico en Informática Orientada a la Programación (Atención al Cliente, Diseño Web y Soporte Técnico)"
-    },
-    {
-      "@type": "Person",
-      "name": "Kevin D. Ponce",
-      "jobTitle": "Co-Fundador · Técnico en Informática Orientada a la Programación (Diseño de Sistemas, Bases de Datos e Infraestructura)"
-    }
+  "founder": serviciosData.sobre_nosotros.fundadores.map((f) => ({
+    "@type": "Person",
+    "name": f.nombre,
+    "jobTitle": f.cargo,
+    "description": f.descripcion
+  })),
+  "serviceType": [
+    ...serviciosData.servicios.map((s) => s.titulo),
+    serviciosData.agencias.titulo
   ],
-  "serviceType": serviciosData.servicios.map((s) => s.titulo),
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Soluciones Digitales para Comercios y PYMEs en Honduras",
-    "itemListElement": serviciosData.servicios.map((s) => ({
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": s.titulo,
-        "description": s.descripcion,
-        "provider": { "@id": `${siteUrl}/#organization` },
-        "areaServed": { "@type": "Country", "name": "Honduras" }
+    "name": "Soluciones Digitales para Negocios y Marca Blanca para Agencias en Honduras",
+    "itemListElement": [
+      ...serviciosData.servicios.map((s) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": s.titulo,
+          "description": s.descripcion,
+          "provider": { "@id": `${siteUrl}/#organization` },
+          "areaServed": { "@type": "Country", "name": "Honduras" }
+        }
+      })),
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": serviciosData.agencias.titulo,
+          "description": serviciosData.agencias.subtitulo,
+          "provider": { "@id": `${siteUrl}/#organization` },
+          "areaServed": { "@type": "Country", "name": "Honduras" }
+        }
       }
-    }))
+    ]
   }
 };
 
@@ -121,7 +135,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": `${siteUrl}/#website`,
   "url": `${siteUrl}/`,
-  "name": "LaPon Tech Solutions | Páginas Web y Sistemas sin Mensualidades en Honduras",
+  "name": `${companyName} | ${serviciosData.empresa.eslogan}`,
   "publisher": {
     "@id": `${siteUrl}/#organization`
   },
@@ -169,8 +183,8 @@ const webPageSchema = {
 <link rel="apple-touch-icon" href="/icons/logo.png" />
 
 <!-- Control de Indexación para Motores de Búsqueda -->
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="robots" content={robotsDirective} />
+<meta name="googlebot" content={robotsDirective} />
 
 <!-- OpenGraph / Redes Sociales & WhatsApp -->
 <meta property="og:site_name" content={companyName} />
@@ -197,10 +211,21 @@ const webPageSchema = {
 <meta name="twitter:image" content={fullOgImageUrl} />
 <meta name="twitter:image:alt" content="LaPon Tech Solutions - Logotipo Oficial de la Empresa" />
 
-<!-- Google Fonts Preconnect & Font Styling -->
+<!-- Google Fonts Preconnect & Non-Blocking Font Loading (Optimizado para Datos Móviles) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'"
+/>
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  />
+</noscript>
 
 <!-- Schema.org JSON-LD (Validado bajo reglas Agentic-SEO-Skill) -->
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />

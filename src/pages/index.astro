@@ -754,7 +754,7 @@ const waP3 = phoneClean.slice(7);
     </a>
   </aside>
 
-  <!-- ─── SCRIPT DE CONVERSIÓN WHATSAPP Y HONEYPOT ──────────────────────── -->
+  <!-- ─── SCRIPT DE FORMULARIO DE CONVERSIÓN WHATSAPP Y HONEYPOT ──────── -->
   <script is:inline>
     // @ts-nocheck
     document.addEventListener("DOMContentLoaded", () => {
@@ -764,15 +764,6 @@ const waP3 = phoneClean.slice(7);
       const p3 = form?.getAttribute("data-wa-p3") || "0000";
       const WA_PHONE = p1 + p2 + p3;
       const WA_HOST = "https://" + "wa" + ".me/";
-
-      // Hidratación de botones de WhatsApp protegidos contra bots recolectores
-      const waLinks = document.querySelectorAll(".js-protected-wa[data-wa-text]");
-      waLinks.forEach((el) => {
-        const msg = el.getAttribute("data-wa-text") || "Hola LaPonTech, quisiera solicitar información sobre sus servicios.";
-        el.setAttribute("href", WA_HOST + WA_PHONE + "?text=" + encodeURIComponent(msg));
-        el.setAttribute("target", "_blank");
-        el.setAttribute("rel", "noopener noreferrer");
-      });
 
       function openWhatsApp(customText) {
         const cleanText = encodeURIComponent(customText || "Hola LaPonTech, quisiera solicitar un diagnóstico gratuito para mi negocio.");
