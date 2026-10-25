@@ -15,7 +15,7 @@ const {
   title = "LaPon Tech Solutions | Software a Medida y Automatización B2B en San Pedro Sula",
   description = "Agencia tecnológica B2B en San Pedro Sula, Honduras fundada por David Flores y Kevin Ponce. Sistemas de facturación e inventario, software a medida y automatizaciones operativas para PYMEs.",
   canonical = Astro.url.pathname,
-  ogImage = "/icons/logo.svg",
+  ogImage = "/logo-completo.png",
   type = "website",
 } = Astro.props;
 
@@ -31,7 +31,7 @@ const schemaJson = {
       "name": companyName,
       "alternateName": ["LaPon Tech Solutions", "LaPon Tech Solution", "LaPon"],
       "url": `${siteUrl}/`,
-      "logo": `${siteUrl}/icons/logo.svg`,
+      "logo": `${siteUrl}/logo-completo.png`,
       "image": fullOgImageUrl,
       "description": "Firma de consultoría y desarrollo tecnológico B2B en San Pedro Sula, Honduras. Especialistas en sistemas empresariales, facturación, inventario y automatización de procesos para PYMEs.",
       "priceRange": "$$",
@@ -141,18 +141,29 @@ const schemaJson = {
 <meta name="geo.position" content="15.5042;-88.0250" />
 <meta name="ICBM" content="15.5042, -88.0250" />
 
+<!-- Favicons y Accesos Directos -->
+<link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
+<link rel="icon" type="image/png" href="/icons/logo.png" />
+<link rel="apple-touch-icon" href="/icons/logo.png" />
+
 <!-- Control de Indexación para Motores de Búsqueda -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-<!-- OpenGraph / Redes Sociales -->
+<!-- OpenGraph / Redes Sociales & WhatsApp -->
+<meta property="og:site_name" content={companyName} />
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={fullOgImageUrl} />
-<meta property="og:site_name" content={companyName} />
+<meta property="og:image:secure_url" content={fullOgImageUrl} />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="517" />
+<meta property="og:image:alt" content="LaPon Tech Solutions - Logotipo Oficial de la Empresa" />
 <meta property="og:locale" content="es_HN" />
+<link rel="image_src" href={fullOgImageUrl} />
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -160,6 +171,7 @@ const schemaJson = {
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={fullOgImageUrl} />
+<meta name="twitter:image:alt" content="LaPon Tech Solutions - Logotipo Oficial de la Empresa" />
 
 <!-- Google Fonts Preconnect & Font Styling -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
