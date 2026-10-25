@@ -183,7 +183,7 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
                   aria-label={`Cotizar ${servicio.titulo} por WhatsApp (Abre en nueva pestaña)`}
                   class="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white font-bold py-3.5 px-6 rounded-xl border border-slate-700 hover:border-emerald-500 transition-all duration-300 text-sm cursor-pointer group-hover:bg-emerald-500 group-hover:text-slate-950 group-hover:border-emerald-500"
                 >
-                  <span>Cotizar este servicio →</span>
+                  <span>{servicio.cta_texto || "Cotizar este servicio →"}</span>
                   <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                   </svg>

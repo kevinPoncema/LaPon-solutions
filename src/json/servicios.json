@@ -32,7 +32,7 @@
       {
         "valor": "7-10 Días",
         "etiqueta": "Tu Página Web Lista",
-        "detalle": "Visible en Google Maps y con botón a WhatsApp"
+        "detalle": "Catálogo digital y botón directo a WhatsApp"
       },
       {
         "valor": "Directo",
@@ -81,34 +81,36 @@
     {
       "id": "presencia-digital",
       "popular": true,
-      "titulo": "Página Web Profesional & Presencia en Google Maps",
-      "subtitulo": "Haz que nuevos clientes te encuentren fácil en Google y te escriban por WhatsApp.",
-      "badges": ["⚡ Carga en < 1s", "🌐 Dominio Propio", "📍 Google Maps"],
-      "descripcion": "Diseñamos una página web moderna, rápida y clara para tu negocio. Se ve impecable en cualquier teléfono y te posiciona en Google Maps para que los clientes de tu ciudad te encuentren primero.",
+      "titulo": "Páginas Web Profesionales & Catálogos Digitales",
+      "subtitulo": "Facilita que tus clientes conozcan tus productos o servicios y te pidan cotizaciones por WhatsApp en segundos.",
+      "badges": ["⚡ Carga Instantánea", "📲 Enfoque en WhatsApp", "🎯 100% Tu Dominio"],
+      "descripcion": "Diseñamos páginas web y catálogos interactivos ultrarrápidos, limpios y optimizados para celulares. El complemento perfecto para tus redes sociales: organiza tus productos, precios y datos clave en un solo lugar accesible las 24 horas, eliminando la pérdida de ventas por mensajes sin responder.",
       "puntos_clave": [
-        "Abre en menos de 1 segundo en celulares, sin hacer esperar a tus clientes",
-        "Ficha en Google Maps optimizada para que te encuentren fácil en tu zona",
-        "Botón directo a tu WhatsApp para que te pidan cotizaciones en un toque",
-        "El nombre de la página web (dominio) y los accesos quedan 100% a tu nombre"
+        "Abre en menos de 1 segundo en celulares: Carga instantánea para que tus visitas no se vayan antes de ver tu oferta.",
+        "Botón y pedidos directos a WhatsApp: Tus clientes seleccionan lo que desean y te envían el mensaje con la consulta o pedido listo.",
+        "Catálogo claro y ordenado: Presentación impecable de tus productos, fotos, precios y horarios sin depender de que revisen decenas de publicaciones.",
+        "Control y propiedad total: El nombre de dominio y todos los accesos quedan registrados 100% a nombre de tu negocio."
       ],
+      "cta_texto": "Cotizar página o catálogo →",
       "servicio_form_val": "presencia-digital",
-      "wa_msg": "Hola LaPonTech, me interesa cotizar una Página Web Profesional y Presencia en Google Maps para mi negocio."
+      "wa_msg": "Hola LaPonTech, me interesa cotizar una Página Web Profesional o Catálogo Digital para mi negocio."
     },
     {
       "id": "facturacion-inventario",
       "popular": false,
-      "titulo": "Control de Inventario, Ventas & Facturación (POS)",
-      "subtitulo": "Ordena tus entradas, salidas de bodega y cobros en mostrador sin mensualidades por empleado.",
-      "badges": ["📦 Control de Bodega", "🔒 Datos Aislados", "🚫 Sin Rentas Forzosas"],
-      "descripcion": "Si llevar las cuentas en libretas o Excel ya te causa enredos o pérdidas, te desarrollamos un sistema a la medida: cobro ágil en mostrador, control exacto de inventario y facturación fácil sin pagar alquileres mensuales.",
+      "titulo": "Desarrollo de Software & Sistemas a Medida",
+      "subtitulo": "Construimos herramientas digitales adaptadas al flujo exacto de tu negocio, sin atarte a suscripciones eternas.",
+      "badges": ["📦 Soluciones a Medida", "🔒 Código y Datos Propios", "🚫 Cero Mensualidades Forzosas"],
+      "descripcion": "Si las libretas, las hojas de cálculo desordenadas o los programas genéricos ya te quedan cortos, creamos la solución que tu operativa necesita. Diseñamos sistemas limpios y rápidos para resolver tu cuello de botella: desde paneles administrativos y control de inventario/bodega, hasta puntos de venta (POS) o automatizaciones de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.",
       "puntos_clave": [
-        "Control exacto de inventario (Kardex): sabe en todo momento qué tienes en bodega",
-        "Punto de venta (POS) rápido para mostrador, lector de código de barras y tickets",
-        "Alertas automáticas cuando un producto se esté terminando para no perder ventas",
-        "Sin rentas forzosas: eres dueño de tu sistema y tú decides si deseas soporte opcional"
+        "Hecho a la medida de tu proceso: Desarrollamos funciones pensadas para tu forma de trabajar, sin pagar por botones o módulos que nunca vas a usar.",
+        "Ejemplos de lo que construimos: Control de stock (Kardex), registro de cobros en mostrador, paneles de seguimiento de pedidos o cotizadores automáticos.",
+        "Propiedad total del sistema: El software y la base de datos son 100% tuyos, sin pagar rentas mensuales abusivas por cada empleado o usuario.",
+        "Fácil de usar desde el celular o computadora: Interfaces directas y rápidas para que tu equipo aprenda a usarlo en minutos y sin enredos."
       ],
+      "cta_texto": "Cotizar desarrollo a medida →",
       "servicio_form_val": "facturacion-inventario",
-      "wa_msg": "Hola LaPonTech, me interesa cotizar un Sistema a Medida para Inventario, POS y Facturación sin rentas forzosas."
+      "wa_msg": "Hola LaPonTech, me interesa cotizar un Desarrollo de Software & Sistema a Medida para mi negocio."
     },
     {
       "id": "automatizaciones",
@@ -123,6 +125,7 @@
         "Recordatorios automáticos de facturas pendientes para que tus clientes te paguen a tiempo",
         "Ahorro de horas de trabajo diario para ti y tus colaboradores"
       ],
+      "cta_texto": "Cotizar automatización →",
       "servicio_form_val": "automatizaciones",
       "wa_msg": "Hola LaPonTech, me gustaría automatizar procesos operativos y notificaciones de WhatsApp para mi negocio."
     },
@@ -139,6 +142,7 @@
         "Copias de seguridad (backups) automáticas para proteger facturas y archivos críticos",
         "Trato directo con los ingenieros fundadores por llamada o WhatsApp en horario hábil"
       ],
+      "cta_texto": "Consultar asesoría técnica →",
       "servicio_form_val": "asesoria-tecnica",
       "wa_msg": "Hola LaPonTech, necesito asesoría técnica o soporte para la infraestructura y equipos de mi negocio."
     }
@@ -262,11 +266,11 @@
     "select_opciones": [
       {
         "valor": "presencia-digital",
-        "texto": "Página Web Profesional & Presencia en Google Maps"
+        "texto": "Páginas Web Profesionales & Catálogos Digitales"
       },
       {
         "valor": "facturacion-inventario",
-        "texto": "Control de Inventario, Ventas & Facturación (POS)"
+        "texto": "Desarrollo de Software & Sistemas a Medida"
       },
       {
         "valor": "automatizaciones",
