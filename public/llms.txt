@@ -14,7 +14,7 @@
 ## Servicios Principales
 - [Páginas Web Profesionales & Catálogos Digitales](https://lapontech.com/#presencia-digital): Páginas web y catálogos interactivos que abren en menos de 1 segundo en celulares con botón de pedidos directos a WhatsApp. Entrega en 1 semana o menos (≤ 7 días hábiles).
 - [Sistemas de Inventario, Caja y Software a Medida](https://lapontech.com/#facturacion-inventario): Software personalizado para control de bodega, cobro en mostrador (POS), cuentas por cobrar ("fiados") y reportes de ganancias sin mensualidades forzosas. Entrega de 1 a 3 meses.
-- [Automatización de Procesos & WhatsApp para Negocios](https://lapontech.com/#automatizaciones): Confirmaciones automáticas de pedidos por WhatsApp, alertas de poco inventario y sincronización con hojas de cálculo.
+- [Automatización Operativa & Mensajes por WhatsApp](https://lapontech.com/#automatizaciones): Automatización a medida de cualquier tarea manual repetitiva que el negocio necesite (por ejemplo: confirmaciones automáticas de pedidos por WhatsApp, alertas de poco inventario, recordatorios de cobro y sincronización con hojas de cálculo).
 - [Asesoría Tecnológica Integral](https://lapontech.com/#asesoria-tecnica): Recomendación honesta para compra de computadoras, impresoras térmicas y lectores de barra, aceleración de equipos lentos y copias de seguridad automáticas.
 
 ## Clientes Objetivo en Honduras

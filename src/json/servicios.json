@@ -118,12 +118,12 @@
       "titulo": "Automatización Operativa & Mensajes por WhatsApp",
       "subtitulo": "Elimina tareas manuales repetitivas y atiende a tus clientes en segundos.",
       "badges": ["🤖 Cero Tareas Manuales", "⚡ Respuestas Inmediatas", "📊 Todo Sincronizado"],
-      "descripcion": "Conectamos tu negocio para que las tareas repetitivas se hagan solas y sin errores humanos. Configuramos confirmaciones automáticas por WhatsApp cuando recibes un pedido, sincronización de ventas con tus hojas de control y recordatorios automáticos de cobro.",
+      "descripcion": "Si en tu negocio pierden horas haciendo el mismo trabajo manual todos los días, lo automatizamos a tu medida para que se haga solo y sin errores humanos. Nos adaptamos a cualquier tarea o flujo que necesites agilizar: tú nos cuentas qué proceso te quita tiempo y nosotros lo conectamos.",
       "puntos_clave": [
-        "Avisos automáticos por WhatsApp a clientes y empleados cuando entra un nuevo pedido o cotización.",
-        "Sincronización directa con hojas de cálculo o tu sistema para no copiar datos a mano dos veces.",
-        "Recordatorios automáticos de cuentas o facturas pendientes para que tus clientes te paguen a tiempo.",
-        "Alertas tempranas cuando un producto clave en bodega está por agotarse."
+        "Automatizamos lo que necesites: Analizamos tu rutina diaria y programamos soluciones para cualquier tarea repetitiva de tu operación.",
+        "Ejemplo en atención y pedidos: Avisos y confirmaciones automáticas por WhatsApp a clientes y empleados al recibir un pedido o cita.",
+        "Ejemplo en administración: Paso automático de datos a tus hojas de cálculo o sistema para no copiar información a mano dos veces.",
+        "Ejemplo en cobros y bodega: Recordatorios automáticos de facturas pendientes o alertas al celular cuando un producto está por agotarse."
       ],
       "cta_texto": "Cotizar automatización →",
       "servicio_form_val": "automatizaciones",
