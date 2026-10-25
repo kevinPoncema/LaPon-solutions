@@ -4,12 +4,13 @@
 import Layout from "../layouts/Layout.astro";
 import serviciosData from "../json/servicios.json";
 
-const { empresa, hero, por_que_nosotros, servicios, sobre_nosotros, metodologia, garantias, faq, contacto_whatsapp } = serviciosData;
+const { empresa, hero, por_que_nosotros, servicios, agencias, sobre_nosotros, metodologia, garantias, faq, contacto_whatsapp } = serviciosData;
 
-const pageTitle = "LaPonTech | Páginas Web y Sistemas a Medida en Honduras";
-const pageDescription = "Páginas web rápidas, catálogos con WhatsApp y sistemas a medida sin rentas mensuales en San Pedro Sula y Honduras. 100% tuyos. ¡Cotiza por WhatsApp!";
+const pageTitle = "LaPonTech | Páginas Web, Sistemas a Medida y Marca Blanca";
+const pageDescription = "Páginas web rápidas, sistemas a medida sin rentas forzosas y brazo técnico en marca blanca para agencias en San Pedro Sula y Honduras. ¡Cotiza por WhatsApp!";
 
-const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIComponent("Hola LaPonTech, quisiera solicitar un diagnóstico gratuito para mi negocio.")}`;
+const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIComponent("Hola LaPonTech, quisiera solicitar información sobre sus servicios.")}`;
+const WA_AGENCIAS_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIComponent(agencias.wa_msg)}`;
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -77,12 +78,12 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
         <!-- 4 Métricas Estáticas de Alto Contraste -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-10 border-t border-slate-800/80">
           {hero.estadisticas.map((stat) => (
-            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all text-center group">
-              <p class="text-2xl sm:text-3xl font-black text-amber-300 font-mono mb-1 group-hover:text-emerald-400 transition-colors">
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all text-center group flex flex-col justify-center">
+              <p class="text-2xl sm:text-3xl font-black text-amber-300 font-mono mb-1.5 group-hover:text-emerald-400 transition-colors">
                 {stat.valor}
               </p>
-              <p class="text-xs sm:text-sm font-bold text-white mb-0.5 leading-snug">{stat.etiqueta}</p>
-              <p class="text-[11px] text-slate-400 leading-tight">{stat.detalle}</p>
+              <p class="text-sm sm:text-base font-bold text-white mb-1 leading-snug">{stat.etiqueta}</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{stat.detalle}</p>
             </div>
           ))}
         </div>
@@ -204,7 +205,7 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
       
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-amber-400 font-bold text-xs uppercase tracking-widest bg-amber-500/10 border border-amber-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          📊 Comparativa para Negocios
+          📊 Problemas Frecuentes vs. Nuestro Enfoque
         </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           {por_que_nosotros.titulo}
@@ -229,26 +230,26 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <!-- Con LaPonTech (Ventaja Técnica) -->
+              <!-- Nuestro Enfoque en LaPonTech -->
               <div class="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30">
                 <p class="text-xs font-bold text-emerald-400 uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
                   <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
-                  <span>Con LaPonTech</span>
+                  <span>Nuestro Enfoque en LaPonTech</span>
                 </p>
                 <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
                   {item.nosotros}
                 </p>
               </div>
 
-              <!-- Con Programas Alquilados / Agencias Tradicionales -->
+              <!-- El Problema Frecuente -->
               <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
-                  <svg class="w-4 h-4 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+                  <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                   </svg>
-                  <span>Programas Alquilados / Agencias Tradicionales</span>
+                  <span>El Problema Frecuente</span>
                 </p>
                 <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   {item.otros}
@@ -258,6 +259,79 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
 
           </div>
         ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 3.5. SECCIÓN PARA AGENCIAS (SERVICIO TÉCNICO EN MARCA BLANCA) ──── -->
+  <section id="agencias" class="py-20 lg:py-28 border-b border-slate-800/80 scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          {agencias.badge}
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+          {agencias.titulo}
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
+          {agencias.subtitulo}
+        </p>
+        <p class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-emerald-300 bg-emerald-950/50 border border-emerald-700/40 px-4 py-2 rounded-xl">
+          <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          <span>{agencias.compromiso_respeto}</span>
+        </p>
+      </div>
+
+      <!-- 3 Áreas de Ejecución Técnica en Marca Blanca -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        {agencias.areas.map((area) => (
+          <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all shadow-card-subtle">
+            <div>
+              <span class="inline-block text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2.5 py-1 rounded-md mb-4">
+                {area.badge}
+              </span>
+              <h3 class="text-lg font-bold text-white mb-2.5 leading-snug">{area.titulo}</h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">{area.descripcion}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Banner de Condición Especial para Primeros Encargos -->
+      <div class="bg-gradient-to-r from-slate-900 via-emerald-950/30 to-slate-900 border border-emerald-500/30 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="max-w-2xl text-center lg:text-left">
+          <span class="inline-block text-xs font-mono font-bold text-amber-300 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full mb-3">
+            {agencias.condicion_especial.badge}
+          </span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-2">
+            {agencias.condicion_especial.titulo}
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            {agencias.condicion_especial.descripcion}
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center lg:items-end flex-shrink-0 w-full lg:w-auto">
+          <a
+            href={WA_AGENCIAS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Solicitar Tarifas de Marca Blanca por WhatsApp (Abre en nueva pestaña)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-6 py-4 rounded-xl shadow-glow-emerald hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] text-sm cursor-pointer"
+          >
+            <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
+            </svg>
+            <span>{agencias.cta_texto}</span>
+          </a>
+          <span class="text-[11px] text-slate-400 mt-2 text-center lg:text-right">
+            {agencias.cta_microtexto}
+          </span>
+        </div>
       </div>
 
     </div>
@@ -329,7 +403,7 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
 
               <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>Atención directa sin ejecutivos comerciales intermediarios</span>
+                <span>Trato directo y cercano con los ingenieros fundadores</span>
               </div>
             </div>
           ))}
@@ -389,7 +463,7 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
         </div>
       </div>
 
-      <!-- Cuentas Claras sobre Dominio e Infraestructura -->
+      <!-- Cuentas Claras sobre Dominio, Hosting y Mantenimiento Opcional -->
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left shadow-sm">
         <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center flex-shrink-0 shadow-md">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -397,9 +471,9 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
           </svg>
         </div>
         <div>
-          <h4 class="font-bold text-white text-base mb-1">Cuentas claras sobre tu nombre web (.com)</h4>
+          <h4 class="font-bold text-white text-base mb-1">Cuentas claras sobre dominio, servidor y mantenimiento opcional</h4>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Tu dirección web (.com) se registra directamente a tu nombre con el proveedor oficial a precio real. Te ayudamos a configurarlo paso a paso sin comisiones ocultas ni cobros inflados.
+            Tu dominio (.com) queda registrado a tu nombre. Además, el mantenimiento continuo, soporte o alojamiento administrado son 100% opcionales con tarifas claras y fijas, sin cobros sorpresa.
           </p>
         </div>
       </div>
@@ -413,15 +487,15 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10 text-center">
       
       <span class="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full mb-4">
-        🔒 Soluciones Prácticas y 100% Tuyas
+        🔒 Soluciones Prácticas para Negocios y Agencias
       </span>
 
       <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-        ¿Listo para digitalizar tu negocio sin pagar rentas eternas?
+        ¿Listo para digitalizar tu negocio o ampliar la capacidad técnica de tu agencia?
       </h2>
 
       <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
-        Páginas web rápidas para captar clientes y sistemas a tu medida para ordenar tus ventas y bodega. Sin intermediarios, sin palabras enredadas y con trato directo con los fundadores.
+        Páginas web optimizadas, sistemas a medida sin rentas forzosas y ejecución en marca blanca para agencias. Con mantenimiento opcional y trato directo con ingeniería.
       </p>
 
       <div class="flex flex-col items-center">
@@ -545,11 +619,13 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
               </div>
             </div>
             <a
-              href="mailto:contacto@lapontech.com"
-              aria-label="Enviar correo a contacto@lapontech.com"
-              class="w-full text-center bg-slate-900 hover:bg-slate-800 text-emerald-400 hover:text-white font-bold px-4 py-3 rounded-xl border border-slate-700 transition-all text-xs tracking-wider"
+              href="#contacto"
+              data-email-user="contacto"
+              data-email-domain="lapontech.com"
+              aria-label="Enviar correo corporativo a LaPonTech"
+              class="js-protected-email w-full text-center bg-slate-900 hover:bg-slate-800 text-emerald-400 hover:text-white font-bold px-4 py-3 rounded-xl border border-slate-700 transition-all text-xs tracking-wider"
             >
-              contacto@lapontech.com
+              <span data-email-text>contacto [arroba] lapontech [punto] com</span>
             </a>
           </div>
         </div>
@@ -587,13 +663,13 @@ const WA_DIRECT_URL = `https://wa.me/${empresa.telefono_clean}?text=${encodeURIC
 
             <div>
               <label for="business_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                Nombre de tu Negocio o Empresa
+                Nombre de tu Negocio o Agencia
               </label>
               <input
                 type="text"
                 id="business_name"
                 name="business_name"
-                placeholder="Ej. Distribuidora Norte / Taller Martínez"
+                placeholder="Ej. Distribuidora Norte / Agencia Creativa"
                 class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-500 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
               />
             </div>

@@ -62,8 +62,13 @@ const currentYear = new Date().getFullYear();
             </a>
           </li>
           <li>
-            <a href="/#servicios" class="text-slate-400 hover:text-emerald-400 transition-colors block py-1">
-              Asesoría en Computadoras & Equipos
+            <a href="/#asesoria-tecnica" class="text-slate-400 hover:text-emerald-400 transition-colors block py-1">
+              Servidores, Correos & Equipos
+            </a>
+          </li>
+          <li>
+            <a href="/#agencias" class="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors block py-1">
+              Marca Blanca para Agencias
             </a>
           </li>
         </ul>
@@ -123,13 +128,16 @@ const currentYear = new Date().getFullYear();
           <p>Honduras, Centroamérica</p>
           <div class="pt-2 space-y-2">
             <a
-              href="mailto:contacto@lapontech.com"
-              class="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-emerald-400 font-semibold transition-colors block"
+              href="#contacto"
+              data-email-user="contacto"
+              data-email-domain="lapontech.com"
+              aria-label="Enviar correo corporativo a LaPonTech"
+              class="js-protected-email inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-emerald-400 font-semibold transition-colors block"
             >
               <svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              <span>contacto@lapontech.com</span>
+              <span data-email-text>contacto [arroba] lapontech [punto] com</span>
             </a>
             <a
               href="/#contacto"
@@ -161,3 +169,32 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  // Hidratación de correo protegida contra bots recolectores (anti-regex scraping)
+  (function () {
+    function hydrateProtectedEmails() {
+      var links = document.querySelectorAll('.js-protected-email[data-email-user][data-email-domain]');
+      for (var i = 0; i < links.length; i++) {
+        var el = links[i];
+        var u = el.getAttribute('data-email-user');
+        var d = el.getAttribute('data-email-domain');
+        if (u && d) {
+          var full = u + String.fromCharCode(64) + d;
+          el.setAttribute('href', 'mailto:' + full);
+          var label = el.querySelector('[data-email-text]');
+          if (label) {
+            label.textContent = full;
+          } else {
+            el.textContent = full;
+          }
+        }
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', hydrateProtectedEmails);
+    } else {
+      hydrateProtectedEmails();
+    }
+  })();
+</script>

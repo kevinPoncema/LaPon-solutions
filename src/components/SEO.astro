@@ -14,8 +14,8 @@ const siteUrl = "https://lapontech.com";
 const companyName = "LaPon Tech Solutions";
 
 const {
-  title = "LaPonTech | Páginas Web y Sistemas a Medida en Honduras",
-  description = "Páginas web rápidas, catálogos con WhatsApp y sistemas a medida sin rentas mensuales en San Pedro Sula y Honduras. 100% tuyos. ¡Cotiza por WhatsApp!",
+  title = "LaPonTech | Páginas Web, Sistemas a Medida y Marca Blanca",
+  description = "Páginas web rápidas, sistemas a medida sin rentas forzosas y brazo técnico en marca blanca para agencias en San Pedro Sula y Honduras. ¡Cotiza por WhatsApp!",
   canonical = Astro.url.pathname,
   ogImage = "/logo-completo.png",
   type = "website",
@@ -42,7 +42,6 @@ const organizationSchema = {
   "description": "Creamos páginas web ultrarrápidas con catálogo de pedidos para WhatsApp y sistemas a medida de inventario, facturación y punto de venta (POS) para comercios y PYMEs en San Pedro Sula y toda Honduras, sin mensualidades forzosas.",
   "priceRange": "$$",
   "telephone": serviciosData.empresa.telefono,
-  "email": serviciosData.empresa.correo,
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -77,17 +76,17 @@ const organizationSchema = {
   ],
   "audience": {
     "@type": "BusinessAudience",
-    "name": "Pequeñas y Medianas Empresas (PYMEs) y Comercios en Honduras",
-    "audienceType": "Ferreterías, farmacias, tiendas de repuestos, distribuidoras, bodegas, talleres, restaurantes, tiendas de ropa y clínicas"
+    "name": "Comercios, PYMEs y Agencias de Marketing y Diseño en Honduras",
+    "audienceType": "Pequeñas y medianas empresas (ferreterías, farmacias, repuestos, distribuidoras, talleres, restaurantes, clínicas) y Agencias de Marketing, Publicidad y Diseño (servicio en modalidad Marca Blanca)"
   },
   "knowsAbout": [
-    "Diseño de páginas web en San Pedro Sula",
-    "Catálogos digitales con pedidos por WhatsApp",
-    "Sistemas de inventario y facturación en Honduras",
-    "Software de punto de venta (POS) sin mensualidades",
-    "Desarrollo de software a medida para PYMEs",
-    "Automatización de WhatsApp para negocios",
-    "Soporte técnico y asesoría de computadoras en San Pedro Sula"
+    "Diseño de páginas web y landings de conversión en San Pedro Sula",
+    "Optimización GEO (Generative Engine Optimization) para motores de IA",
+    "Desarrollo web y soporte técnico en Marca Blanca para agencias de marketing",
+    "Sistemas de inventario, facturación y punto de venta (POS) a medida",
+    "Automatización de prospectos y campañas con WhatsApp y CRM (webhooks)",
+    "Configuración de servidores, DNS y correos corporativos (SPF, DKIM, DMARC)",
+    "Asesoría tecnológica y mantenimiento opcional para empresas"
   ],
   "founder": [
     {
@@ -146,7 +145,7 @@ const webPageSchema = {
   "inLanguage": "es-HN",
   "speakable": {
     "@type": "SpeakableSpecification",
-    "cssSelector": ["h1", "#servicios h2", "#comparativa h2", "#faq details"]
+    "cssSelector": ["h1", "#servicios h2", "#comparativa h2", "#agencias h2", "#faq details"]
   }
 };
 ---

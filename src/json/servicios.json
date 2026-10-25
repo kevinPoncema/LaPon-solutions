@@ -8,72 +8,72 @@
     "telefono_clean": "50499000000",
     "correo": "contacto@lapontech.com",
     "whatsapp_link": "https://wa.me/50499000000",
-    "eslogan": "Páginas Web Rápidas y Sistemas a Medida para Negocios sin Rentas Forzosas"
+    "eslogan": "Páginas Web, Sistemas a Medida y Brazo Técnico en Marca Blanca en Honduras"
   },
   "hero": {
-    "badge": "Páginas Web Rápidas & Sistemas a Medida · Honduras",
+    "badge": "Soluciones para Negocios & Marca Blanca para Agencias · Honduras",
     "titulo_principal": "Páginas web rápidas y sistemas a medida para tu negocio",
     "titulo_destacado": "sin rentas forzosas",
-    "subtitulo": "Creamos páginas web que abren en menos de 1 segundo en celulares y sistemas fáciles para ordenar tus ventas, inventario o procesos. Sin mensualidades abusivas: pagas por tu herramienta y eres dueño total de tu sistema y de tu información.",
-    "cta_whatsapp_texto": "Solicitar Diagnóstico Gratuito por WhatsApp",
-    "cta_microtexto": "Sin compromiso • Respuesta directa en horario hábil",
-    "cta_comparativa_texto": "Ver Comparativa para Negocios",
+    "subtitulo": "Creamos páginas web ligeras optimizadas para celulares, sistemas a medida para ordenar tus ventas o inventario, y brindamos soporte de ingeniería en marca blanca para agencias. Eres dueño de tu herramienta, con planes de mantenimiento 100% opcionales.",
+    "cta_whatsapp_texto": "Solicitar Diagnóstico por WhatsApp",
+    "cta_microtexto": "Atención directa en horario hábil • Mantenimiento opcional",
+    "cta_comparativa_texto": "Ver Nuestro Enfoque",
     "estadisticas": [
       {
-        "valor": "< 1s",
-        "etiqueta": "Carga Rápida en Celulares",
-        "detalle": "Tus clientes no esperan ni se van a la competencia"
+        "valor": "Velocidad",
+        "etiqueta": "Optimizado para Celulares",
+        "detalle": "Sitios ligeros pensados para abrir rápido con datos móviles"
       },
       {
         "valor": "100%",
-        "etiqueta": "Tuyo y a tu Nombre",
-        "detalle": "Sin software secuestrado ni rentas forzosas"
+        "etiqueta": "Propiedad de tu Proyecto",
+        "detalle": "Sin alquileres obligatorios y con mantenimiento opcional"
       },
       {
-        "valor": "≤ 7 Días",
-        "etiqueta": "Tu Página Web Lista",
-        "detalle": "Catálogo digital y botón directo a WhatsApp"
+        "valor": "Ágil",
+        "etiqueta": "Desarrollo Veloz",
+        "detalle": "Entregas claras según el alcance de cada proyecto"
       },
       {
         "valor": "Directo",
-        "etiqueta": "Trato con los Fundadores",
-        "detalle": "Sin intermediarios ni secretarias por WhatsApp"
+        "etiqueta": "Trato con Ingeniería",
+        "detalle": "Comunicación clara por WhatsApp o correo con los fundadores"
       }
     ]
   },
   "por_que_nosotros": {
-    "titulo": "¿Por qué elegir LaPonTech para tu negocio?",
-    "subtitulo": "La diferencia entre contratar soluciones prácticas que son 100% tuyas o quedar atrapado en mensualidades eternas.",
+    "titulo": "¿Cómo resolvemos los problemas tecnológicos más frecuentes?",
+    "subtitulo": "Nuestro enfoque está diseñado para evitar cuellos de botella, costos mensuales forzosos y herramientas difíciles de administrar.",
     "comparativa": [
       {
-        "criterio": "Velocidad en Celulares",
-        "badge": "⚡ Carga en < 1 segundo",
-        "nosotros": "Páginas y sistemas ligeros que abren al instante incluso con datos móviles prepago. Tus clientes ven lo que ofreces rápido y te escriben sin esperar.",
-        "otros": "Páginas pesadas que tardan más de 8 segundos en abrir en el celular, se traban y hacen que el cliente cierre la ventana."
+        "criterio": "Rendimiento en Celulares y Campañas",
+        "badge": "⚡ Sitios Ligeros y Fluidos",
+        "nosotros": "Desarrollamos páginas y sistemas ultraligeros pensados para abrir con fluidez en teléfonos móviles, mejorando la experiencia del visitante y el aprovechamiento de tus campañas.",
+        "otros": "Sitios sobrecargados de complementos pesados que tardan demasiado en cargar con datos móviles, provocando que muchas visitas abandonen la página antes de consultar."
       },
       {
-        "criterio": "Costos y Mensualidades",
-        "badge": "🚫 Sin Rentas Forzosas",
-        "nosotros": "No te cobramos alquileres mensuales obligatorios por usar tu propio sistema. Eres dueño de tu herramienta y tú decides si contratas pólizas opcionales de soporte.",
-        "otros": "Suscripciones mensuales obligatorias por cada usuario o caja que suben de precio cada año. Si dejas de pagar, te cortan el acceso."
+        "criterio": "Esquema de Pagos y Mantenimiento",
+        "badge": "🚫 Mantenimiento 100% Opcional",
+        "nosotros": "Inviertes en el desarrollo de tu herramienta y queda siendo tuya. El mantenimiento continuo, soporte prioritario o alojamiento administrado son planes completamente opcionales.",
+        "otros": "Licencias mensuales obligatorias por cada usuario o empleado que aumentan el gasto fijo año tras año y suspenden el acceso si dejas de pagar la suscripción."
       },
       {
-        "criterio": "Propiedad de tu Información",
-        "badge": "🔒 Tus Datos son 100% Tuyos",
-        "nosotros": "Tu base de datos de clientes, ventas e inventario queda bajo tu control total, instalada en tu equipo o servidor propio. Nunca retenemos tus contraseñas.",
-        "otros": "Plataformas cerradas o agencias que se quedan con tus claves y no te entregan tus datos si deseas cambiar de proveedor."
+        "criterio": "Control de Accesos e Información",
+        "badge": "🔒 Tus Datos a tu Nombre",
+        "nosotros": "Entregamos el acceso completo a tu base de datos, código y credenciales documentadas a tu nombre, garantizando autonomía total sobre la información de tu negocio o cliente.",
+        "otros": "Falta de acceso directo a las configuraciones del dominio, correos o base de datos, lo que complica realizar mejoras o migraciones en el futuro."
       },
       {
-        "criterio": "Atención y Respuestas",
-        "badge": "🤝 Trato Directo con Fundadores",
-        "nosotros": "Hablas directo por WhatsApp con Kevin y David, los ingenieros fundadores. Recibes respuestas claras, honestas y sin rodeos en horario hábil.",
-        "otros": "Te atienden vendedores que no conocen la parte técnica o sistemas de tickets que tardan días en contestar."
+        "criterio": "Comunicación y Resolución Técnica",
+        "badge": "🤝 Trato Directo con Ingeniería",
+        "nosotros": "Conversas directamente por WhatsApp o correo con los ingenieros fundadores que desarrollan tu proyecto. Evaluamos tu caso de primera mano para darte soluciones prácticas y presupuestos claros.",
+        "otros": "Procesos de soporte lentos con múltiples intermediarios donde los requerimientos técnicos tardan días en ser comprendidos y atendidos."
       },
       {
-        "criterio": "Facilidad y Estabilidad",
-        "badge": "🛡️ Fácil de Usar y Seguro",
-        "nosotros": "Herramientas diseñadas a la medida exacta de tu negocio. Cualquier persona de tu equipo aprende a usarlas en minutos desde celular o computadora.",
-        "otros": "Programas complicados llenos de menús que nunca usas o plantillas genéricas que no se adaptan a tu forma de vender."
+        "criterio": "Facilidad de Uso en el Día a Día",
+        "badge": "🛡️ Pantallas Claras y Prácticas",
+        "nosotros": "Construimos cada pantalla únicamente con las funciones que tu operación necesita, incluyendo capacitación paso a paso para facilitar la adaptación de tu equipo.",
+        "otros": "Programas genéricos llenos de menús y configuraciones complejas que no se ajustan al flujo real del negocio y dificultan el trabajo diario."
       }
     ]
   },
@@ -82,31 +82,31 @@
       "id": "presencia-digital",
       "popular": true,
       "titulo": "Páginas Web Profesionales & Catálogos Digitales",
-      "subtitulo": "Facilita que tus clientes conozcan tus productos o servicios y te pidan cotizaciones por WhatsApp en segundos.",
-      "badges": ["⚡ Carga Instantánea", "📲 Enfoque en WhatsApp", "🎯 100% Tu Dominio"],
-      "descripcion": "Diseñamos páginas web profesionales y catálogos interactivos rápidos, limpios y optimizados para celulares. Es el complemento ideal para tus redes sociales: organiza tus productos, servicios, precios y ubicación en un solo enlace disponible las 24 horas. Así evitas perder clientes por mensajes sin responder.",
+      "subtitulo": "Facilita que tus clientes conozcan lo que ofreces, te ubiquen mejor en buscadores e IA y te contacten por WhatsApp.",
+      "badges": ["🔍 Mejor Visibilidad en Google e IA (SEO + GEO)", "📲 Enfoque en WhatsApp", "🎯 100% Tu Dominio"],
+      "descripcion": "Diseñamos páginas web profesionales y catálogos interactivos optimizados para celulares, cuidando desde la base el SEO y GEO. Además de ordenar tus productos, servicios y precios en un solo lugar, construimos tu sitio con la estructura que leen Google y las inteligencias artificiales (como ChatGPT, Gemini o Perplexity), facilitando que reconozcan tu negocio y sea mucho más probable que te muestren cuando alguien busque lo que ofreces.",
       "puntos_clave": [
-        "Abre en menos de 1 segundo en celulares: Carga instantánea para que tus visitas no se vayan antes de ver tu oferta.",
-        "Botón y pedidos directos a WhatsApp: Tus clientes eligen lo que necesitan y te envían el mensaje con la consulta o pedido listo.",
-        "Catálogo y servicios bien ordenados: Presentación clara de tus fotos, precios y horarios sin que el cliente tenga que buscar entre decenas de publicaciones.",
-        "Control y propiedad total: El nombre de dominio (.com) y todos los accesos quedan registrados 100% a nombre de tu negocio."
+        "Más fácil de encontrar en Google e IA (SEO + GEO): Estructuramos tu web en el formato que leen ChatGPT, Gemini, Perplexity y Google, ayudando a que comprendan qué vendes y sea más probable que te tomen en cuenta al responder a posibles clientes.",
+        "Botón y pedidos directos a WhatsApp: Tus visitas revisan tu catálogo o servicios y te envían el mensaje con su consulta o pedido listo en un toque.",
+        "Navegación fluida en celulares: Diseño ligero pensado para abrir rápido y sin trabas incluso con conexiones de datos móviles.",
+        "Control total y mantenimiento opcional: Tu dominio (.com) queda a tu nombre y tú decides si lo administras o contratas nuestro soporte opcional."
       ],
       "cta_texto": "Cotizar página o catálogo →",
       "servicio_form_val": "presencia-digital",
-      "wa_msg": "Hola LaPonTech, me interesa cotizar una Página Web Profesional o Catálogo Digital para mi negocio."
+      "wa_msg": "Hola LaPonTech, me interesa cotizar una Página Web Profesional o Catálogo Digital optimizado para Google e IA (SEO + GEO)."
     },
     {
       "id": "facturacion-inventario",
       "popular": false,
       "titulo": "Desarrollo de Software & Sistemas a Medida",
-      "subtitulo": "Construimos herramientas digitales adaptadas al flujo exacto de tu negocio, sin atarte a suscripciones eternas.",
-      "badges": ["📦 Soluciones a Medida", "🔒 Código y Datos Propios", "🚫 Cero Mensualidades Forzosas"],
-      "descripcion": "Si los cuadernos, las hojas de Excel desordenadas o los programas genéricos ya te quedan cortos, creamos la solución exacta que tu operación necesita. Diseñamos sistemas rápidos y claros para resolver tu cuello de botella: desde control de inventario y bodega, hasta puntos de venta (POS), paneles administrativos o seguimiento de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.",
+      "subtitulo": "Construimos herramientas digitales adaptadas al flujo exacto de tu negocio, sin atarte a suscripciones obligatorias.",
+      "badges": ["📦 Soluciones a Medida", "🔒 Código y Datos Propios", "🛠️ Soporte Opcional"],
+      "descripcion": "Si los cuadernos, las hojas de Excel desordenadas o los programas genéricos ya te quedan cortos, creamos la solución que tu operación necesita. Diseñamos sistemas claros para resolver tu cuello de botella: desde control de inventario y bodega, hasta puntos de venta (POS), paneles administrativos o seguimiento de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.",
       "puntos_clave": [
-        "Hecho a la medida de tu proceso: Desarrollamos solo las funciones pensadas para tu forma de trabajar, sin botones de adorno que nadie usa.",
+        "Hecho a la medida de tu proceso: Desarrollamos las funciones pensadas para tu forma de trabajar, sin módulos innecesarios que nadie usa.",
         "Ejemplos de lo que construimos: Control de existencias y bodega, registro de cobros en mostrador, cuentas por cobrar, seguimiento de pedidos o cotizadores.",
-        "Propiedad total del sistema: El programa y la base de datos son 100% tuyos, sin pagar rentas mensuales abusivas por cada empleado o usuario.",
-        "Fácil de usar en celular o computadora: Pantallas limpias y directas para que tu equipo aprenda a usarlo en minutos y sin enredos."
+        "Propiedad del sistema sin rentas forzosas: El programa y la base de datos son tuyos; las pólizas de mantenimiento y actualizaciones posteriores son opcionales.",
+        "Práctico desde celular o computadora: Pantallas limpias e intuitivas con capacitación incluida para que tu equipo se adapte con facilidad."
       ],
       "cta_texto": "Cotizar desarrollo a medida →",
       "servicio_form_val": "facturacion-inventario",
@@ -116,152 +116,183 @@
       "id": "automatizaciones",
       "popular": false,
       "titulo": "Automatización Operativa & Mensajes por WhatsApp",
-      "subtitulo": "Elimina tareas manuales repetitivas y atiende a tus clientes en segundos.",
-      "badges": ["🤖 Cero Tareas Manuales", "⚡ Respuestas Inmediatas", "📊 Todo Sincronizado"],
-      "descripcion": "Si en tu negocio pierden horas haciendo el mismo trabajo manual todos los días, lo automatizamos a tu medida para que se haga solo y sin errores humanos. Nos adaptamos a cualquier tarea o flujo que necesites agilizar: tú nos cuentas qué proceso te quita tiempo y nosotros lo conectamos.",
+      "subtitulo": "Elimina tareas manuales repetitivas y agiliza la entrega de prospectos y pedidos.",
+      "badges": ["🤖 Menos Trabajo Manual", "⚡ Flujos Automáticos", "📊 Todo Conectado"],
+      "descripcion": "Si en tu negocio o campaña pierden horas haciendo el mismo trabajo manual todos los días, lo automatizamos a tu medida para reducir errores humanos. Nos adaptamos a cualquier flujo que necesites agilizar: tú nos cuentas qué proceso te quita tiempo y nosotros lo conectamos.",
       "puntos_clave": [
-        "Automatizamos lo que necesites: Analizamos tu rutina diaria y programamos soluciones para cualquier tarea repetitiva de tu operación.",
-        "Ejemplo en atención y pedidos: Avisos y confirmaciones automáticas por WhatsApp a clientes y empleados al recibir un pedido o cita.",
-        "Ejemplo en administración: Paso automático de datos a tus hojas de cálculo o sistema para no copiar información a mano dos veces.",
-        "Ejemplo en cobros y bodega: Recordatorios automáticos de facturas pendientes o alertas al celular cuando un producto está por agotarse."
+        "Automatizamos lo que necesites: Analizamos tu flujo de trabajo y conectamos tus herramientas para ahorrar tiempo operativo.",
+        "Ejemplo en campañas y prospectos: Integración de formularios web y anuncios con WhatsApp, hojas de cálculo o CRMs mediante webhooks.",
+        "Ejemplo en atención y pedidos: Avisos y confirmaciones automáticas por WhatsApp al recibir un nuevo pedido, cita o solicitud.",
+        "Ejemplo en cobros y bodega: Recordatorios automáticos de pagos pendientes o alertas cuando un producto clave está por agotarse."
       ],
       "cta_texto": "Cotizar automatización →",
       "servicio_form_val": "automatizaciones",
-      "wa_msg": "Hola LaPonTech, me gustaría automatizar procesos operativos y notificaciones de WhatsApp para mi negocio."
+      "wa_msg": "Hola LaPonTech, me gustaría automatizar procesos operativos o integraciones con WhatsApp."
     },
     {
       "id": "asesoria-tecnica",
       "popular": false,
-      "titulo": "Asesoría en Computadoras, Equipos & Sistemas",
-      "subtitulo": "Respaldo y soporte de confianza para tus equipos, redes y programas.",
-      "badges": ["💻 Diagnóstico Honesto", "🛡️ Copias de Seguridad", "🤝 Trato con Fundadores"],
-      "descripcion": "Te orientamos con total honestidad para que inviertas bien y no gastes de más en piezas o equipos innecesarios. Te ayudamos a elegir qué computadoras comprar, aceleramos máquinas lentas y configuramos copias de seguridad para proteger la información de tu negocio.",
+      "titulo": "Asesoría Técnica, Servidores & Equipos",
+      "subtitulo": "Respaldo técnico confiable para tus equipos, servidores, dominios y conexión de correos corporativos.",
+      "badges": ["💻 Diagnóstico Honesto", "🌐 Configuración DNS", "🛡️ Copias de Seguridad"],
+      "descripcion": "Te orientamos con total transparencia para resolver requerimientos técnicos de hardware o infraestructura web. Desde qué computadoras adquirir y cómo optimizar equipos lentos, hasta migración de servidores web, configuración de dominios (DNS) y conexión técnica de tus correos corporativos con proveedores líderes.",
       "puntos_clave": [
-        "Recomendaciones honestas para comprar computadoras, impresoras térmicas y lectores de barra según tu presupuesto.",
-        "Diagnóstico y solución para computadoras lentas, fallos de red local o programas que se traban.",
-        "Copias de seguridad automáticas para proteger tus facturas, inventarios y archivos importantes.",
-        "Trato directo con los ingenieros fundadores por WhatsApp o visita presencial en San Pedro Sula."
+        "Configuración de DNS y correos corporativos: Enrutamos tu dominio y configuramos los sellos de seguridad (SPF, DKIM, DMARC) conectándolo con plataformas especializadas externas (como Google Workspace, Microsoft 365 o Zoho) para garantizar que tus correos lleguen a la bandeja principal y no a spam.",
+        "Alojamiento web administrado opcional: Despliegue de páginas y sistemas en servidores optimizados con tarifas claras y fijas para evitar saturación o sobrecostos de renovación.",
+        "Equipos y soporte local: Recomendación honesta para compra de computadoras e impresoras, y mejora de equipos lentos en San Pedro Sula.",
+        "Respaldo de información: Configuración de copias de seguridad automáticas para proteger tus bases de datos y archivos críticos."
       ],
-      "cta_texto": "Consultar asesoría técnica →",
+      "cta_texto": "Consultar asistencia técnica →",
       "servicio_form_val": "asesoria-tecnica",
-      "wa_msg": "Hola LaPonTech, necesito asesoría técnica o soporte para la infraestructura y equipos de mi negocio."
+      "wa_msg": "Hola LaPonTech, necesito asistencia técnica en servidores, configuración de DNS/correos o equipos de cómputo."
     }
   ],
-  "sobre_nosotros": {
-    "badge": "Propósito & Fundadores",
-    "titulo_principal": "Tecnología práctica y transparente para tu negocio",
-    "subtitulo": "En LaPonTech creemos que la tecnología debe ayudarte a vender más y trabajar con tranquilidad. No debe ser un gasto mensual eterno ni un dolor de cabeza lleno de palabras difíciles.",
-    "principios": [
+  "agencias": {
+    "badge": "🤝 Servicio Técnico B2B · Modalidad Marca Blanca",
+    "titulo": "Tu Brazo Técnico Externo para Agencias de Marketing y Diseño",
+    "subtitulo": "Sabemos que muchas agencias enfrentan cuellos de botella técnicos o prefieren no asumir el costo fijo de un equipo interno de programación para requerimientos puntuales. Te brindamos un servicio de ejecución técnica en marca blanca para que amplíes tu catálogo o desahogues proyectos bajo tu propio margen comercial.",
+    "compromiso_respeto": "Ejecutamos la ingeniería detrás de escena: respetamos al 100% la relación con tus clientes, tu autoría comercial y tu confidencialidad.",
+    "areas": [
       {
-        "titulo": "Sin Rentas Forzosas de Software",
-        "descripcion": "No te cobramos suscripciones abusivas por usar tu propio sistema. Eres dueño de tu herramienta y tú decides si contratas pólizas opcionales de soporte.",
-        "badge": "🚫 Cero Rentas"
+        "badge": "🚀 Landings & GEO",
+        "titulo": "Desarrollo Web y Landings de Conversión",
+        "descripcion": "Sitios ultraligeros enfocados en el rendimiento de tus campañas de pauta publicitaria y estructurados para SEO y GEO (Generative Engine Optimization), ayudando a que motores de IA como ChatGPT, Gemini y Perplexity citen y recomienden a los clientes de tu agencia."
       },
       {
-        "titulo": "Tus Datos y Sistema son Tuyos",
-        "descripcion": "Tienes control total sobre tu base de datos, tu sistema y tus contraseñas. Todo queda instalado en tu equipo o servidor propio, sin software secuestrado.",
-        "badge": "🔒 Acceso Total"
+        "badge": "🌐 Infraestructura & DNS",
+        "titulo": "Asistencia Técnica, Servidores y DNS",
+        "descripcion": "Despliegue web, enrutamiento de DNS y conexión técnica de correos corporativos (SPF, DKIM, DMARC) sobre proveedores externos especializados (Google Workspace, Microsoft 365, Zoho) para máxima entregabilidad, además de hosting web administrado opcional con tarifas fijas."
       },
       {
-        "titulo": "Velocidad Real que Vende",
-        "descripcion": "Páginas y sistemas que abren en menos de 1 segundo en cualquier celular. Tus clientes no se cansan de esperar y te compran más rápido.",
-        "badge": "⚡ Carga en < 1s"
-      },
-      {
-        "titulo": "Trato Directo y Claro",
-        "descripcion": "Hablas directo con los ingenieros fundadores por WhatsApp, sin intermediarios ni vendedores. Respuestas claras y soluciones directas en horario hábil.",
-        "badge": "🤝 Sin Intermediarios"
+        "badge": "⚡ Leads en Tiempo Real",
+        "titulo": "Automatización de Campañas y Prospectos",
+        "descripcion": "Integración técnica de tus formularios y campañas publicitarias con WhatsApp, hojas de cálculo o CRMs mediante webhooks y flujos automáticos para la entrega inmediata de prospectos a tus clientes."
       }
     ],
-    "fundadores_titulo": "Dos ingenieros técnicos, una visión compartida",
-    "fundadores_subtitulo": "David Flores Lagos y Kevin D. Ponce somos los fundadores de LaPonTech en San Pedro Sula. Diseñamos herramientas útiles, estables y hechas a la medida de la realidad de tu negocio.",
+    "condicion_especial": {
+      "badge": "✨ Condición Especial de Apertura para Agencias",
+      "titulo": "Tarifas preferenciales para agencias y descuento en primeros encargos",
+      "descripcion": "Manejamos tablas de tarifas mayoristas para agencias aliadas y ofrecemos un descuento introductorio especial en tus primeros encargos (ajustado según el tamaño y complejidad del proyecto). Así puedes evaluar nuestra velocidad de entrega y estándar técnico con riesgo mínimo y un margen de ganancia superior."
+    },
+    "cta_texto": "Solicitar Tarifas de Marca Blanca por WhatsApp",
+    "cta_microtexto": "Llamada breve de 10 minutos o atención directa con Dirección Técnica",
+    "wa_msg": "Hola LaPonTech, escribo en representación de una agencia de marketing/diseño y me gustaría conocer sus tarifas preferenciales y el descuento introductorio de Marca Blanca."
+  },
+  "sobre_nosotros": {
+    "badge": "Propósito & Fundadores",
+    "titulo_principal": "Ingeniería práctica, transparente y adaptable a tu necesidad",
+    "subtitulo": "En LaPonTech trabajamos para que la tecnología sea un apoyo rentable y fácil de entender, tanto si diriges un negocio que busca ordenar su operación como si lideras una agencia que necesita respaldo técnico confiable.",
+    "principios": [
+      {
+        "titulo": "Mantenimiento 100% Opcional",
+        "descripcion": "Pagas por el desarrollo de tu proyecto y eres dueño de él. Si luego deseas delegar el soporte, actualizaciones o servidor administrado, contamos con planes opcionales claros.",
+        "badge": "🚫 Sin Ataduras"
+      },
+      {
+        "titulo": "Tus Datos y Accesos son Tuyos",
+        "descripcion": "Entregamos el control total sobre tu base de datos, código y dominios. Todo queda documentado y registrado de forma transparente.",
+        "badge": "🔒 Control Total"
+      },
+      {
+        "titulo": "Enfoque en Rendimiento Real",
+        "descripcion": "Construimos páginas y sistemas ligeros que funcionan con fluidez en celulares y computadoras, cuidando la experiencia de cada usuario.",
+        "badge": "⚡ Diseño Ligero"
+      },
+      {
+        "titulo": "Trato Directo con Ingeniería",
+        "descripcion": "Hablas directo por WhatsApp con los fundadores técnicos en horario hábil, logrando diagnósticos precisos y entregas sin fricción.",
+        "badge": "🤝 Comunicación Clara"
+      }
+    ],
+    "fundadores_titulo": "Dos ingenieros técnicos a cargo de tu proyecto",
+    "fundadores_subtitulo": "David Flores Lagos y Kevin D. Ponce somos los fundadores de LaPonTech en San Pedro Sula. Cuidamos personalmente la calidad técnica y la atención de cada entrega.",
     "fundadores": [
+      {
+        "nombre": "Kevin D. Ponce",
+        "cargo": "Director Técnico & Co-Fundador · Técnico en Informática Orientada a la Programación",
+        "enfoque": "Arquitectura de Sistemas, Bases de Datos, Infraestructura & Alianzas con Agencias",
+        "descripcion": "Responsable del diseño de sistemas a medida, automatizaciones, despliegue en servidores, configuración de DNS/correos y coordinación técnica en modalidad marca blanca para agencias."
+      },
       {
         "nombre": "David Flores Lagos",
         "cargo": "Co-Fundador · Técnico en Informática Orientada a la Programación",
-        "enfoque": "Soporte Técnico, Atención al Cliente & Diseño Web",
-        "descripcion": "Especialista en atención cercana, soporte técnico y diseño de páginas web fáciles de usar. Te acompaña paso a paso con comunicación clara y soluciones rápidas en horario hábil."
-      },
-      {
-        "nombre": "Kevin D. Ponce",
-        "cargo": "Co-Fundador · Técnico en Informática Orientada a la Programación",
-        "enfoque": "Diseño de Sistemas, Bases de Datos & Infraestructura",
-        "descripcion": "Especialista en el desarrollo de sistemas a medida y bases de datos seguras. Construye herramientas rápidas y estables que ordenan tu inventario, tus cobros y tu operación."
+        "enfoque": "Diseño Web Mobile-First, Atención al Cliente & Soporte Técnico",
+        "descripcion": "Responsable de crear interfaces web limpias y fáciles de usar en celulares, además de brindar acompañamiento cercano, capacitación práctica y soporte de equipos."
       }
     ]
   },
   "metodologia": {
-    "titulo": "De tu necesidad a la solución funcionando en 4 pasos",
-    "subtitulo": "Un proceso sencillo, transparente, con fechas claras y sin costos sorpresa.",
+    "titulo": "De tu requerimiento a la solución funcionando en 4 pasos",
+    "subtitulo": "Un proceso ordenado, con alcances definidos desde el inicio y total claridad en costos.",
     "pasos": [
       {
         "numero": "01",
-        "nombre": "Conversación Inicial",
-        "descripcion": "Hablamos por WhatsApp o llamada para entender tu negocio y qué deseas resolver. Te recomendamos la opción más práctica y económica sin compromiso."
+        "nombre": "Diagnóstico Inicial (10 min)",
+        "descripcion": "Conversamos por WhatsApp o llamada breve para entender tu requerimiento (para tu empresa o para el cliente de tu agencia) y definir la vía técnica más práctica."
       },
       {
         "numero": "02",
-        "nombre": "Presupuesto Claro y Cerrado",
-        "descripcion": "Te entregamos un plan sencillo con lo que incluye, fechas de entrega y precio fijo cerrado. Sin cobros sorpresa ni letra pequeña."
+        "nombre": "Alcance, Tiempo y Presupuesto Cerrado",
+        "descripcion": "Presentamos una propuesta detallada con los entregables, tiempos estimados según la complejidad y el costo fijo de desarrollo, sin cargos ocultos."
       },
       {
         "numero": "03",
-        "nombre": "Construcción y Revisiones Contigo",
-        "descripcion": "Desarrollamos tu página o sistema mostrándote avances reales en tu celular o computadora. Así comprobamos juntos que todo funcione fácil y a tu gusto."
+        "nombre": "Desarrollo y Revisiones de Avance",
+        "descripcion": "Construimos la página, automatización o sistema enviándote enlaces de prueba para validar juntos que todo funcione con fluidez antes de publicar."
       },
       {
         "numero": "04",
-        "nombre": "Entrega, Accesos & Capacitación",
-        "descripcion": "Dejamos tu herramienta funcionando, te entregamos todas tus claves a tu nombre y capacitamos con paciencia a tu equipo para que tengan autonomía total."
+        "nombre": "Entrega de Accesos y Soporte Opcional",
+        "descripcion": "Ponemos el proyecto en marcha, entregamos todas las credenciales e incluimos capacitación. Luego tú eliges si operas por tu cuenta o con mantenimiento opcional."
       }
     ]
   },
   "garantias": {
-    "titulo": "Nuestros compromisos contigo",
+    "titulo": "Nuestros compromisos en cada entrega",
     "items": [
       {
-        "titulo": "Carga Rápida Garantizada",
-        "descripcion": "Probamos tu página o sistema en teléfonos móviles reales para asegurar que abra en menos de 1 segundo antes de entregártelo."
+        "titulo": "Optimización Móvil y GEO",
+        "descripcion": "Verificamos que cada sitio o sistema cargue con fluidez en teléfonos móviles y cuente con estructura técnica limpia para buscadores e IA."
       },
       {
-        "titulo": "Trato Directo con Fundadores",
-        "descripcion": "Hablas y trabajas directamente con Kevin y David por WhatsApp en horario hábil. Sin vendedores intermediarios ni secretarias."
+        "titulo": "Confidencialidad y Propiedad",
+        "descripcion": "Respetamos la propiedad total de tus datos y, en proyectos de marca blanca para agencias, trabajamos con absoluta discreción técnica."
       },
       {
         "titulo": "Acompañamiento Post-Entrega",
-        "descripcion": "Cuentas con nuestro respaldo durante las primeras semanas tras la entrega para resolver dudas y asegurar que todo tu equipo trabaje cómodo."
+        "descripcion": "Incluimos un periodo de respaldo tras la entrega para resolver dudas operativas, con opción libre a planes de mantenimiento futuro."
       }
     ]
   },
   "faq": [
     {
-      "pregunta": "¿Quién es el dueño de la página web o del sistema?",
-      "respuesta": "Tú eres el dueño absoluto desde el primer día. Te entregamos el sistema instalado, tu base de datos completa, tu dominio web (.com) registrado a tu nombre y todas las contraseñas. En LaPonTech no cobramos rentas mensuales forzosas por usar tu propio programa ni retenemos tus datos."
+      "pregunta": "¿Quién queda como dueño de la página web o del sistema?",
+      "respuesta": "Tú (o el cliente final de tu agencia) eres el dueño desde el primer día. Entregamos el sistema funcionando, la base de datos, el dominio web (.com) registrado a tu nombre y todas las contraseñas, sin retener accesos."
     },
     {
-      "pregunta": "¿Cómo se pagan el dominio web y el servidor?",
-      "respuesta": "Con total transparencia. El registro anual del dominio (.com) o el servidor se pagan directamente al proveedor oficial a precio real y a nombre de tu negocio. Nosotros te asesoramos para elegir la opción más económica y segura, sin comisiones ocultas ni cobros inflados."
+      "pregunta": "¿El mantenimiento mensual o el soporte técnico son obligatorios?",
+      "respuesta": "No son obligatorios. Nuestro desarrollo no te ata a rentas mensuales forzosas para seguir usando tu herramienta. Una vez entregado el proyecto, eres libre de administrarlo por tu cuenta o contratar nuestros planes opcionales de mantenimiento, respaldos o hosting administrado con tarifas fijas."
     },
     {
-      "pregunta": "¿El sistema a medida o la página web son difíciles de usar?",
-      "respuesta": "Para nada. Los diseñamos pensando en dueños y empleados que buscan rapidez y simplicidad, sin palabras técnicas. Cualquier persona en tu negocio aprende a usarlos en minutos desde un celular o computadora, y además te incluimos capacitación paso a paso."
+      "pregunta": "¿Cómo funciona el servicio de marca blanca para agencias de marketing y diseño?",
+      "respuesta": "Operamos como tu brazo técnico externo para resolver desarrollo web, landings con optimización GEO, enrutamiento de DNS, configuración de correos corporativos sobre plataformas especializadas externas (SPF, DKIM, DMARC) y automatizaciones con WhatsApp o CRM. Te damos tarifas preferenciales para agencias y un descuento introductorio en tus primeros encargos para que conserves un excelente margen comercial, manteniendo siempre el respeto total por tus clientes."
     },
     {
-      "pregunta": "¿Cuánto tiempo tarda en estar lista una página web o un sistema a medida?",
-      "respuesta": "Una página web profesional o catálogo digital está lista en 1 semana o menos (5 a 7 días hábiles tras recibir tus fotos y datos). Un sistema de software a medida toma de 1 a 3 meses según las funciones requeridas, entregándote avances periódicos para tu revisión."
+      "pregunta": "¿Cuánto tiempo toma desarrollar una página web o un sistema a medida?",
+      "respuesta": "El tiempo se define con claridad en la propuesta según el tamaño y la complejidad del encargo, así como la entrega de materiales. Las páginas web y landings suelen completarse de forma ágil en pocos días o semanas, mientras que los sistemas a medida se entregan por etapas funcionales."
     },
     {
-      "pregunta": "¿Ofrecen soporte técnico después de entregar el trabajo?",
-      "respuesta": "Sí. Incluimos acompañamiento garantizado durante las primeras semanas después de la entrega para resolver cualquier duda. Luego eres libre de operar por tu cuenta sin pagos mensuales, o contratar pólizas opcionales de soporte y copias de seguridad cuando lo necesites."
+      "pregunta": "¿Cómo se manejan los pagos de dominio web y alojamiento (hosting)?",
+      "respuesta": "Con total transparencia. Puedes registrar el dominio (.com) y el servidor directamente a tu nombre con el proveedor oficial bajo nuestra guía técnica, o bien optar por nuestro servicio opcional de hosting administrado con tarifa fija anual sin sobrecostos de renovación."
     },
     {
-      "pregunta": "¿Para qué tipo de negocios trabajan y en qué zonas de Honduras atienden?",
-      "respuesta": "Atendemos comercios, negocios familiares y PYMEs como ferreterías, farmacias, tiendas de repuestos, talleres, bodegas, distribuidoras, restaurantes, clínicas y firmas de servicios. Trabajamos de forma presencial en San Pedro Sula y el Valle de Sula (Choloma, Villanueva, El Progreso y Puerto Cortés), y 100% en línea por WhatsApp y videollamada en Tegucigalpa y toda Honduras."
+      "pregunta": "¿Para qué tipo de empresas trabajan y en qué zonas de Honduras atienden?",
+      "respuesta": "Atendemos tanto a comercios y PYMEs (ferreterías, farmacias, repuestos, distribuidoras, talleres, restaurantes, clínicas y servicios profesionales) como a agencias de marketing, diseño y publicidad. Nuestra base está en San Pedro Sula con cobertura en el Valle de Sula y atención 100% en línea por WhatsApp y videollamada en Tegucigalpa y toda Honduras."
     }
   ],
   "contacto_whatsapp": {
-    "titulo": "¿Tienes un proyecto o necesitas ordenar tu negocio?",
-    "subtitulo": "Escríbenos directamente por WhatsApp. Kevin y David te responderemos en horario hábil con una orientación clara, honesta y sin palabras complicadas.",
+    "titulo": "¿Tienes un proyecto para tu negocio o buscas un brazo técnico para tu agencia?",
+    "subtitulo": "Escríbenos directamente por WhatsApp. Te responderemos en horario hábil con una propuesta clara, honesta y ajustada a tu requerimiento.",
     "telefono": "50499000000",
     "select_opciones": [
       {
@@ -278,11 +309,15 @@
       },
       {
         "valor": "asesoria-tecnica",
-        "texto": "Asesoría en Computadoras, Equipos & Sistemas"
+        "texto": "Asistencia Técnica, Servidores, Correos & Equipos"
+      },
+      {
+        "valor": "marca-blanca-agencias",
+        "texto": "Servicio Técnico en Marca Blanca / Alianza para Agencia"
       },
       {
         "valor": "otra-consulta",
-        "texto": "Diagnóstico Gratuito / Otra consulta para mi negocio"
+        "texto": "Diagnóstico / Otra consulta técnica"
       }
     ]
   }

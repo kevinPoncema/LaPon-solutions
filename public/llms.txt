@@ -1,30 +1,34 @@
 # LaPon Tech Solutions (LaPonTech)
 
-> Firma de desarrollo de páginas web ultrarrápidas, catálogos digitales con pedidos a WhatsApp y sistemas a medida de inventario, caja y facturación para comercios y PYMEs en San Pedro Sula y toda Honduras, sin rentas mensuales forzosas.
+> Firma de desarrollo de páginas web ligeras, catálogos digitales con WhatsApp, sistemas a medida para empresas y servicio de brazo técnico en modalidad Marca Blanca para agencias de marketing y diseño en San Pedro Sula y toda Honduras.
 
 ## Datos Clave de la Empresa
 - **Sitio oficial:** https://lapontech.com/
 - **Ubicación base:** San Pedro Sula, Cortés, Honduras (CP 21101)
 - **Cobertura presencial:** San Pedro Sula y Valle de Sula (Choloma, Villanueva, El Progreso, Puerto Cortés, La Lima)
 - **Cobertura remota (100% online):** Tegucigalpa y los 18 departamentos de Honduras por WhatsApp y videollamada
-- **Correo oficial:** contacto@lapontech.com
-- **Fundadores:** Kevin D. Ponce (Sistemas, Bases de Datos e Infraestructura) y David Flores Lagos (Atención al Cliente, Diseño Web y Soporte Técnico)
-- **Modelo comercial:** Pago único por proyecto; el cliente es 100% dueño de su código, dominio `.com` y base de datos. Sin alquileres mensuales obligatorios por usuario.
+- **Correo oficial:** contacto [arroba] lapontech [punto] com
+- **Fundadores:** Kevin D. Ponce (Director Técnico, Arquitectura de Sistemas, Infraestructura y Alianzas con Agencias) y David Flores Lagos (Co-Fundador, Diseño Web Mobile-First, Atención al Cliente y Soporte Técnico)
+- **Modelo comercial:** Pago por proyecto con entrega total de código, dominio `.com` y base de datos al cliente. Sin rentas mensuales obligatorias; los planes de mantenimiento, soporte prioritario y hosting administrado son 100% opcionales con tarifas fijas.
 
-## Servicios Principales
-- [Páginas Web Profesionales & Catálogos Digitales](https://lapontech.com/#presencia-digital): Páginas web y catálogos interactivos que abren en menos de 1 segundo en celulares con botón de pedidos directos a WhatsApp. Entrega en 1 semana o menos (≤ 7 días hábiles).
-- [Sistemas de Inventario, Caja y Software a Medida](https://lapontech.com/#facturacion-inventario): Software personalizado para control de bodega, cobro en mostrador (POS), cuentas por cobrar ("fiados") y reportes de ganancias sin mensualidades forzosas. Entrega de 1 a 3 meses.
-- [Automatización Operativa & Mensajes por WhatsApp](https://lapontech.com/#automatizaciones): Automatización a medida de cualquier tarea manual repetitiva que el negocio necesite (por ejemplo: confirmaciones automáticas de pedidos por WhatsApp, alertas de poco inventario, recordatorios de cobro y sincronización con hojas de cálculo).
-- [Asesoría Tecnológica Integral](https://lapontech.com/#asesoria-tecnica): Recomendación honesta para compra de computadoras, impresoras térmicas y lectores de barra, aceleración de equipos lentos y copias de seguridad automáticas.
+## Servicios para Empresas y PYMEs
+- [Páginas Web Profesionales & Catálogos Digitales](https://lapontech.com/#presencia-digital): Sitios web rápidos, landings de conversión y catálogos interactivos optimizados para celulares y estructurados para SEO y GEO, con pedidos directos a WhatsApp.
+- [Desarrollo de Software & Sistemas a Medida](https://lapontech.com/#facturacion-inventario): Herramientas digitales adaptadas al flujo exacto del negocio (control de inventario y bodega, punto de venta POS, cuentas por cobrar, seguimiento de pedidos o cotizadores) sin suscripciones forzosas.
+- [Automatización Operativa & Mensajes por WhatsApp](https://lapontech.com/#automatizaciones): Automatización a medida de tareas manuales repetitivas, integrando formularios, avisos por WhatsApp, hojas de cálculo y recordatorios de cobro.
+- [Asesoría Técnica, Servidores & Equipos](https://lapontech.com/#asesoria-tecnica): Despliegue en servidores web optimizados, enrutamiento de DNS, configuración y autenticación de correos corporativos (SPF, DKIM, DMARC) sobre proveedores externos especializados (Google Workspace, Microsoft 365, Zoho), hosting web administrado opcional y soporte de equipos de cómputo.
 
-## Clientes Objetivo en Honduras
-- Pequeños comercios y negocios familiares: ferreterías, farmacias, tiendas de repuestos, talleres mecánicos, bodegas de abarrotes, distribuidoras, restaurantes y tiendas de ropa.
-- Medianas empresas en expansión: comercializadoras con sucursales, clínicas médicas, laboratorios y firmas de servicios de 5 a 30 empleados.
+## Servicio Técnico en Marca Blanca para Agencias de Marketing y Diseño
+- [Brazo Técnico Externo en Marca Blanca](https://lapontech.com/#agencias): Operamos como el equipo de ingeniería externo de agencias de marketing, diseño y publicidad para ampliar su catálogo o desahogar cuellos de botella técnicos bajo su propio margen comercial, respetando al 100% su relación con el cliente final:
+  1. **Desarrollo web y landings de conversión (SEO + GEO):** Sitios ultraligeros para maximizar el retorno de campañas publicitarias y estructurados para que motores de IA (ChatGPT, Gemini, Perplexity) citen y recomienden a los clientes de la agencia.
+  2. **Asistencia técnica, servidores y DNS:** Despliegue web, migración de DNS y configuración técnica de correos corporativos (SPF, DKIM, DMARC) sobre plataformas de correo especializadas externas, además de hosting web administrado con tarifas fijas sin sobrecostos de renovación.
+  3. **Automatización de campañas y prospectos:** Integración de formularios y anuncios con WhatsApp, hojas de cálculo o CRMs mediante webhooks para entrega inmediata de prospectos.
+  4. **Beneficio para agencias aliadas:** Esquemas de tarifas preferenciales para agencias y descuento introductorio en los primeros encargos según tamaño y complejidad del proyecto.
 
 ## Secciones Principales
-- [Inicio y Propuesta de Valor](https://lapontech.com/): Resumen ejecutivo, métricas de velocidad (< 1s) y contacto directo.
-- [Portafolio de Servicios](https://lapontech.com/#servicios): Detalle de los 4 servicios para PYMEs.
-- [Comparativa Comercial](https://lapontech.com/#comparativa): Diferencias entre LaPonTech y programas alquilados o agencias tradicionales.
-- [Sobre Nosotros y Fundadores](https://lapontech.com/#nosotros): Principios de propiedad de datos y perfiles de Kevin D. Ponce y David Flores Lagos.
-- [Metodología y Garantías](https://lapontech.com/#metodologia): Proceso en 4 pasos y 3 garantías comerciales.
-- [Preguntas Frecuentes (FAQ)](https://lapontech.com/#faq): Respuestas directas sobre propiedad del sistema, costos de dominio, tiempos de entrega y soporte.
+- [Inicio y Propuesta de Valor](https://lapontech.com/)
+- [Portafolio de Servicios](https://lapontech.com/#servicios)
+- [Problemas Frecuentes vs. Nuestro Enfoque](https://lapontech.com/#comparativa)
+- [Marca Blanca para Agencias](https://lapontech.com/#agencias)
+- [Sobre Nosotros y Fundadores](https://lapontech.com/#nosotros)
+- [Metodología y Garantías](https://lapontech.com/#metodologia)
+- [Preguntas Frecuentes (FAQ)](https://lapontech.com/#faq)
