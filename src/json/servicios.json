@@ -4,10 +4,10 @@
     "nombre_comercial": "LaPonTech",
     "ubicacion": "San Pedro Sula, Cortés, Honduras",
     "cobertura": ["San Pedro Sula", "Valle de Sula", "Tegucigalpa", "Honduras"],
-    "telefono": "+50499000000",
-    "telefono_clean": "50499000000",
+    "telefono": "+504 8900-5569",
+    "telefono_clean": "50489005569",
     "correo": "contacto@lapontech.com",
-    "whatsapp_link": "https://wa.me/50499000000",
+    "whatsapp_link": "https://wa.me/50489005569",
     "eslogan": "Páginas Web, Sistemas a Medida y Brazo Técnico en Marca Blanca en Honduras"
   },
   "hero": {
@@ -293,7 +293,7 @@
   "contacto_whatsapp": {
     "titulo": "¿Tienes un proyecto para tu negocio o buscas un brazo técnico para tu agencia?",
     "subtitulo": "Escríbenos directamente por WhatsApp. Te responderemos en horario hábil con una propuesta clara, honesta y ajustada a tu requerimiento.",
-    "telefono": "50499000000",
+    "telefono": "50489005569",
     "select_opciones": [
       {
         "valor": "presencia-digital",
