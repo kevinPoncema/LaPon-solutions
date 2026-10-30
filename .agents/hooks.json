@@ -1,0 +1,16 @@
+{
+  "impeccable": {
+    "PostToolUse": [
+      {
+        "matcher": "edit_file|write_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -f \".agents/skills/impeccable/scripts/impeccable\" ] || \".agents/skills/impeccable/scripts/impeccable\" hook",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

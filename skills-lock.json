@@ -1,6 +1,18 @@
 {
   "version": 1,
   "skills": {
+    "apple-design": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/apple-design/SKILL.md",
+      "computedHash": "0190417d092a0df447b000154e39733ea6d97efad6d3bec8a6ce3845aeb88914"
+    },
+    "seo-geo-aeo": {
+      "source": "SNLabat/SEO-GEO-AEO-Skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "0b4b119228fae4b9cf8af91b0406804733e86de5e2d90ddb146684b3eaece274"
+    },
     "transitions-dev": {
       "source": "Jakubantalik/transitions.dev",
       "sourceType": "github",
