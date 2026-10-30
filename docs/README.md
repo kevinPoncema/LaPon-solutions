@@ -16,6 +16,7 @@ graph TD
     DOCS --> D5["05-arquitectura-tecnica-y-seo.md<br/>(Astro, Triple Schema JSON-LD, llms.txt y CI/CD)"]
     DOCS --> D6["06-alianzas-y-marca-blanca-agencias.md<br/>(Modelo B2B para Agencias y Plantilla de Correo)"]
     DOCS --> D7["07-seguridad-anti-scraping-y-geo.md<br/>(Protección JS de Correo/Teléfonos y Reglas WAF)"]
+    DOCS --> D8["08-skills-y-herramientas-agente.md<br/>(Skills de IA, Auditoría SEO/GEO/AEO, Apple Design y Paleta Ámbar)"]
 ```
 
 ---
@@ -45,3 +46,6 @@ graph TD
 
 ### 7. [07-seguridad-anti-scraping-y-geo.md](./07-seguridad-anti-scraping-y-geo.md)
 - **Qué encontrarás:** La arquitectura de ofuscación con JavaScript para proteger `contacto@lapontech.com` y los números de WhatsApp (`wa.me`) contra recolectores automáticos de spam sin perder visibilidad ante modelos de IA, los comandos `curl + grep` de auditoría en Linux y la regla personalizada de Cloudflare WAF.
+
+### 8. [08-skills-y-herramientas-agente.md](./08-skills-y-herramientas-agente.md)
+- **Qué encontrarás:** El compendio operativo de las skills instaladas (`seo-geo-aeo`, `apple-design`, `impeccable`, `transitions-dev`, `transitions-polish`), guías paso a paso para auditar SEO tradicional, GEO para motores de IA (ChatGPT, Perplexity, Gemini) y AEO, los principios de latencia cero de Apple, la eliminación de antipatrones visuales con `npx impeccable detect`, y el uso armónico de la paleta Ámbar y Esmeralda sin degradar el contraste ni generar halos artificiales.

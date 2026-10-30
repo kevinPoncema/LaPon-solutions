@@ -29,21 +29,21 @@ const waP3 = phoneClean.slice(7);
       <div class="max-w-4xl mx-auto text-center">
         
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2.5 bg-slate-900/90 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-8 backdrop-blur-md shadow-glow-emerald">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>📍 San Pedro Sula, Cortés · {hero.badge}</span>
+        <div class="inline-flex items-center gap-2.5 bg-slate-900/90 border border-slate-700 text-emerald-300 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-8 backdrop-blur-md shadow-elevation-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>San Pedro Sula, Cortés · {hero.badge}</span>
         </div>
 
         <!-- Título Principal de Alto Impacto -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
           {hero.titulo_principal}{" "}
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">
+          <span class="text-emerald-400">
             {hero.titulo_destacado}
           </span>
         </h1>
 
         <!-- Subtítulo CRO (Ventaja Técnica Real vs WordPress) -->
-        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-[56ch] mx-auto mb-10 leading-relaxed font-normal">
           {hero.subtitulo}
         </p>
 
@@ -54,7 +54,7 @@ const waP3 = phoneClean.slice(7);
               href="#contacto"
               data-wa-text={WA_DIRECT_MSG}
               aria-label="Solicitar Diagnóstico Gratuito por WhatsApp (Abre en nueva pestaña)"
-              class="js-protected-wa w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-glow-emerald hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] min-h-[52px] text-base cursor-pointer"
+              class="js-protected-wa w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] min-h-[52px] text-base cursor-pointer"
             >
               <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
@@ -69,7 +69,7 @@ const waP3 = phoneClean.slice(7);
 
           <a
             href="#comparativa"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-bold px-7 py-4 rounded-xl border border-slate-700/80 hover:border-emerald-500/50 transition-all duration-300 hover:translate-y-[-2px] min-h-[52px] text-base backdrop-blur-sm"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-bold px-7 py-4 rounded-xl border border-slate-700/80 hover:border-emerald-500/50 transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] min-h-[52px] text-base backdrop-blur-sm"
           >
             <span>{hero.cta_comparativa_texto}</span>
             <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -78,10 +78,10 @@ const waP3 = phoneClean.slice(7);
           </a>
         </div>
 
-        <!-- 4 Métricas Estáticas de Alto Contraste -->
+        <!-- 4 Métricas Estáticas de Alto Contraste con Elevación y Hover Físico -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-10 border-t border-slate-800/80">
           {hero.estadisticas.map((stat) => (
-            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all text-center group flex flex-col justify-center">
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 hover:-translate-y-1 hover:shadow-card-subtle transition-all duration-200 text-center group flex flex-col justify-center">
               <p class="text-2xl sm:text-3xl font-black text-amber-300 font-mono mb-1.5 group-hover:text-emerald-400 transition-colors">
                 {stat.valor}
               </p>
@@ -99,14 +99,11 @@ const waP3 = phoneClean.slice(7);
   <section id="servicios" class="py-20 lg:py-28 border-b border-slate-800/80 scroll-mt-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          🛠️ Soluciones para Negocios
-        </span>
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           Servicios y Soluciones para tu Negocio
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-[58ch] mx-auto">
           Diseñamos páginas web para captar clientes, sistemas a medida para ordenar tu operación, automatizaciones por WhatsApp y asesoría en equipos. Rápidos, fáciles de usar y 100% de tu propiedad.
         </p>
       </div>
@@ -121,14 +118,14 @@ const waP3 = phoneClean.slice(7);
           return (
             <article
               id={servicio.id}
-              class={`${colSpan} rounded-3xl p-6 sm:p-8 bg-slate-900 border transition-all duration-300 flex flex-col justify-between relative overflow-hidden group hover:shadow-card-subtle ${
+              class={`${colSpan} reveal-on-scroll rounded-3xl p-6 sm:p-8 bg-slate-900 border transition-all duration-300 hover:-translate-y-1 hover:shadow-card-subtle flex flex-col justify-between relative overflow-hidden group ${
                 servicio.popular
                   ? "border-emerald-500/50 ring-1 ring-emerald-500/20 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950"
                   : "border-slate-800 hover:border-slate-700 bg-slate-900/90"
               }`}
             >
               {servicio.popular && (
-                <div class="absolute top-0 right-0 bg-emerald-500 text-slate-950 text-[11px] font-black px-3.5 py-1 rounded-bl-xl uppercase tracking-wider">
+                <div class="absolute top-0 right-0 bg-emerald-500 text-slate-950 text-xs font-black px-3.5 py-1 rounded-bl-xl uppercase tracking-wider">
                   Alta Demanda
                 </div>
               )}
@@ -137,35 +134,36 @@ const waP3 = phoneClean.slice(7);
                 <!-- Encabezado con Icono y Badges -->
                 <div class="flex flex-wrap items-center gap-2 mb-4">
                   {servicio.badges.map((badge) => (
-                    <span class="inline-flex items-center text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-md bg-slate-800 text-emerald-300 border border-slate-700">
+                    <span class="inline-flex items-center text-xs font-mono font-semibold px-2.5 py-0.5 rounded-md bg-slate-800 text-emerald-300 border border-slate-700">
                       {badge}
                     </span>
                   ))}
                 </div>
 
-                <div class="mb-4 inline-flex p-3 rounded-2xl bg-slate-800/80 border border-slate-700/70 text-emerald-400 group-hover:scale-105 transition-transform">
-                  {servicio.id === "presencia-digital" && (
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-                  )}
-                  {servicio.id === "facturacion-inventario" && (
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                  )}
-                  {servicio.id === "automatizaciones" && (
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  )}
-                  {servicio.id === "asesoria-tecnica" && (
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                  )}
+                <div class="flex items-start gap-3 mb-2">
+                  <span class="mt-1 text-emerald-400 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+                    {servicio.id === "presencia-digital" && (
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    )}
+                    {servicio.id === "facturacion-inventario" && (
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    )}
+                    {servicio.id === "automatizaciones" && (
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    )}
+                    {servicio.id === "asesoria-tecnica" && (
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    )}
+                  </span>
+                  <h3 class="text-xl sm:text-2xl font-bold text-white leading-snug">{servicio.titulo}</h3>
                 </div>
-
-                <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">{servicio.titulo}</h3>
-                <p class="text-emerald-400 font-semibold text-xs sm:text-sm mb-3">{servicio.subtitulo}</p>
-                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+                <p class="text-emerald-400 font-semibold text-xs sm:text-sm mb-3 max-w-[50ch]">{servicio.subtitulo}</p>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 max-w-[50ch]">
                   {servicio.descripcion}
                 </p>
 
                 <!-- Micro-Lista con Viñetas Concisas -->
-                <ul class="space-y-2.5 mb-8" aria-label={`Características técnicas de ${servicio.titulo}`}>
+                <ul class="space-y-2.5 mb-8 max-w-[50ch]" aria-label={`Características técnicas de ${servicio.titulo}`}>
                   {servicio.puntos_clave.map((punto) => (
                     <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                       <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -183,7 +181,7 @@ const waP3 = phoneClean.slice(7);
                   href="#contacto"
                   data-wa-text={servicio.wa_msg}
                   aria-label={`Cotizar ${servicio.titulo} por WhatsApp (Abre en nueva pestaña)`}
-                  class="js-protected-wa w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white font-bold py-3.5 px-6 rounded-xl border border-slate-700 hover:border-emerald-500 transition-all duration-300 text-sm cursor-pointer group-hover:bg-emerald-500 group-hover:text-slate-950 group-hover:border-emerald-500"
+                  class="js-protected-wa w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white font-bold py-3.5 px-6 rounded-xl border border-slate-700 hover:border-emerald-500 active:scale-[0.98] transition-all duration-200 text-sm cursor-pointer group-hover:bg-emerald-500 group-hover:text-slate-950 group-hover:border-emerald-500"
                 >
                   <span>{servicio.cta_texto || "Cotizar este servicio →"}</span>
                   <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -204,14 +202,11 @@ const waP3 = phoneClean.slice(7);
     <div id="por-que-nosotros" class="absolute -top-20" aria-hidden="true"></div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-amber-400 font-bold text-xs uppercase tracking-widest bg-amber-500/10 border border-amber-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          📊 Problemas Frecuentes vs. Nuestro Enfoque
-        </span>
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           {por_que_nosotros.titulo}
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-[58ch] mx-auto">
           {por_que_nosotros.subtitulo}
         </p>
       </div>
@@ -219,7 +214,7 @@ const waP3 = phoneClean.slice(7);
       <!-- Matriz de Comparativa Compacta y Mobile-First -->
       <div class="space-y-4">
         {por_que_nosotros.comparativa.map((item) => (
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 transition-all hover:border-slate-700">
+          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 transition-all duration-200 hover:border-slate-700 hover:shadow-card-subtle">
             
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
               <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
@@ -230,10 +225,10 @@ const waP3 = phoneClean.slice(7);
               </span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pt-4 border-t border-slate-800/80">
               <!-- Nuestro Enfoque en LaPonTech -->
-              <div class="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30">
-                <p class="text-xs font-bold text-emerald-400 uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
+              <div class="space-y-1.5">
+                <p class="text-xs font-bold text-emerald-400 uppercase tracking-wide flex items-center gap-1.5">
                   <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                   </svg>
@@ -245,8 +240,8 @@ const waP3 = phoneClean.slice(7);
               </div>
 
               <!-- El Problema Frecuente -->
-              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
+              <div class="space-y-1.5">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1.5">
                   <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                   </svg>
@@ -269,14 +264,11 @@ const waP3 = phoneClean.slice(7);
   <section id="agencias" class="py-20 lg:py-28 border-b border-slate-800/80 scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
       
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          {agencias.badge}
-        </span>
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           {agencias.titulo}
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-5 max-w-[58ch] mx-auto">
           {agencias.subtitulo}
         </p>
         <p class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-emerald-300 bg-emerald-950/50 border border-emerald-700/40 px-4 py-2 rounded-xl">
@@ -290,9 +282,9 @@ const waP3 = phoneClean.slice(7);
       <!-- 3 Áreas de Ejecución Técnica en Marca Blanca -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {agencias.areas.map((area) => (
-          <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all shadow-card-subtle">
+          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 hover:border-emerald-500/40 hover:-translate-y-1 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 shadow-card-subtle">
             <div>
-              <span class="inline-block text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2.5 py-1 rounded-md mb-4">
+              <span class="inline-block text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2.5 py-1 rounded-md mb-4">
                 {area.badge}
               </span>
               <h3 class="text-lg font-bold text-white mb-2.5 leading-snug">{area.titulo}</h3>
@@ -303,15 +295,15 @@ const waP3 = phoneClean.slice(7);
       </div>
 
       <!-- Banner de Condición Especial para Primeros Encargos -->
-      <div class="bg-gradient-to-r from-slate-900 via-emerald-950/30 to-slate-900 border border-emerald-500/30 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div class="reveal-on-scroll bg-gradient-to-r from-slate-900 via-emerald-950/30 to-slate-900 border border-emerald-500/30 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
         <div class="max-w-2xl text-center lg:text-left">
-          <span class="inline-block text-xs font-mono font-bold text-amber-300 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full mb-3">
+          <span class="inline-block text-xs font-mono font-bold text-amber-300 bg-amber-950/60 border border-amber-500/30 px-3 py-1 rounded-full mb-3">
             {agencias.condicion_especial.badge}
           </span>
           <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-2">
             {agencias.condicion_especial.titulo}
           </h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-[58ch] mx-auto lg:mx-0">
             {agencias.condicion_especial.descripcion}
           </p>
         </div>
@@ -321,14 +313,14 @@ const waP3 = phoneClean.slice(7);
             href="#contacto"
             data-wa-text={WA_AGENCIAS_MSG}
             aria-label="Solicitar Tarifas de Marca Blanca por WhatsApp (Abre en nueva pestaña)"
-            class="js-protected-wa w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-6 py-4 rounded-xl shadow-glow-emerald hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] text-sm cursor-pointer"
+            class="js-protected-wa w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-6 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-sm cursor-pointer"
           >
             <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
             </svg>
             <span>{agencias.cta_texto}</span>
           </a>
-          <span class="text-[11px] text-slate-400 mt-2 text-center lg:text-right">
+          <span class="text-xs text-slate-400 mt-2 text-center lg:text-right">
             {agencias.cta_microtexto}
           </span>
         </div>
@@ -341,14 +333,11 @@ const waP3 = phoneClean.slice(7);
   <section id="nosotros" class="py-20 lg:py-28 border-b border-slate-800/80 relative overflow-hidden scroll-mt-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          {sobre_nosotros.badge}
-        </span>
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
         <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
           {sobre_nosotros.titulo_principal}
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-normal max-w-[58ch] mx-auto">
           {sobre_nosotros.subtitulo}
         </p>
       </div>
@@ -356,9 +345,9 @@ const waP3 = phoneClean.slice(7);
       <!-- Bento Grid: Principios Clave -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
         {sobre_nosotros.principios.map((p) => (
-          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div class="reveal-on-scroll p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
             <div>
-              <span class="inline-block text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2 py-0.5 rounded mb-3">
+              <span class="inline-block text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2 py-0.5 rounded mb-3">
                 {p.badge}
               </span>
               <h3 class="text-base font-bold text-white mb-2 leading-snug">{p.titulo}</h3>
@@ -370,30 +359,30 @@ const waP3 = phoneClean.slice(7);
 
       <!-- Bloque de Fundadores: Dos Ingenieros, Una Visión Compartida -->
       <div class="pt-10 border-t border-slate-800/80">
-        <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="text-center max-w-2xl mx-auto mb-10 reveal-on-scroll">
           <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">
             {sobre_nosotros.fundadores_titulo}
           </h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-[56ch] mx-auto">
             {sobre_nosotros.fundadores_subtitulo}
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {sobre_nosotros.fundadores.map((fundador) => (
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition-all">
+            <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 hover:shadow-card-subtle transition-all duration-300">
               <div>
                 <div class="flex items-center gap-3.5 mb-4">
-                  <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-700/80 flex items-center justify-center p-2 shadow-glow-emerald">
+                  <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-700/80 flex items-center justify-center p-2 shadow-elevation-sm">
                     <img src="/icons/logo.png" alt="Logo LaPonTech" class="w-full h-full object-contain" width="36" height="36" loading="lazy" />
                   </div>
                   <div>
                     <h4 class="text-lg font-bold text-white">{fundador.nombre}</h4>
-                    <span class="text-[11px] font-mono text-emerald-400 block">{fundador.cargo}</span>
+                    <span class="text-xs font-mono text-emerald-400 block">{fundador.cargo}</span>
                   </div>
                 </div>
 
-                <p class="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-2.5">
+                <p class="text-xs font-semibold text-amber-300 mb-2.5">
                   {fundador.enfoque}
                 </p>
                 <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
@@ -401,7 +390,7 @@ const waP3 = phoneClean.slice(7);
                 </p>
               </div>
 
-              <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
+              <div class="pt-3 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span>Trato directo y cercano con los ingenieros fundadores</span>
               </div>
@@ -417,32 +406,29 @@ const waP3 = phoneClean.slice(7);
   <section id="metodologia" class="py-20 lg:py-28 bg-slate-900/30 border-b border-slate-800/80 scroll-mt-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          ⚡ Proceso Ágil
-        </span>
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           {metodologia.titulo}
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-[58ch] mx-auto">
           {metodologia.subtitulo}
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {metodologia.pasos.map((paso) => (
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
+          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 hover:-translate-y-1 transition-all duration-300">
             <div>
-              <span class="text-3xl font-black text-amber-300/30 font-mono block mb-2">{paso.numero}</span>
+              <span class="text-3xl font-black text-emerald-400/80 font-mono block mb-2">{paso.numero}</span>
               <h3 class="text-base font-bold text-white mb-2">{paso.nombre}</h3>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">{paso.descripcion}</p>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">{paso.descripcion}</p>
             </div>
           </div>
         ))}
       </div>
 
       <!-- Garantías Comerciales para el Dueño de Negocio -->
-      <div class="mb-10">
+      <div class="mb-10 reveal-on-scroll">
         <h3 class="text-lg sm:text-xl font-bold text-white text-center mb-6">
           {garantias.titulo}
         </h3>
@@ -464,15 +450,15 @@ const waP3 = phoneClean.slice(7);
       </div>
 
       <!-- Cuentas Claras sobre Dominio, Hosting y Mantenimiento Opcional -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left shadow-sm">
-        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center flex-shrink-0 shadow-md">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-6 flex items-start gap-4 text-left shadow-sm">
+        <span class="mt-0.5 text-emerald-400 flex-shrink-0" aria-hidden="true">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-        </div>
+        </span>
         <div>
           <h4 class="font-bold text-white text-base mb-1">Cuentas claras sobre dominio, servidor y mantenimiento opcional</h4>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-[62ch]">
             Tu dominio (.com) queda registrado a tu nombre. Además, el mantenimiento continuo, soporte o alojamiento administrado son 100% opcionales con tarifas claras y fijas, sin cobros sorpresa.
           </p>
         </div>
@@ -484,17 +470,13 @@ const waP3 = phoneClean.slice(7);
   <!-- ─── 6. SECCIÓN INTERMEDIA: BANNER DE CIERRE CRO (SOCIAL PROOF / SOBERANÍA) ── -->
   <section class="py-16 sm:py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800/80 relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#10b9810f_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" aria-hidden="true"></div>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10 text-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10 text-center reveal-on-scroll">
       
-      <span class="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full mb-4">
-        🔒 Soluciones Prácticas para Negocios y Agencias
-      </span>
-
-      <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4 max-w-[32ch] mx-auto">
         ¿Listo para digitalizar tu negocio o ampliar la capacidad técnica de tu agencia?
       </h2>
 
-      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+      <p class="text-slate-300 text-sm sm:text-base max-w-[56ch] mx-auto mb-8 leading-relaxed">
         Páginas web optimizadas, sistemas a medida sin rentas forzosas y ejecución en marca blanca para agencias. Con mantenimiento opcional y trato directo con ingeniería.
       </p>
 
@@ -503,7 +485,7 @@ const waP3 = phoneClean.slice(7);
           href="#contacto"
           data-wa-text={WA_DIRECT_MSG}
           aria-label="Solicitar Diagnóstico Gratuito por WhatsApp (Abre en nueva pestaña)"
-          class="js-protected-wa inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-glow-emerald hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] text-base"
+          class="js-protected-wa inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-base"
         >
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
@@ -522,36 +504,33 @@ const waP3 = phoneClean.slice(7);
   <section id="faq" class="py-20 lg:py-28 bg-slate-900/30 border-b border-slate-800/80 scroll-mt-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          Respuestas Claras
-        </span>
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           Preguntas Frecuentes
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-[56ch] mx-auto">
           Resolvemos tus principales dudas sobre tiempos, costos de dominios, propiedad de tus sistemas y soporte.
         </p>
       </div>
 
       <div class="space-y-4">
         {faq.map((item, idx) => (
-          <details class="group bg-slate-900 border border-slate-800 hover:border-slate-700/80 rounded-2xl p-6 transition-all duration-200 open:border-emerald-500/50 open:bg-slate-900/90 shadow-card-subtle">
-            <summary class="flex items-center justify-between cursor-pointer list-none select-none text-left font-bold text-white text-base sm:text-lg gap-4">
+          <details class="reveal-on-scroll group bg-slate-900 border border-slate-800 hover:border-slate-700/80 rounded-2xl p-6 transition-all duration-300 open:border-emerald-500/50 open:bg-slate-900/90 shadow-card-subtle">
+            <summary class="flex items-center justify-between cursor-pointer list-none select-none text-left font-bold text-white text-base sm:text-lg gap-4 active:scale-[0.99] transition-transform duration-150">
               <span class="flex items-center gap-3">
                 <span class="text-emerald-400/90 text-xs font-mono font-bold bg-emerald-950/60 border border-emerald-800/50 px-2.5 py-1 rounded-md">
                   0{idx + 1}
                 </span>
                 <span>{item.pregunta}</span>
               </span>
-              <span class="w-8 h-8 rounded-full bg-slate-800 group-open:bg-emerald-500 group-open:text-slate-950 text-slate-400 flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-open:rotate-180">
+              <span class="w-8 h-8 rounded-full bg-slate-800 group-open:bg-emerald-500 group-open:text-slate-950 text-slate-400 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-open:rotate-180">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
                 </svg>
               </span>
             </summary>
             <div class="pt-4 mt-4 border-t border-slate-800/80 text-slate-300 text-sm sm:text-base leading-relaxed pl-1 sm:pl-10">
-              <p>{item.respuesta}</p>
+              <p class="max-w-[62ch]">{item.respuesta}</p>
             </div>
           </details>
         ))}
@@ -564,26 +543,23 @@ const waP3 = phoneClean.slice(7);
   <section id="contacto" class="py-20 lg:py-28 relative scroll-mt-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
       
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
-          Hablemos de tu Proyecto
-        </span>
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-on-scroll">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           {contacto_whatsapp.titulo}
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-[54ch] mx-auto">
           {contacto_whatsapp.subtitulo}
         </p>
       </div>
 
-      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      <div class="reveal-on-scroll max-w-4xl mx-auto space-y-6">
         
         <!-- Canales Directos: WhatsApp y Correo Oficial -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <!-- Canal 1: WhatsApp Directo -->
-          <div class="bg-emerald-950/40 border border-emerald-700/50 rounded-2xl p-5 flex flex-col justify-between">
+          <div class="bg-slate-900 border border-emerald-500/30 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/60 shadow-elevation-sm transition-all duration-200">
             <div class="flex items-center gap-3.5 mb-4">
-              <div class="w-11 h-11 rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center flex-shrink-0 shadow-glow-emerald">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center flex-shrink-0 shadow-elevation-sm">
                 <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
                 </svg>
@@ -597,16 +573,16 @@ const waP3 = phoneClean.slice(7);
               href="#contacto"
               data-wa-text={WA_DIRECT_MSG}
               aria-label="Abrir WhatsApp directo con LaPonTech (Abre en nueva pestaña)"
-              class="js-protected-wa w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-3 rounded-xl transition-all shadow-glow-emerald text-xs uppercase tracking-wider"
+              class="js-protected-wa w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-3 rounded-xl active:scale-[0.98] transition-all duration-150 shadow-elevation-sm text-xs uppercase tracking-wider"
             >
               Escribir por WhatsApp →
             </a>
           </div>
 
           <!-- Canal 2: Correo Oficial -->
-          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 shadow-elevation-sm transition-all duration-200">
             <div class="flex items-center gap-3.5 mb-4">
-              <div class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-700 text-emerald-400 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-xl bg-slate-950 border border-slate-700 text-emerald-400 flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
@@ -621,110 +597,152 @@ const waP3 = phoneClean.slice(7);
               data-email-user="contacto"
               data-email-domain="lapontech.com"
               aria-label="Enviar correo corporativo a LaPonTech"
-              class="js-protected-email w-full text-center bg-slate-900 hover:bg-slate-800 text-emerald-400 hover:text-white font-bold px-4 py-3 rounded-xl border border-slate-700 transition-all text-xs tracking-wider"
+              class="js-protected-email w-full text-center bg-slate-950 hover:bg-slate-800 text-emerald-400 hover:text-white font-bold px-4 py-3 rounded-xl border border-slate-700 active:scale-[0.98] transition-all duration-150 text-xs tracking-normal"
             >
               <span data-email-text>contacto [arroba] lapontech [punto] com</span>
             </a>
           </div>
         </div>
 
-        <!-- Separador -->
-        <div class="relative my-8 text-center">
-          <hr class="border-slate-800" />
-          <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-            O describe tu requerimiento a continuación
-          </span>
+        <!-- Canal 3: Redes Sociales Oficiales Verificadas -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span class="text-xs font-semibold text-slate-300">Conéctate también en nuestras redes oficiales:</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <a
+              href={empresa.redes_sociales.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium active:scale-95 transition-all duration-150"
+              aria-label="Instagram oficial (Abre en nueva pestaña)"
+              title="Instagram"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a
+              href={empresa.redes_sociales.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium active:scale-95 transition-all duration-150"
+              aria-label="Facebook oficial (Abre en nueva pestaña)"
+              title="Facebook"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a
+              href={empresa.redes_sociales.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium active:scale-95 transition-all duration-150"
+              aria-label="TikTok oficial (Abre en nueva pestaña)"
+              title="TikTok"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 2.89 3.5 2.77 1.81-.02 3.32-1.52 3.33-3.33.02-4.74.01-9.48.01-14.22-.01-.15.01-.3-.02-.45z"/></svg>
+              <span>TikTok</span>
+            </a>
+          </div>
         </div>
 
         <!-- Canal 2: Formulario de Contacto -->
-        <form id="contact-form" data-wa-p1={waP1} data-wa-p2={waP2} data-wa-p3={waP3} class="space-y-6" novalidate>
-          <!-- Honeypot invisible -->
-          <div class="hidden" style="display:none !important;" aria-hidden="true">
-            <label for="b_field">No llenar este campo:</label>
-            <input type="text" id="b_field" name="b_field" tabindex="-1" autocomplete="off" />
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-elevation-md">
+          <div class="mb-8">
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Envíanos un mensaje</h3>
+            <p class="text-sm text-slate-300">Cuéntanos tu proyecto y te responderemos por WhatsApp o correo.</p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <form id="contact-form" data-wa-p1={waP1} data-wa-p2={waP2} data-wa-p3={waP3} class="space-y-6" novalidate>
+            <!-- Honeypot invisible -->
+            <div class="hidden" style="display:none !important;" aria-hidden="true">
+              <label for="b_field">No llenar este campo:</label>
+              <input type="text" id="b_field" name="b_field" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="user_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                  Tu Nombre <span class="text-emerald-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="user_name"
+                  name="user_name"
+                  required
+                  placeholder="Ej. Carlos Martínez"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+                />
+              </div>
+
+              <div>
+                <label for="business_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                  Nombre de tu Negocio o Agencia
+                </label>
+                <input
+                  type="text"
+                  id="business_name"
+                  name="business_name"
+                  placeholder="Ej. Distribuidora Norte / Agencia Creativa"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Selección de Servicio -->
             <div>
-              <label for="user_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                Tu Nombre <span class="text-emerald-400">*</span>
+              <label for="service_select" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                Servicio de Interés <span class="text-emerald-400">*</span>
               </label>
-              <input
-                type="text"
-                id="user_name"
-                name="user_name"
+              <select
+                id="service_select"
+                name="service_select"
                 required
-                placeholder="Ej. Carlos Martínez"
-                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-500 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
-              />
+                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all cursor-pointer"
+              >
+                <option value="" disabled selected class="text-slate-400">Selecciona una opción...</option>
+                {contacto_whatsapp.select_opciones.map((opt) => (
+                  <option value={opt.valor} class="bg-slate-900 text-white">{opt.texto}</option>
+                ))}
+              </select>
             </div>
 
+            <!-- Mensaje -->
             <div>
-              <label for="business_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                Nombre de tu Negocio o Agencia
+              <label for="user_message" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                Detalles de lo que necesitas resolver <span class="text-emerald-400">*</span>
               </label>
-              <input
-                type="text"
-                id="business_name"
-                name="business_name"
-                placeholder="Ej. Distribuidora Norte / Agencia Creativa"
-                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-500 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
-              />
+              <textarea
+                id="user_message"
+                name="user_message"
+                rows="4"
+                required
+                placeholder="Cuéntanos brevemente qué buscas resolver (ej. crear web para captar clientes, sistema de inventario sin mensualidades, o soporte técnico)..."
+                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+              ></textarea>
             </div>
-          </div>
 
-          <!-- Selección de Servicio -->
-          <div>
-            <label for="service_select" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-              Servicio de Interés <span class="text-emerald-400">*</span>
-            </label>
-            <select
-              id="service_select"
-              name="service_select"
-              required
-              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all cursor-pointer"
+            <!-- Alerta de validación -->
+            <div id="form-error" class="hidden p-4 bg-red-950/60 border border-red-800 text-red-200 rounded-xl text-sm font-medium"></div>
+
+            <!-- Botón de Envío -->
+            <button
+              type="submit"
+              id="submit-form-btn"
+              class="w-full inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-4 px-8 rounded-xl shadow-elevation-md hover:shadow-elevation-lg transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] min-h-[50px] text-base cursor-pointer"
             >
-              <option value="" disabled selected class="text-slate-500">Selecciona una opción...</option>
-              {contacto_whatsapp.select_opciones.map((opt) => (
-                <option value={opt.valor} class="bg-slate-900 text-white">{opt.texto}</option>
-              ))}
-            </select>
-          </div>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
+              </svg>
+              <span>Consultar requerimiento por WhatsApp</span>
+            </button>
 
-          <!-- Mensaje -->
-          <div>
-            <label for="user_message" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-              Detalles de lo que necesitas resolver <span class="text-emerald-400">*</span>
-            </label>
-            <textarea
-              id="user_message"
-              name="user_message"
-              rows="4"
-              required
-              placeholder="Cuéntanos brevemente qué buscas resolver (ej. crear web para captar clientes, sistema de inventario sin mensualidades, o soporte técnico)..."
-              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-500 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
-            ></textarea>
-          </div>
-
-          <!-- Alerta de validación -->
-          <div id="form-error" class="hidden p-4 bg-red-950/60 border border-red-800 text-red-200 rounded-xl text-sm font-medium"></div>
-
-          <!-- Botón de Envío -->
-          <button
-            type="submit"
-            id="submit-form-btn"
-            class="w-full inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-4 px-8 rounded-xl shadow-glow-emerald hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] min-h-[50px] text-base cursor-pointer"
-          >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
-            </svg>
-            <span>Consultar requerimiento por WhatsApp</span>
-          </button>
-
-          <p class="text-xs text-slate-400 text-center">
-            Tus datos se transmiten directamente a través de WhatsApp. Sin spam ni almacenamiento invasivo.
-          </p>
-        </form>
+            <p class="text-xs text-slate-400 text-center">
+              Tus datos se transmiten directamente a través de WhatsApp. Sin spam ni almacenamiento invasivo.
+            </p>
+          </form>
+        </div>
 
       </div>
 
@@ -737,20 +755,16 @@ const waP3 = phoneClean.slice(7);
       href="#contacto"
       data-wa-text={WA_DIRECT_MSG}
       aria-label="Contactar a LaPonTech por WhatsApp (Respuesta en horario hábil)"
-      class="js-protected-wa fixed bottom-6 right-6 z-50 group inline-flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-4 py-3 rounded-full shadow-[0_4px_24px_rgba(16,185,129,0.4)] hover:shadow-[0_6px_32px_rgba(16,185,129,0.6)] transition-all duration-300 hover:scale-105 active:scale-95"
+      class="js-protected-wa fixed bottom-6 right-6 z-50 group inline-flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-3 rounded-full shadow-elevation-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
     >
       <div class="relative flex items-center justify-center">
         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
         </svg>
-        <span class="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-950"></span>
-        </span>
       </div>
       <span class="hidden sm:inline text-xs font-extrabold tracking-tight">WhatsApp Directo</span>
       <span class="hidden md:inline-block w-1 h-1 rounded-full bg-slate-950/40"></span>
-      <span class="hidden md:inline text-[11px] font-bold text-slate-900">Horario hábil</span>
+      <span class="hidden md:inline text-xs font-bold text-slate-900">Horario hábil</span>
     </a>
   </aside>
 

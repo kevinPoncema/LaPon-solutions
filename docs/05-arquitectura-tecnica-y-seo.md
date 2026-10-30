@@ -27,16 +27,17 @@ graph LR
 
 ## 2. Arquitectura SEO + GEO (Generative Engine Optimization)
 
-### A. Triple Schema.org JSON-LD ([`src/components/SEO.astro`](../src/components/SEO.astro))
-Para cumplir con los estándares de validación de Google y facilitar la extracción de entidades por modelos de IA, [`src/components/SEO.astro`](../src/components/SEO.astro) inyecta **3 bloques `<script type="application/ld+json">` independientes** (cada uno con un `@type` string de nivel superior):
+### A. Cuádruple Schema.org JSON-LD ([`src/components/SEO.astro`](../src/components/SEO.astro))
+Para cumplir con los estándares de validación de Google y maximizar la extracción de entidades en buscadores y motores de IA (SEO + GEO + AEO), [`src/components/SEO.astro`](../src/components/SEO.astro) inyecta **4 bloques `<script type="application/ld+json">` independientes** en la portada (cada uno con un `@type` string de nivel superior):
 1. **`ProfessionalService` (`#organization`):**
-   - Incluye geolocalización en San Pedro Sula (`15.5042, -88.0250`), `postalCode: 21101`, `areaServed` (San Pedro Sula, Choloma, Villanueva, El Progreso, Puerto Cortés, La Lima, Tegucigalpa, Cortés, Honduras), `audience` (Comercios, PYMEs y Agencias de Marketing y Diseño), `knowsAbout`, `founder` (David Flores Lagos y Kevin D. Ponce) y `hasOfferCatalog`.
+   - Incluye enlaces verificados `sameAs` (Instagram, Facebook, TikTok), geolocalización en San Pedro Sula (`15.5042, -88.0250`), `postalCode: 21101`, `areaServed` (San Pedro Sula, Choloma, Villanueva, El Progreso, Puerto Cortés, La Lima, Tegucigalpa, Cortés, Honduras), `audience` (Comercios, PYMEs y Agencias de Marketing y Diseño), `knowsAbout`, `founder` (David Flores Lagos y Kevin D. Ponce) y `hasOfferCatalog`.
    - *Seguridad:* No expone `email` ni `telephone` en texto plano para evitar que bots recolectores de spam los extraigan del JSON-LD.
 2. **`WebSite` (`#website`):**
    - Define la entidad del sitio en idioma `es-HN` vinculada a `#organization`.
 3. **`WebPage` (`#webpage`):**
    - Incluye `SpeakableSpecification` apuntando a `["h1", "#servicios h2", "#comparativa h2", "#agencias h2", "#faq details"]` para asistentes de voz y motores de respuesta.
-   - *Nota de cumplimiento Google (Agosto 2023):* No se utiliza `FAQPage` JSON-LD porque Google restringió ese tipo de resultado enriquecido exclusivamente a sitios gubernamentales y de salud.
+4. **`FAQPage` (`#faqpage`):**
+   - Estructura las 6 preguntas y respuestas oficiales de `servicios.json` para **AEO (Answer Engine Optimization)** en Perplexity, ChatGPT Search, Bing y asistentes de voz. *(En Google Search no genera penalización; Google simplemente reserva el desplegable visual en SERP a sitios gubernamentales y de salud desde agosto de 2023).*
 
 ### B. Archivo [`public/llms.txt`](../public/llms.txt) para Agentes de IA
 Archivo en formato Markdown estructurado siguiendo el estándar `llms.txt` en la raíz del dominio (`https://lapontech.com/llms.txt`) para que **ChatGPT, Perplexity, Claude y Gemini** comprendan de inmediato:

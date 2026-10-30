@@ -37,6 +37,11 @@ const organizationSchema = {
   "alternateName": [serviciosData.empresa.nombre_comercial, "LaPon Tech", "LaPon Tech Solution"],
   "slogan": serviciosData.empresa.eslogan,
   "url": `${siteUrl}/`,
+  "sameAs": [
+    serviciosData.empresa.redes_sociales.instagram,
+    serviciosData.empresa.redes_sociales.facebook,
+    serviciosData.empresa.redes_sociales.tiktok
+  ],
   "logo": {
     "@type": "ImageObject",
     "url": `${siteUrl}/logo-completo.png`,
@@ -161,14 +166,36 @@ const webPageSchema = {
     "cssSelector": ["h1", "#servicios h2", "#comparativa h2", "#agencias h2", "#faq details"]
   }
 };
+
+const isHomePage = !noindex && (canonicalURL === `${siteUrl}/` || canonicalURL === siteUrl);
+
+const faqSchema = isHomePage
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faqpage`,
+      "mainEntity": serviciosData.faq.map((item) => ({
+        "@type": "Question",
+        "name": item.pregunta,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.respuesta
+        }
+      }))
+    }
+  : null;
 ---
 
 <!-- Metadatos Básicos -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#020617" />
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
+{isHomePage && (
+  <link rel="alternate" type="text/markdown" href={`${siteUrl}/index.md`} title="Contenido Markdown para Agentes de IA" />
+)}
 <meta name="generator" content={Astro.generator} />
 
 <!-- Metaetiquetas Geográficas Obligatorias (San Pedro Sula, Honduras) -->
@@ -211,19 +238,19 @@ const webPageSchema = {
 <meta name="twitter:image" content={fullOgImageUrl} />
 <meta name="twitter:image:alt" content="LaPon Tech Solutions - Logotipo Oficial de la Empresa" />
 
-<!-- Google Fonts Preconnect & Non-Blocking Font Loading (Optimizado para Datos Móviles) -->
+<!-- Google Fonts Preconnect & Non-Blocking Font Loading (Optimizado con Tipografía Moderna Outfit) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
   rel="preload"
   as="style"
-  href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
   onload="this.onload=null;this.rel='stylesheet'"
 />
 <noscript>
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
   />
 </noscript>
 
@@ -231,3 +258,6 @@ const webPageSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+{faqSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}

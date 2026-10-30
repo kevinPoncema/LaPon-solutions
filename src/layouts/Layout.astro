@@ -20,7 +20,7 @@ const { title, description, canonical, ogImage, noindex } = Astro.props;
   <head>
     <SEO title={title} description={description} canonical={canonical} ogImage={ogImage} noindex={noindex} />
   </head>
-  <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-slate-950 overflow-x-hidden">
+  <body class="bg-slate-950 text-white font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-400 selection:text-slate-950 overflow-x-hidden">
     <!-- Skip to main content accessibility link -->
     <a
       href="#main-content"
@@ -43,5 +43,78 @@ const { title, description, canonical, ogImage, noindex } = Astro.props;
     </main>
 
     <Footer />
+
+    <style is:global>
+      :root {
+        color-scheme: dark;
+        caret-color: #34d399;
+        scrollbar-color: #334155 #020617;
+        scrollbar-width: thin;
+      }
+      a {
+        text-underline-offset: 3px;
+      }
+      h1, h2, h3, h4 {
+        text-wrap: balance;
+      }
+      p, li, dd {
+        text-wrap: pretty;
+      }
+
+      /* Apple & Transitions-Dev Motion Tokens */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+      .reveal-on-scroll.is-revealed {
+        opacity: 1;
+        transform: translateY(0);
+        will-change: auto;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal-on-scroll {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      (function() {
+        if (typeof window === 'undefined') return;
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
+        function initScrollReveals() {
+          var elements = document.querySelectorAll('.reveal-on-scroll:not(.is-revealed)');
+          if (prefersReduced) {
+            elements.forEach(function(el) { el.classList.add('is-revealed'); });
+            return;
+          }
+          if (!('IntersectionObserver' in window)) {
+            elements.forEach(function(el) { el.classList.add('is-revealed'); });
+            return;
+          }
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+          elements.forEach(function(el) { observer.observe(el); });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initScrollReveals);
+        } else {
+          initScrollReveals();
+        }
+      })();
+    </script>
   </body>
 </html>

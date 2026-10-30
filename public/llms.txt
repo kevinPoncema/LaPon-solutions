@@ -8,6 +8,11 @@
 - **Cobertura presencial:** San Pedro Sula y Valle de Sula (Choloma, Villanueva, El Progreso, Puerto Cortés, La Lima)
 - **Cobertura remota (100% online):** Tegucigalpa y los 18 departamentos de Honduras por WhatsApp y videollamada
 - **Correo oficial:** contacto [arroba] lapontech [punto] com
+- **Versión completa en Markdown para Agentes:** https://lapontech.com/index.md
+- **Redes Sociales Oficiales:**
+  - Instagram: https://www.instagram.com/lapontech_hn/
+  - Facebook: https://www.facebook.com/profile.php?id=61596266540932
+  - TikTok: https://www.tiktok.com/@lapontech
 - **Fundadores:** Kevin D. Ponce (Director Técnico, Arquitectura de Sistemas, Infraestructura y Alianzas con Agencias) y David Flores Lagos (Co-Fundador, Diseño Web Mobile-First, Atención al Cliente y Soporte Técnico)
 - **Modelo comercial:** Pago por proyecto con entrega total de código, dominio `.com` y base de datos al cliente. Sin rentas mensuales obligatorias; los planes de mantenimiento, soporte prioritario y hosting administrado son 100% opcionales con tarifas fijas.
 

@@ -8,7 +8,12 @@
     "telefono_clean": "50489005569",
     "correo": "contacto@lapontech.com",
     "whatsapp_link": "https://wa.me/50489005569",
-    "eslogan": "Páginas Web, Sistemas a Medida y Brazo Técnico en Marca Blanca en Honduras"
+    "eslogan": "Páginas Web, Sistemas a Medida y Brazo Técnico en Marca Blanca en Honduras",
+    "redes_sociales": {
+      "instagram": "https://www.instagram.com/lapontech_hn/",
+      "facebook": "https://www.facebook.com/profile.php?id=61596266540932",
+      "tiktok": "https://www.tiktok.com/@lapontech"
+    }
   },
   "hero": {
     "badge": "Soluciones para Negocios & Marca Blanca para Agencias · Honduras",

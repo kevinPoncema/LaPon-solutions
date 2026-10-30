@@ -50,6 +50,13 @@
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
   X-Robots-Tag: all
 
+/index.md
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  X-Robots-Tag: all
+
 # HTML pages - revalidate to ensure immediate updates & accessible to crawlers
 /*
   X-Content-Type-Options: nosniff
@@ -58,3 +65,5 @@
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
   X-Robots-Tag: all
+  Link: </index.md>; rel="alternate"; type="text/markdown"
+  Vary: Accept
