@@ -50,7 +50,79 @@ const { title, description, canonical, ogImage, noindex } = Astro.props;
         caret-color: #34d399;
         scrollbar-color: #334155 #020617;
         scrollbar-width: thin;
+
+        /* ── Motion tokens (transitions.dev + Apple physical curves) ── */
+        --duration-stagger: 40ms;
+        --duration-micro: 80ms;
+        --duration-quick: 150ms;
+        --duration-fast: 250ms;
+        --duration-medium: 350ms;
+        --duration-slow: 420ms;
+        --duration-very-slow: 500ms;
+
+        --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+        --ease-in-out: ease-in-out;
+        --ease-out: ease-out;
+
+        --distance-micro: 4px;
+        --distance-small: 6px;
+        --distance-base: 8px;
+        --distance-medium: 14px;
+
+        --scale-large: 0.96;
+        --scale-medium: 0.97;
+        --scale-small: 0.98;
+        --scale-tiny: 0.99;
+
+        --blur-small: 2px;
+        --blur-medium: 3px;
+
+        /* Menu dropdown (asymmetric open 250ms / close 150ms) */
+        --dropdown-open-dur: 250ms;
+        --dropdown-close-dur: 150ms;
+        --dropdown-pre-scale: 0.97;
+        --dropdown-closing-scale: 0.99;
+        --dropdown-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+        /* Icon swap (hamburger <-> close, submit <-> check) */
+        --icon-swap-dur: 250ms;
+        --icon-swap-blur: 2px;
+        --icon-swap-start-scale: 0.25;
+        --icon-swap-ease: ease-in-out;
+
+        /* Sliding nav indicator */
+        --tabs-dur: 250ms;
+        --tabs-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+        /* Accordion expand / collapse */
+        --acc-expand: 250ms;
+        --acc-collapse: 200ms;
+        --acc-chevron: 250ms;
+        --acc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+        /* Error state shake */
+        --shake-distance: 6px;
+        --shake-overshoot: 4px;
+        --shake-dur-a: 80ms;
+        --shake-dur-b: 60ms;
+        --shake-ease: cubic-bezier(0.22, 1, 0.36, 1);
+        --revert-hold: 3500ms;
+        --revert-dur: 250ms;
+
+        /* Text state swap */
+        --text-swap-dur: 150ms;
+        --text-swap-translate-y: 4px;
+        --text-swap-blur: 2px;
+        --text-swap-ease: ease-in-out;
+
+        /* Learn more chevron hover */
+        --learn-shift: 3px;
+        --learn-spread: 8deg;
+        --learn-in: 250ms;
+        --learn-out: 180ms;
+        --learn-ease: cubic-bezier(0.22, 1, 0.36, 1);
       }
+
       a {
         text-underline-offset: 3px;
       }
@@ -61,23 +133,334 @@ const { title, description, canonical, ogImage, noindex } = Astro.props;
         text-wrap: pretty;
       }
 
-      /* Apple & Transitions-Dev Motion Tokens */
+      /* ── 1. Staggered Scroll Reveal ── */
       .reveal-on-scroll {
         opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        will-change: opacity, transform;
+        transform: translateY(var(--distance-medium));
+        transition:
+          opacity var(--duration-slow) var(--ease-smooth-out) var(--reveal-delay, 0ms),
+          transform var(--duration-slow) var(--ease-smooth-out) var(--reveal-delay, 0ms);
       }
       .reveal-on-scroll.is-revealed {
         opacity: 1;
         transform: translateY(0);
-        will-change: auto;
       }
+
+      /* ── 2. Instant Pointer-Down Tactile Press ── */
+      .t-press {
+        transition:
+          transform var(--duration-quick) var(--ease-smooth-out),
+          background-color var(--duration-quick) var(--ease-out),
+          border-color var(--duration-quick) var(--ease-out),
+          color var(--duration-quick) var(--ease-out),
+          box-shadow var(--duration-quick) var(--ease-smooth-out);
+      }
+      .t-press:active {
+        transform: scale(var(--scale-small));
+        transition-duration: var(--duration-micro);
+      }
+
+      /* ── 3. Icon Swap (09-icon-swap) ── */
+      .t-icon-swap {
+        position: relative;
+        display: inline-grid;
+        place-items: center;
+      }
+      .t-icon-swap .t-icon {
+        grid-area: 1 / 1;
+        transition:
+          opacity var(--icon-swap-dur) var(--icon-swap-ease),
+          filter var(--icon-swap-dur) var(--icon-swap-ease),
+          transform var(--icon-swap-dur) var(--icon-swap-ease);
+      }
+      .t-icon-swap[data-state="a"] .t-icon[data-icon="a"],
+      .t-icon-swap[data-state="b"] .t-icon[data-icon="b"] {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1) rotate(0deg);
+      }
+      .t-icon-swap[data-state="a"] .t-icon[data-icon="b"] {
+        opacity: 0;
+        filter: blur(var(--icon-swap-blur));
+        transform: scale(var(--icon-swap-start-scale)) rotate(-45deg);
+      }
+      .t-icon-swap[data-state="b"] .t-icon[data-icon="a"] {
+        opacity: 0;
+        filter: blur(var(--icon-swap-blur));
+        transform: scale(var(--icon-swap-start-scale)) rotate(45deg);
+      }
+
+      /* ── 4. Mobile Dropdown Menu & Backdrop (05-menu-dropdown) ── */
+      .t-dropdown {
+        transform-origin: top right;
+        transform: translateY(-8px) scale(var(--dropdown-pre-scale));
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          transform var(--dropdown-open-dur) var(--dropdown-ease),
+          opacity var(--dropdown-open-dur) var(--dropdown-ease);
+      }
+      .t-dropdown[data-origin="top-center"] {
+        transform-origin: top center;
+      }
+      .t-dropdown.is-open {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+        will-change: transform, opacity;
+      }
+      .t-dropdown.is-closing {
+        transform: translateY(-4px) scale(var(--dropdown-closing-scale));
+        opacity: 0;
+        pointer-events: none;
+        will-change: transform, opacity;
+        transition:
+          transform var(--dropdown-close-dur) var(--dropdown-ease),
+          opacity var(--dropdown-close-dur) var(--dropdown-ease);
+      }
+      .t-dropdown .mobile-menu-item {
+        opacity: 0;
+        transform: translateY(-5px);
+        transition:
+          opacity 200ms var(--dropdown-ease) calc(var(--item-idx, 0) * 24ms),
+          transform 200ms var(--dropdown-ease) calc(var(--item-idx, 0) * 24ms),
+          background-color var(--duration-quick) var(--ease-out),
+          color var(--duration-quick) var(--ease-out);
+      }
+      .t-dropdown.is-open .mobile-menu-item {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .t-dropdown.is-closing .mobile-menu-item {
+        opacity: 0;
+        transform: translateY(-3px);
+        transition-duration: 110ms;
+        transition-delay: 0ms;
+      }
+
+      .t-mobile-backdrop {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--dropdown-open-dur) var(--dropdown-ease);
+      }
+      .t-mobile-backdrop.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .t-mobile-backdrop.is-closing {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--dropdown-close-dur) var(--dropdown-ease);
+      }
+
+      /* ── 5. Desktop Nav Sliding Pill (16-tabs-sliding) ── */
+      .t-nav-pill {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 36px;
+        width: 0;
+        opacity: 0;
+        border-radius: 0.5rem;
+        background-color: rgba(30, 41, 59, 0.78);
+        transform: translate3d(0, -50%, 0);
+        transition:
+          transform var(--tabs-dur) var(--tabs-ease),
+          width var(--tabs-dur) var(--tabs-ease),
+          opacity var(--duration-quick) var(--ease-out);
+        z-index: 0;
+        pointer-events: none;
+      }
+      .t-nav-pill.is-visible {
+        opacity: 1;
+      }
+
+      /* ── 6. Smooth Accordion Expand / Collapse (21-accordion) ── */
+      .t-acc-panel {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows var(--acc-collapse) var(--acc-ease);
+      }
+      .t-acc[data-open="true"] .t-acc-panel {
+        grid-template-rows: 1fr;
+        transition: grid-template-rows var(--acc-expand) var(--acc-ease);
+      }
+      .t-acc-panel-inner {
+        overflow: hidden;
+        min-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        filter: blur(var(--blur-small));
+        transition:
+          opacity var(--acc-collapse) var(--acc-ease),
+          filter var(--acc-collapse) var(--acc-ease),
+          visibility 0s linear var(--acc-collapse);
+      }
+      .t-acc[data-open="true"] .t-acc-panel-inner {
+        opacity: 1;
+        visibility: visible;
+        filter: blur(0);
+        transition:
+          opacity var(--acc-expand) var(--acc-ease),
+          filter var(--acc-expand) var(--acc-ease),
+          visibility 0s linear 0s;
+      }
+      .t-acc-chevron {
+        display: inline-flex;
+        transform: scaleY(1);
+        transform-origin: center;
+        transition:
+          transform var(--acc-chevron) var(--acc-ease),
+          background-color var(--duration-quick) var(--ease-out),
+          color var(--duration-quick) var(--ease-out);
+      }
+      .t-acc-chevron path {
+        vector-effect: non-scaling-stroke;
+      }
+      .t-acc[data-open="true"] .t-acc-chevron {
+        transform: scaleY(-1);
+        background-color: #10b981;
+        color: #020617;
+      }
+
+      /* ── 7. Error State Shake (12-error-state-shake) ── */
+      .t-input {
+        transition:
+          border-color var(--duration-quick) var(--ease-out),
+          box-shadow var(--duration-quick) var(--ease-out);
+      }
+      .t-input.is-error {
+        border-color: #f59e0b !important;
+        box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35);
+        transition:
+          border-color var(--revert-dur) var(--ease-out),
+          box-shadow var(--revert-dur) var(--ease-out);
+      }
+      .t-input.is-shaking {
+        will-change: transform;
+        animation: t-input-shake calc(var(--shake-dur-a) * 2 + var(--shake-dur-b) * 2) linear;
+      }
+      @keyframes t-input-shake {
+        0%     { transform: translateX(0);                                 animation-timing-function: var(--shake-ease); }
+        28.57% { transform: translateX(var(--shake-distance));             animation-timing-function: var(--shake-ease); }
+        57.14% { transform: translateX(calc(var(--shake-distance) * -1)); animation-timing-function: var(--shake-ease); }
+        78.57% { transform: translateX(var(--shake-overshoot));            animation-timing-function: var(--shake-ease); }
+        100%   { transform: translateX(0); }
+      }
+
+      /* ── 8. Text States Swap (04-text-states-swap) ── */
+      .t-text-swap {
+        display: inline-block;
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+        transition:
+          transform var(--text-swap-dur) var(--text-swap-ease),
+          filter var(--text-swap-dur) var(--text-swap-ease),
+          opacity var(--text-swap-dur) var(--text-swap-ease);
+      }
+      .t-text-swap.is-exit {
+        transform: translateY(calc(var(--text-swap-translate-y) * -1));
+        filter: blur(var(--text-swap-blur));
+        opacity: 0;
+      }
+      .t-text-swap.is-enter-start {
+        transform: translateY(var(--text-swap-translate-y));
+        filter: blur(var(--text-swap-blur));
+        opacity: 0;
+        transition: none;
+      }
+
+      /* ── 9. Learn More Chevron Spread & Glide (24-learn-more-hover) ── */
+      .t-learn-chevron {
+        display: inline-flex;
+        transform: translateX(0);
+        transition: transform var(--learn-out) var(--learn-ease);
+      }
+      .t-learn-arm {
+        transform-box: view-box;
+        transform-origin: 10px 8px;
+        vector-effect: non-scaling-stroke;
+        transition: transform var(--learn-out) var(--learn-ease);
+      }
+      @media (hover: hover) {
+        .t-learn:hover .t-learn-chevron,
+        .group:hover .t-learn .t-learn-chevron {
+          transform: translateX(var(--learn-shift));
+          transition-duration: var(--learn-in);
+        }
+        .t-learn:hover .t-learn-arm,
+        .group:hover .t-learn .t-learn-arm {
+          transition-duration: var(--learn-in);
+        }
+        .t-learn:hover .t-learn-arm-top,
+        .group:hover .t-learn .t-learn-arm-top {
+          transform: rotate(var(--learn-spread));
+        }
+        .t-learn:hover .t-learn-arm-bot,
+        .group:hover .t-learn .t-learn-arm-bot {
+          transform: rotate(calc(var(--learn-spread) * -1));
+        }
+      }
+
+      /* ── 10. Subtle Live Status Dot Breathing ── */
+      .t-status-dot {
+        position: relative;
+      }
+      .t-status-dot::after {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border-radius: 9999px;
+        background-color: rgba(52, 211, 153, 0.35);
+        animation: t-status-pulse 2.8s var(--ease-in-out) infinite;
+        pointer-events: none;
+      }
+      @keyframes t-status-pulse {
+        0%, 100% { transform: scale(0.85); opacity: 0.2; }
+        50%      { transform: scale(1.35); opacity: 0.65; }
+      }
+
+      /* ── Accessibility Guards: Reduced Motion & Reduced Transparency ── */
       @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto !important;
+        }
         .reveal-on-scroll {
           opacity: 1 !important;
           transform: none !important;
           transition: none !important;
+        }
+        .t-dropdown,
+        .t-dropdown .mobile-menu-item,
+        .t-mobile-backdrop,
+        .t-icon-swap .t-icon,
+        .t-nav-pill,
+        .t-acc-panel,
+        .t-acc-panel-inner,
+        .t-acc-chevron,
+        .t-text-swap,
+        .t-learn-chevron,
+        .t-learn-arm,
+        .t-press {
+          transition: none !important;
+        }
+        .t-input {
+          animation: none !important;
+          transform: none !important;
+        }
+        .t-status-dot::after {
+          animation: none !important;
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-transparency: reduce) {
+        #site-header,
+        #mobile-nav-menu {
+          background-color: #020617 !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
         }
       }
     </style>
@@ -89,14 +472,24 @@ const { title, description, canonical, ogImage, noindex } = Astro.props;
         
         function initScrollReveals() {
           var elements = document.querySelectorAll('.reveal-on-scroll:not(.is-revealed)');
-          if (prefersReduced) {
+          if (prefersReduced || !('IntersectionObserver' in window)) {
             elements.forEach(function(el) { el.classList.add('is-revealed'); });
             return;
           }
-          if (!('IntersectionObserver' in window)) {
-            elements.forEach(function(el) { el.classList.add('is-revealed'); });
-            return;
-          }
+
+          // Assign capped per-row stagger offsets (<200ms cap) for grid siblings
+          var parents = new Map();
+          elements.forEach(function(el) {
+            var parent = el.parentElement;
+            if (!parent) return;
+            var count = parents.get(parent) || 0;
+            if (count > 0 && parent.children.length > 1) {
+              var delay = Math.min(count * 45, 180);
+              el.style.setProperty('--reveal-delay', delay + 'ms');
+            }
+            parents.set(parent, count + 1);
+          });
+
           var observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
               if (entry.isIntersecting) {
@@ -104,7 +497,7 @@ const { title, description, canonical, ogImage, noindex } = Astro.props;
                 observer.unobserve(entry.target);
               }
             });
-          }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+          }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
 
           elements.forEach(function(el) { observer.observe(el); });
         }

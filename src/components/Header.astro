@@ -5,16 +5,20 @@ import serviciosData from "../json/servicios.json";
 const { redes_sociales } = serviciosData.empresa;
 ---
 
-<header class="fixed top-0 left-0 w-full z-50 bg-slate-950/85 backdrop-blur-xl border-b border-slate-800/70 transition-all duration-300" role="banner">
-  <div class="container mx-auto flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
+<header
+  id="site-header"
+  class="fixed top-0 left-0 w-full z-50 bg-slate-950/85 backdrop-blur-xl border-b border-slate-800/70 transition-[background-color,border-color,box-shadow] duration-200"
+  role="banner"
+>
+  <div class="container mx-auto flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8 relative z-50">
     
     <!-- Logo Real de LaPon Tech Solutions -->
     <a
       href="/"
-      class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-emerald-400 rounded-xl p-1 active:scale-[0.98] transition-transform duration-150"
+      class="t-press flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-emerald-400 rounded-xl p-1"
       aria-label="LaPon Tech Solutions - Inicio"
     >
-      <div class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-700/80 flex items-center justify-center p-1.5 shadow-elevation-sm transition-all duration-300 group-hover:border-emerald-400 group-hover:scale-105">
+      <div class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-700/80 flex items-center justify-center p-1.5 shadow-elevation-sm transition-[transform,border-color] duration-200 group-hover:border-emerald-400 group-hover:scale-105">
         <img
           src="/icons/logo.png"
           alt="Logo LaPon Tech Solutions"
@@ -27,7 +31,7 @@ const { redes_sociales } = serviciosData.empresa;
 
       <div class="flex flex-col">
         <div class="flex items-baseline gap-1.5">
-          <span class="text-base sm:text-lg font-extrabold tracking-tight text-white group-hover:text-emerald-400 transition-colors">
+          <span class="text-base sm:text-lg font-extrabold tracking-tight text-white group-hover:text-emerald-400 transition-colors duration-150">
             LaPon
           </span>
           <span class="text-xs font-semibold text-emerald-400">
@@ -40,60 +44,70 @@ const { redes_sociales } = serviciosData.empresa;
       </div>
     </a>
 
-    <!-- Desktop Navigation con anclas a la landing principal -->
-    <nav class="hidden lg:flex items-center space-x-1" aria-label="Navegación principal">
+    <!-- Desktop Navigation con indicador deslizante y anclas a la landing principal -->
+    <nav id="desktop-nav" class="hidden lg:flex items-center space-x-1 relative py-1" aria-label="Navegación principal">
+      <span id="desktop-nav-pill" class="t-nav-pill" aria-hidden="true"></span>
+
       <a
         href="/"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="top"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white"
       >
         Inicio
       </a>
 
       <a
         href="/#servicios"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="servicios"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white"
       >
         Servicios
       </a>
 
       <a
         href="/#comparativa"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="comparativa"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white"
       >
         Enfoque
       </a>
 
       <a
         href="/#agencias"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-emerald-400 hover:text-emerald-300 hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="agencias"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-semibold text-emerald-400 hover:text-emerald-300"
       >
         Para Agencias
       </a>
 
       <a
         href="/#nosotros"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="nosotros"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white"
       >
         Sobre Nosotros
       </a>
 
       <a
         href="/#metodologia"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="metodologia"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white"
       >
         Metodología
       </a>
 
       <a
         href="/#faq"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="faq"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white"
       >
         Preguntas
       </a>
 
       <a
         href="/#contacto"
-        class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 active:scale-[0.97] transition-all duration-150"
+        data-nav-section="contacto"
+        class="nav-link t-press relative z-10 px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white"
       >
         Contacto
       </a>
@@ -107,7 +121,7 @@ const { redes_sociales } = serviciosData.empresa;
           href={redes_sociales.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-900/80 active:scale-95 transition-all duration-150"
+          class="t-press w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-900/80"
           aria-label="Instagram de LaPonTech (Abre en nueva pestaña)"
           title="Síguenos en Instagram"
         >
@@ -119,7 +133,7 @@ const { redes_sociales } = serviciosData.empresa;
           href={redes_sociales.facebook}
           target="_blank"
           rel="noopener noreferrer"
-          class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-900/80 active:scale-95 transition-all duration-150"
+          class="t-press w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-900/80"
           aria-label="Facebook de LaPonTech (Abre en nueva pestaña)"
           title="Síguenos en Facebook"
         >
@@ -131,7 +145,7 @@ const { redes_sociales } = serviciosData.empresa;
           href={redes_sociales.tiktok}
           target="_blank"
           rel="noopener noreferrer"
-          class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-900/80 active:scale-95 transition-all duration-150"
+          class="t-press w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-900/80"
           aria-label="TikTok de LaPonTech (Abre en nueva pestaña)"
           title="Síguenos en TikTok"
         >
@@ -143,7 +157,7 @@ const { redes_sociales } = serviciosData.empresa;
 
       <a
         href="/#contacto"
-        class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-sm shadow-elevation-sm hover:-translate-y-0.5 active:scale-[0.97] transition-all duration-150"
+        class="t-press inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-sm shadow-elevation-sm hover:-translate-y-0.5"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
@@ -152,85 +166,103 @@ const { redes_sociales } = serviciosData.empresa;
       </a>
     </div>
 
-    <!-- Mobile Hamburger Toggle Button -->
+    <!-- Mobile Hamburger Toggle Button con Icon Swap animado -->
     <button
       type="button"
       id="mobile-menu-btn"
-      class="lg:hidden text-slate-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 w-11 h-11 flex items-center justify-center rounded-xl bg-slate-900 border border-slate-800 active:scale-95 transition-all duration-150"
+      class="t-press lg:hidden text-slate-300 hover:text-white hover:border-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 w-11 h-11 flex items-center justify-center rounded-xl bg-slate-900 border border-slate-800"
       aria-label="Abrir menú de navegación"
       aria-expanded="false"
       aria-controls="mobile-nav-menu"
     >
-      <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-      <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
+      <span id="mobile-menu-icon" class="t-icon-swap" data-state="a" aria-hidden="true">
+        <svg class="t-icon w-6 h-6" data-icon="a" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg class="t-icon w-6 h-6" data-icon="b" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </span>
     </button>
   </div>
 
-  <!-- Mobile Drawer Menu con animación origin-aware -->
+  <!-- Backdrop táctil para cerrar el menú móvil al tocar fuera -->
+  <div
+    id="mobile-nav-backdrop"
+    class="hidden lg:hidden fixed inset-x-0 top-20 bottom-0 bg-slate-950/60 backdrop-blur-[2px] z-40 t-mobile-backdrop"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Mobile Dropdown Menu con animación origin-aware asimétrica (250ms open / 150ms close) -->
   <div
     id="mobile-nav-menu"
-    class="hidden lg:hidden bg-slate-950/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-2 backdrop-blur-2xl transition-all duration-300"
+    data-origin="top-right"
+    class="hidden lg:hidden absolute top-full left-0 w-full z-50 bg-slate-950/95 border-b border-slate-800 px-4 pt-3 pb-6 space-y-1.5 backdrop-blur-2xl shadow-elevation-lg max-h-[calc(100dvh-5rem)] overflow-y-auto t-dropdown"
   >
     <a
       href="/"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98] transition-all"
+      style="--item-idx: 0"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98]"
     >
-      Inicio
+      <span>Inicio</span>
     </a>
     <a
       href="/#servicios"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98] transition-all"
+      style="--item-idx: 1"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98]"
     >
-      Servicios
+      <span>Servicios</span>
     </a>
     <a
       href="/#comparativa"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98] transition-all"
+      style="--item-idx: 2"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98]"
     >
-      Nuestro Enfoque
+      <span>Nuestro Enfoque</span>
     </a>
     <a
       href="/#agencias"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-emerald-400 hover:bg-slate-900 hover:text-emerald-300 active:scale-[0.98] transition-all"
+      style="--item-idx: 3"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold text-emerald-400 hover:bg-slate-900 hover:text-emerald-300 active:scale-[0.98]"
     >
-      Marca Blanca para Agencias
+      <span>Marca Blanca para Agencias</span>
     </a>
     <a
       href="/#nosotros"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98] transition-all"
+      style="--item-idx: 4"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98]"
     >
-      Sobre Nosotros
+      <span>Sobre Nosotros</span>
     </a>
     <a
       href="/#metodologia"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98] transition-all"
+      style="--item-idx: 5"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98]"
     >
-      Metodología
+      <span>Metodología</span>
     </a>
     <a
       href="/#faq"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98] transition-all"
+      style="--item-idx: 6"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98]"
     >
-      Preguntas Frecuentes
+      <span>Preguntas Frecuentes</span>
     </a>
     <a
       href="/#contacto"
-      class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98] transition-all"
+      style="--item-idx: 7"
+      class="mobile-nav-link mobile-menu-item flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-white active:scale-[0.98]"
     >
-      Contacto
+      <span>Contacto</span>
     </a>
 
     <!-- Redes Sociales en Móvil -->
-    <div class="flex items-center justify-around py-3 border-t border-slate-800/80">
+    <div style="--item-idx: 8" class="mobile-menu-item flex items-center justify-around py-3 border-t border-slate-800/80">
       <a
         href={redes_sociales.instagram}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 py-1 px-2 rounded-lg active:scale-95 transition-all"
+        class="t-press flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 py-1 px-2 rounded-lg"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         <span>Instagram</span>
@@ -239,7 +271,7 @@ const { redes_sociales } = serviciosData.empresa;
         href={redes_sociales.facebook}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 py-1 px-2 rounded-lg active:scale-95 transition-all"
+        class="t-press flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 py-1 px-2 rounded-lg"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         <span>Facebook</span>
@@ -248,17 +280,17 @@ const { redes_sociales } = serviciosData.empresa;
         href={redes_sociales.tiktok}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 py-1 px-2 rounded-lg active:scale-95 transition-all"
+        class="t-press flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 py-1 px-2 rounded-lg"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 2.89 3.5 2.77 1.81-.02 3.32-1.52 3.33-3.33.02-4.74.01-9.48.01-14.22-.01-.15.01-.3-.02-.45z"/></svg>
         <span>TikTok</span>
       </a>
     </div>
 
-    <div class="pt-2 border-t border-slate-800">
+    <div style="--item-idx: 9" class="mobile-menu-item pt-2 border-t border-slate-800">
       <a
         href="/#contacto"
-        class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-3.5 rounded-xl text-sm active:scale-[0.98] transition-all duration-150 shadow-elevation-sm"
+        class="mobile-nav-link t-press w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-3.5 rounded-xl text-sm shadow-elevation-sm"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
@@ -270,31 +302,222 @@ const { redes_sociales } = serviciosData.empresa;
 </header>
 
 <script is:inline>
-  const btn = document.getElementById("mobile-menu-btn");
-  const menu = document.getElementById("mobile-nav-menu");
-  const iconOpen = document.getElementById("menu-icon-open");
-  const iconClose = document.getElementById("menu-icon-close");
+  (function () {
+    const header = document.getElementById("site-header");
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-nav-menu");
+    const backdrop = document.getElementById("mobile-nav-backdrop");
+    const iconSwap = document.getElementById("mobile-menu-icon");
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (btn && menu) {
-    btn.addEventListener("click", () => {
-      const isHidden = menu.classList.toggle("hidden");
-      const isExpanded = !isHidden;
-      btn.setAttribute("aria-expanded", isExpanded ? "true" : "false");
-      if (iconOpen && iconClose) {
-        iconOpen.classList.toggle("hidden", isExpanded);
-        iconClose.classList.toggle("hidden", !isExpanded);
+    // 1. Elevación sutil del Header al hacer scroll
+    function syncHeaderScroll() {
+      if (!header) return;
+      if (window.scrollY > 12) {
+        header.classList.add("shadow-elevation-md", "bg-slate-950/95", "border-slate-700/80");
+        header.classList.remove("bg-slate-950/85", "border-slate-800/70");
+      } else {
+        header.classList.remove("shadow-elevation-md", "bg-slate-950/95", "border-slate-700/80");
+        header.classList.add("bg-slate-950/85", "border-slate-800/70");
       }
-    });
+    }
+    window.addEventListener("scroll", syncHeaderScroll, { passive: true });
+    syncHeaderScroll();
 
-    menu.querySelectorAll(".mobile-nav-link").forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.classList.add("hidden");
+    // 2. Menú desplegable móvil (05-menu-dropdown + 09-icon-swap + interrumpible)
+    if (btn && menu) {
+      let closeTimer = null;
+      let isOpen = false;
+      const closeMs = prefersReduced
+        ? 0
+        : parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--dropdown-close-dur")) || 150;
+
+      function openMenu() {
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        isOpen = true;
+        btn.setAttribute("aria-expanded", "true");
+        btn.setAttribute("aria-label", "Cerrar menú de navegación");
+        if (iconSwap) iconSwap.setAttribute("data-state", "b");
+
+        menu.classList.remove("hidden", "is-closing");
+        if (backdrop) backdrop.classList.remove("hidden", "is-closing");
+
+        void menu.offsetWidth; // Reflow para animar desde el estado inicial
+        menu.classList.add("is-open");
+        if (backdrop) backdrop.classList.add("is-open");
+      }
+
+      function closeMenu(restoreFocus) {
+        if (!isOpen && menu.classList.contains("hidden")) return;
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        isOpen = false;
         btn.setAttribute("aria-expanded", "false");
-        if (iconOpen && iconClose) {
-          iconOpen.classList.remove("hidden");
-          iconClose.classList.add("hidden");
+        btn.setAttribute("aria-label", "Abrir menú de navegación");
+        if (iconSwap) iconSwap.setAttribute("data-state", "a");
+
+        menu.classList.remove("is-open");
+        menu.classList.add("is-closing");
+        if (backdrop) {
+          backdrop.classList.remove("is-open");
+          backdrop.classList.add("is-closing");
+        }
+
+        if (restoreFocus) btn.focus();
+
+        const finalize = () => {
+          closeTimer = null;
+          if (!isOpen) {
+            menu.classList.remove("is-closing");
+            menu.classList.add("hidden");
+            if (backdrop) {
+              backdrop.classList.remove("is-closing");
+              backdrop.classList.add("hidden");
+            }
+          }
+        };
+
+        if (closeMs <= 0) {
+          finalize();
+        } else {
+          closeTimer = setTimeout(finalize, closeMs);
+        }
+      }
+
+      btn.addEventListener("click", () => {
+        if (isOpen) {
+          closeMenu(false);
+        } else {
+          openMenu();
         }
       });
-    });
-  }
+
+      if (backdrop) {
+        backdrop.addEventListener("click", () => closeMenu(false));
+      }
+
+      menu.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => closeMenu(false));
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && isOpen) {
+          closeMenu(true);
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024 && isOpen) {
+          closeMenu(false);
+        }
+      });
+    }
+
+    // 3. Indicador deslizante y scroll-spy en navegación de escritorio (16-tabs-sliding)
+    const desktopNav = document.getElementById("desktop-nav");
+    const navPill = document.getElementById("desktop-nav-pill");
+    if (desktopNav && navPill) {
+      const navLinks = Array.from(desktopNav.querySelectorAll(".nav-link[data-nav-section]"));
+      let activeLink = navLinks[0] || null;
+      let hoveredLink = null;
+
+      function movePillTo(targetLink, animate) {
+        if (!targetLink || window.innerWidth < 1024) {
+          navPill.classList.remove("is-visible");
+          return;
+        }
+        const x = targetLink.offsetLeft;
+        const w = targetLink.offsetWidth;
+        if (!w) return;
+
+        if (!animate || !navPill.classList.contains("is-visible")) {
+          const prev = navPill.style.transition;
+          navPill.style.transition = "none";
+          navPill.style.transform = `translate3d(${x}px, -50%, 0)`;
+          navPill.style.width = `${w}px`;
+          void navPill.offsetWidth;
+          navPill.style.transition = prev;
+        } else {
+          navPill.style.transform = `translate3d(${x}px, -50%, 0)`;
+          navPill.style.width = `${w}px`;
+        }
+        navPill.classList.add("is-visible");
+      }
+
+      function setActiveSection(sectionId, animate) {
+        const match = navLinks.find((l) => l.getAttribute("data-nav-section") === sectionId) || navLinks[0];
+        if (!match) return;
+        activeLink = match;
+        navLinks.forEach((l) => {
+          const isCurrent = l === match;
+          const isAgencias = l.getAttribute("data-nav-section") === "agencias";
+          if (!isAgencias) {
+            l.classList.toggle("text-white", isCurrent);
+            l.classList.toggle("text-slate-300", !isCurrent);
+          }
+        });
+        if (!hoveredLink) {
+          movePillTo(activeLink, animate);
+        }
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          hoveredLink = link;
+          movePillTo(link, true);
+        });
+        link.addEventListener("focus", () => {
+          hoveredLink = link;
+          movePillTo(link, true);
+        });
+      });
+
+      desktopNav.addEventListener("mouseleave", () => {
+        hoveredLink = null;
+        movePillTo(activeLink, true);
+      });
+      desktopNav.addEventListener("focusout", (e) => {
+        if (!desktopNav.contains(e.relatedTarget)) {
+          hoveredLink = null;
+          movePillTo(activeLink, true);
+        }
+      });
+
+      // Scroll-spy ligero con IntersectionObserver en la portada
+      const sectionIds = ["servicios", "comparativa", "agencias", "nosotros", "metodologia", "faq", "contacto"];
+      const observedSections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+      if (observedSections.length > 0 && "IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActiveSection(entry.target.id, true);
+              }
+            });
+          },
+          { rootMargin: "-25% 0px -60% 0px", threshold: 0 }
+        );
+        observedSections.forEach((sec) => sectionObserver.observe(sec));
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (window.scrollY < 220) {
+              setActiveSection("top", true);
+            }
+          },
+          { passive: true }
+        );
+      }
+
+      requestAnimationFrame(() => setActiveSection(window.scrollY < 220 ? "top" : activeLink?.getAttribute("data-nav-section") || "top", false));
+      window.addEventListener("resize", () => movePillTo(hoveredLink || activeLink, false));
+    }
+  })();
 </script>

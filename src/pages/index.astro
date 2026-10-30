@@ -30,7 +30,7 @@ const waP3 = phoneClean.slice(7);
         
         <!-- Badge -->
         <div class="inline-flex items-center gap-2.5 bg-slate-900/90 border border-slate-700 text-emerald-300 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-8 backdrop-blur-md shadow-elevation-sm">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span class="t-status-dot w-2 h-2 rounded-full bg-emerald-400"></span>
           <span>San Pedro Sula, Cortés · {hero.badge}</span>
         </div>
 
@@ -54,7 +54,7 @@ const waP3 = phoneClean.slice(7);
               href="#contacto"
               data-wa-text={WA_DIRECT_MSG}
               aria-label="Solicitar Diagnóstico Gratuito por WhatsApp (Abre en nueva pestaña)"
-              class="js-protected-wa w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] min-h-[52px] text-base cursor-pointer"
+              class="js-protected-wa t-press w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 min-h-[52px] text-base cursor-pointer"
             >
               <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
@@ -69,10 +69,10 @@ const waP3 = phoneClean.slice(7);
 
           <a
             href="#comparativa"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-bold px-7 py-4 rounded-xl border border-slate-700/80 hover:border-emerald-500/50 transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] min-h-[52px] text-base backdrop-blur-sm"
+            class="t-press group/cta w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-bold px-7 py-4 rounded-xl border border-slate-700/80 hover:border-emerald-500/50 hover:-translate-y-0.5 min-h-[52px] text-base backdrop-blur-sm"
           >
             <span>{hero.cta_comparativa_texto}</span>
-            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="w-4 h-4 text-emerald-400 transition-transform duration-200 group-hover/cta:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </a>
@@ -81,8 +81,8 @@ const waP3 = phoneClean.slice(7);
         <!-- 4 Métricas Estáticas de Alto Contraste con Elevación y Hover Físico -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-10 border-t border-slate-800/80">
           {hero.estadisticas.map((stat) => (
-            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 hover:-translate-y-1 hover:shadow-card-subtle transition-all duration-200 text-center group flex flex-col justify-center">
-              <p class="text-2xl sm:text-3xl font-black text-amber-300 font-mono mb-1.5 group-hover:text-emerald-400 transition-colors">
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 hover:-translate-y-1 hover:shadow-card-subtle transition-[transform,border-color,box-shadow] duration-200 text-center group flex flex-col justify-center">
+              <p class="text-2xl sm:text-3xl font-black text-amber-300 font-mono mb-1.5 group-hover:text-emerald-400 transition-colors duration-200">
                 {stat.valor}
               </p>
               <p class="text-sm sm:text-base font-bold text-white mb-1 leading-snug">{stat.etiqueta}</p>
@@ -114,11 +114,12 @@ const waP3 = phoneClean.slice(7);
         {servicios.map((servicio, idx) => {
           const isWide = idx === 0;
           const colSpan = isWide ? "lg:col-span-7" : idx === 1 ? "lg:col-span-5" : "lg:col-span-6";
+          const cleanCta = (servicio.cta_texto || "Cotizar este servicio").replace(/\s*→$/, "");
 
           return (
             <article
               id={servicio.id}
-              class={`${colSpan} reveal-on-scroll rounded-3xl p-6 sm:p-8 bg-slate-900 border transition-all duration-300 hover:-translate-y-1 hover:shadow-card-subtle flex flex-col justify-between relative overflow-hidden group ${
+              class={`${colSpan} reveal-on-scroll rounded-3xl p-6 sm:p-8 bg-slate-900 border transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-card-subtle flex flex-col justify-between relative overflow-hidden group ${
                 servicio.popular
                   ? "border-emerald-500/50 ring-1 ring-emerald-500/20 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950"
                   : "border-slate-800 hover:border-slate-700 bg-slate-900/90"
@@ -134,7 +135,7 @@ const waP3 = phoneClean.slice(7);
                 <!-- Encabezado con Icono y Badges -->
                 <div class="flex flex-wrap items-center gap-2 mb-4">
                   {servicio.badges.map((badge) => (
-                    <span class="inline-flex items-center text-xs font-mono font-semibold px-2.5 py-0.5 rounded-md bg-slate-800 text-emerald-300 border border-slate-700">
+                    <span class="inline-flex items-center text-xs font-mono font-semibold px-2.5 py-0.5 rounded-md bg-slate-800 text-emerald-300 border border-slate-700 transition-colors duration-200 group-hover:border-emerald-500/40">
                       {badge}
                     </span>
                   ))}
@@ -175,18 +176,21 @@ const waP3 = phoneClean.slice(7);
                 </ul>
               </div>
 
-              <!-- Micro-Acción Directa por WhatsApp (Alta Conversión) -->
+              <!-- Micro-Acción Directa por WhatsApp con Chevron Spread (24-learn-more-hover) -->
               <div class="pt-5 border-t border-slate-800 mt-auto flex flex-col sm:flex-row gap-3">
                 <a
                   href="#contacto"
                   data-wa-text={servicio.wa_msg}
                   aria-label={`Cotizar ${servicio.titulo} por WhatsApp (Abre en nueva pestaña)`}
-                  class="js-protected-wa w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white font-bold py-3.5 px-6 rounded-xl border border-slate-700 hover:border-emerald-500 active:scale-[0.98] transition-all duration-200 text-sm cursor-pointer group-hover:bg-emerald-500 group-hover:text-slate-950 group-hover:border-emerald-500"
+                  class="js-protected-wa t-learn t-press w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-white font-bold py-3.5 px-6 rounded-xl border border-slate-700 hover:border-emerald-500 text-sm cursor-pointer group-hover:bg-emerald-500 group-hover:text-slate-950 group-hover:border-emerald-500"
                 >
-                  <span>{servicio.cta_texto || "Cotizar este servicio →"}</span>
-                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                  </svg>
+                  <span>{cleanCta}</span>
+                  <span class="t-learn-chevron" aria-hidden="true">
+                    <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                      <path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8" stroke-width="2" stroke-linecap="round" />
+                      <path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </span>
                 </a>
               </div>
             </article>
@@ -214,7 +218,7 @@ const waP3 = phoneClean.slice(7);
       <!-- Matriz de Comparativa Compacta y Mobile-First -->
       <div class="space-y-4">
         {por_que_nosotros.comparativa.map((item) => (
-          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 transition-all duration-200 hover:border-slate-700 hover:shadow-card-subtle">
+          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 transition-[border-color,box-shadow] duration-200 hover:border-slate-700 hover:shadow-card-subtle">
             
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
               <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
@@ -282,7 +286,7 @@ const waP3 = phoneClean.slice(7);
       <!-- 3 Áreas de Ejecución Técnica en Marca Blanca -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {agencias.areas.map((area) => (
-          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 hover:border-emerald-500/40 hover:-translate-y-1 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 shadow-card-subtle">
+          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 hover:border-emerald-500/40 hover:-translate-y-1 rounded-2xl p-6 flex flex-col justify-between transition-[transform,border-color,box-shadow] duration-300 shadow-card-subtle">
             <div>
               <span class="inline-block text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2.5 py-1 rounded-md mb-4">
                 {area.badge}
@@ -313,7 +317,7 @@ const waP3 = phoneClean.slice(7);
             href="#contacto"
             data-wa-text={WA_AGENCIAS_MSG}
             aria-label="Solicitar Tarifas de Marca Blanca por WhatsApp (Abre en nueva pestaña)"
-            class="js-protected-wa w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-6 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-sm cursor-pointer"
+            class="js-protected-wa t-press w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-6 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 text-sm cursor-pointer"
           >
             <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
@@ -345,7 +349,7 @@ const waP3 = phoneClean.slice(7);
       <!-- Bento Grid: Principios Clave -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
         {sobre_nosotros.principios.map((p) => (
-          <div class="reveal-on-scroll p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div class="reveal-on-scroll p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 hover:-translate-y-1 transition-[transform,border-color] duration-300 flex flex-col justify-between">
             <div>
               <span class="inline-block text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2 py-0.5 rounded mb-3">
                 {p.badge}
@@ -370,7 +374,7 @@ const waP3 = phoneClean.slice(7);
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {sobre_nosotros.fundadores.map((fundador) => (
-            <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 hover:shadow-card-subtle transition-all duration-300">
+            <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 hover:shadow-card-subtle transition-[border-color,box-shadow] duration-300">
               <div>
                 <div class="flex items-center gap-3.5 mb-4">
                   <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-700/80 flex items-center justify-center p-2 shadow-elevation-sm">
@@ -417,9 +421,9 @@ const waP3 = phoneClean.slice(7);
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {metodologia.pasos.map((paso) => (
-          <div class="reveal-on-scroll bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 hover:-translate-y-1 transition-all duration-300">
+          <div class="reveal-on-scroll group bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 hover:-translate-y-1 transition-[transform,border-color] duration-300">
             <div>
-              <span class="text-3xl font-black text-emerald-400/80 font-mono block mb-2">{paso.numero}</span>
+              <span class="text-3xl font-black text-emerald-400/80 group-hover:text-emerald-300 group-hover:translate-x-0.5 transition-[transform,color] duration-200 font-mono block mb-2">{paso.numero}</span>
               <h3 class="text-base font-bold text-white mb-2">{paso.nombre}</h3>
               <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">{paso.descripcion}</p>
             </div>
@@ -434,7 +438,7 @@ const waP3 = phoneClean.slice(7);
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
           {garantias.items.map((g) => (
-            <div class="bg-slate-950/70 border border-emerald-500/20 rounded-2xl p-5 flex flex-col justify-between">
+            <div class="bg-slate-950/70 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors duration-200 rounded-2xl p-5 flex flex-col justify-between">
               <div>
                 <h4 class="text-sm sm:text-base font-bold text-emerald-400 mb-1.5 flex items-center gap-2">
                   <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -485,7 +489,7 @@ const waP3 = phoneClean.slice(7);
           href="#contacto"
           data-wa-text={WA_DIRECT_MSG}
           aria-label="Solicitar Diagnóstico Gratuito por WhatsApp (Abre en nueva pestaña)"
-          class="js-protected-wa inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-base"
+          class="js-protected-wa t-press inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 text-base"
         >
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
@@ -500,7 +504,7 @@ const waP3 = phoneClean.slice(7);
     </div>
   </section>
 
-  <!-- ─── 7. PREGUNTAS FRECUENTES (FAQ INTERACTIVO Y ACCESIBLE) ─────────── -->
+  <!-- ─── 7. PREGUNTAS FRECUENTES (ACORDEÓN FLUIDO 21-ACCORDION) ─────────── -->
   <section id="faq" class="py-20 lg:py-28 bg-slate-900/30 border-b border-slate-800/80 scroll-mt-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
       
@@ -513,28 +517,57 @@ const waP3 = phoneClean.slice(7);
         </p>
       </div>
 
-      <div class="space-y-4">
-        {faq.map((item, idx) => (
-          <details class="reveal-on-scroll group bg-slate-900 border border-slate-800 hover:border-slate-700/80 rounded-2xl p-6 transition-all duration-300 open:border-emerald-500/50 open:bg-slate-900/90 shadow-card-subtle">
-            <summary class="flex items-center justify-between cursor-pointer list-none select-none text-left font-bold text-white text-base sm:text-lg gap-4 active:scale-[0.99] transition-transform duration-150">
-              <span class="flex items-center gap-3">
-                <span class="text-emerald-400/90 text-xs font-mono font-bold bg-emerald-950/60 border border-emerald-800/50 px-2.5 py-1 rounded-md">
-                  0{idx + 1}
+      <div class="space-y-4" id="faq-accordion-list">
+        {faq.map((item, idx) => {
+          const initialOpen = idx === 0 ? "true" : "false";
+          return (
+            <div
+              class="t-acc reveal-on-scroll bg-slate-900 border border-slate-800 hover:border-slate-700/80 data-[open=true]:border-emerald-500/50 rounded-2xl p-6 transition-colors duration-200 shadow-card-subtle"
+              data-open={initialOpen}
+            >
+              <button
+                type="button"
+                id={`faq-btn-${idx}`}
+                aria-expanded={initialOpen}
+                aria-controls={`faq-panel-${idx}`}
+                class="t-acc-head w-full flex items-center justify-between cursor-pointer select-none text-left font-bold text-white text-base sm:text-lg gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-xl"
+              >
+                <span class="flex items-center gap-3">
+                  <span class="text-emerald-400/90 text-xs font-mono font-bold bg-emerald-950/60 border border-emerald-800/50 px-2.5 py-1 rounded-md">
+                    0{idx + 1}
+                  </span>
+                  <span>{item.pregunta}</span>
                 </span>
-                <span>{item.pregunta}</span>
-              </span>
-              <span class="w-8 h-8 rounded-full bg-slate-800 group-open:bg-emerald-500 group-open:text-slate-950 text-slate-400 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-open:rotate-180">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </span>
-            </summary>
-            <div class="pt-4 mt-4 border-t border-slate-800/80 text-slate-300 text-sm sm:text-base leading-relaxed pl-1 sm:pl-10">
-              <p class="max-w-[62ch]">{item.respuesta}</p>
+                <span class="t-acc-chevron w-8 h-8 rounded-full bg-slate-800 text-slate-300 items-center justify-center flex-shrink-0" aria-hidden="true">
+                  <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                    <path d="M4 6.5L8 10.5L12 6.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+
+              <div
+                id={`faq-panel-${idx}`}
+                role="region"
+                aria-labelledby={`faq-btn-${idx}`}
+                class="t-acc-panel"
+              >
+                <div class="t-acc-panel-inner">
+                  <div class="pt-4 mt-4 border-t border-slate-800/80 text-slate-300 text-sm sm:text-base leading-relaxed pl-1 sm:pl-10">
+                    <p class="max-w-[54ch]">{item.respuesta}</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </details>
-        ))}
+          );
+        })}
       </div>
+
+      <noscript>
+        <style>
+          .t-acc-panel { grid-template-rows: 1fr !important; }
+          .t-acc-panel-inner { opacity: 1 !important; visibility: visible !important; filter: none !important; }
+        </style>
+      </noscript>
 
     </div>
   </section>
@@ -557,7 +590,7 @@ const waP3 = phoneClean.slice(7);
         <!-- Canales Directos: WhatsApp y Correo Oficial -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <!-- Canal 1: WhatsApp Directo -->
-          <div class="bg-slate-900 border border-emerald-500/30 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/60 shadow-elevation-sm transition-all duration-200">
+          <div class="bg-slate-900 border border-emerald-500/30 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/60 shadow-elevation-sm transition-colors duration-200">
             <div class="flex items-center gap-3.5 mb-4">
               <div class="w-11 h-11 rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center flex-shrink-0 shadow-elevation-sm">
                 <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -573,14 +606,20 @@ const waP3 = phoneClean.slice(7);
               href="#contacto"
               data-wa-text={WA_DIRECT_MSG}
               aria-label="Abrir WhatsApp directo con LaPonTech (Abre en nueva pestaña)"
-              class="js-protected-wa w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-3 rounded-xl active:scale-[0.98] transition-all duration-150 shadow-elevation-sm text-xs uppercase tracking-wider"
+              class="js-protected-wa t-learn t-press w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-3 rounded-xl shadow-elevation-sm text-xs uppercase tracking-wider"
             >
-              Escribir por WhatsApp →
+              <span>Escribir por WhatsApp</span>
+              <span class="t-learn-chevron" aria-hidden="true">
+                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                  <path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8" stroke-width="2.2" stroke-linecap="round" />
+                  <path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12" stroke-width="2.2" stroke-linecap="round" />
+                </svg>
+              </span>
             </a>
           </div>
 
           <!-- Canal 2: Correo Oficial -->
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 shadow-elevation-sm transition-all duration-200">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 shadow-elevation-sm transition-colors duration-200">
             <div class="flex items-center gap-3.5 mb-4">
               <div class="w-11 h-11 rounded-xl bg-slate-950 border border-slate-700 text-emerald-400 flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -597,7 +636,7 @@ const waP3 = phoneClean.slice(7);
               data-email-user="contacto"
               data-email-domain="lapontech.com"
               aria-label="Enviar correo corporativo a LaPonTech"
-              class="js-protected-email w-full text-center bg-slate-950 hover:bg-slate-800 text-emerald-400 hover:text-white font-bold px-4 py-3 rounded-xl border border-slate-700 active:scale-[0.98] transition-all duration-150 text-xs tracking-normal"
+              class="js-protected-email t-press w-full text-center bg-slate-950 hover:bg-slate-800 text-emerald-400 hover:text-white font-bold px-4 py-3 rounded-xl border border-slate-700 text-xs tracking-normal"
             >
               <span data-email-text>contacto [arroba] lapontech [punto] com</span>
             </a>
@@ -607,7 +646,7 @@ const waP3 = phoneClean.slice(7);
         <!-- Canal 3: Redes Sociales Oficiales Verificadas -->
         <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div class="flex items-center gap-2.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span class="t-status-dot w-2 h-2 rounded-full bg-emerald-400"></span>
             <span class="text-xs font-semibold text-slate-300">Conéctate también en nuestras redes oficiales:</span>
           </div>
           <div class="flex items-center gap-2">
@@ -615,7 +654,7 @@ const waP3 = phoneClean.slice(7);
               href={empresa.redes_sociales.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium active:scale-95 transition-all duration-150"
+              class="t-press inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium"
               aria-label="Instagram oficial (Abre en nueva pestaña)"
               title="Instagram"
             >
@@ -626,7 +665,7 @@ const waP3 = phoneClean.slice(7);
               href={empresa.redes_sociales.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium active:scale-95 transition-all duration-150"
+              class="t-press inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium"
               aria-label="Facebook oficial (Abre en nueva pestaña)"
               title="Facebook"
             >
@@ -637,7 +676,7 @@ const waP3 = phoneClean.slice(7);
               href={empresa.redes_sociales.tiktok}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium active:scale-95 transition-all duration-150"
+              class="t-press inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 text-xs font-medium"
               aria-label="TikTok oficial (Abre en nueva pestaña)"
               title="TikTok"
             >
@@ -647,7 +686,7 @@ const waP3 = phoneClean.slice(7);
           </div>
         </div>
 
-        <!-- Canal 2: Formulario de Contacto -->
+        <!-- Canal 2: Formulario de Contacto con Micro-interacciones de Validación y Confirmación -->
         <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-elevation-md">
           <div class="mb-8">
             <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Envíanos un mensaje</h3>
@@ -662,7 +701,7 @@ const waP3 = phoneClean.slice(7);
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
+              <div class="t-input-wrap">
                 <label for="user_name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
                   Tu Nombre <span class="text-emerald-400">*</span>
                 </label>
@@ -672,7 +711,7 @@ const waP3 = phoneClean.slice(7);
                   name="user_name"
                   required
                   placeholder="Ej. Carlos Martínez"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+                  class="t-input w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none"
                 />
               </div>
 
@@ -685,13 +724,13 @@ const waP3 = phoneClean.slice(7);
                   id="business_name"
                   name="business_name"
                   placeholder="Ej. Distribuidora Norte / Agencia Creativa"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+                  class="t-input w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none"
                 />
               </div>
             </div>
 
             <!-- Selección de Servicio -->
-            <div>
+            <div class="t-input-wrap">
               <label for="service_select" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
                 Servicio de Interés <span class="text-emerald-400">*</span>
               </label>
@@ -699,7 +738,7 @@ const waP3 = phoneClean.slice(7);
                 id="service_select"
                 name="service_select"
                 required
-                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all cursor-pointer"
+                class="t-input w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none cursor-pointer"
               >
                 <option value="" disabled selected class="text-slate-400">Selecciona una opción...</option>
                 {contacto_whatsapp.select_opciones.map((opt) => (
@@ -709,7 +748,7 @@ const waP3 = phoneClean.slice(7);
             </div>
 
             <!-- Mensaje -->
-            <div>
+            <div class="t-input-wrap">
               <label for="user_message" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
                 Detalles de lo que necesitas resolver <span class="text-emerald-400">*</span>
               </label>
@@ -719,23 +758,32 @@ const waP3 = phoneClean.slice(7);
                 rows="4"
                 required
                 placeholder="Cuéntanos brevemente qué buscas resolver (ej. crear web para captar clientes, sistema de inventario sin mensualidades, o soporte técnico)..."
-                class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-all"
+                class="t-input w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-950 text-white placeholder-slate-400 text-sm focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none"
               ></textarea>
             </div>
 
             <!-- Alerta de validación -->
-            <div id="form-error" class="hidden p-4 bg-red-950/60 border border-red-800 text-red-200 rounded-xl text-sm font-medium"></div>
+            <div
+              id="form-error"
+              role="alert"
+              class="hidden p-4 bg-amber-950/70 border border-amber-500/50 text-amber-200 rounded-xl text-sm font-medium"
+            ></div>
 
-            <!-- Botón de Envío -->
+            <!-- Botón de Envío con Icon Swap + Text Swap -->
             <button
               type="submit"
               id="submit-form-btn"
-              class="w-full inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-4 px-8 rounded-xl shadow-elevation-md hover:shadow-elevation-lg transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] min-h-[50px] text-base cursor-pointer"
+              class="t-press w-full inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-4 px-8 rounded-xl shadow-elevation-md hover:shadow-elevation-lg hover:-translate-y-0.5 min-h-[52px] text-base cursor-pointer"
             >
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
-              </svg>
-              <span>Consultar requerimiento por WhatsApp</span>
+              <span id="submit-btn-icon" class="t-icon-swap" data-state="a" aria-hidden="true">
+                <svg class="t-icon w-5 h-5 fill-current" data-icon="a" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
+                </svg>
+                <svg class="t-icon w-5 h-5" data-icon="b" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+              </span>
+              <span id="submit-btn-text" class="t-text-swap">Consultar requerimiento por WhatsApp</span>
             </button>
 
             <p class="text-xs text-slate-400 text-center">
@@ -755,10 +803,10 @@ const waP3 = phoneClean.slice(7);
       href="#contacto"
       data-wa-text={WA_DIRECT_MSG}
       aria-label="Contactar a LaPonTech por WhatsApp (Respuesta en horario hábil)"
-      class="js-protected-wa fixed bottom-6 right-6 z-50 group inline-flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-3 rounded-full shadow-elevation-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+      class="js-protected-wa t-press fixed bottom-6 right-6 z-50 group inline-flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-3 rounded-full shadow-elevation-lg hover:-translate-y-0.5"
     >
       <div class="relative flex items-center justify-center">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="w-6 h-6 fill-current transition-transform duration-200 group-hover:scale-105" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.534 1.768.814 2.801.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.773-5.768zm3.364 8.163c-.14.393-.812.728-1.127.776-.309.047-.712.063-1.144-.078-.276-.089-.63-.223-1.077-.417-1.905-.826-3.14-2.766-3.235-2.893-.095-.127-.775-1.03-.775-1.964s.489-1.394.663-1.585c.174-.191.38-.239.507-.239.127 0 .253.001.364.007.118.006.276-.045.432.329.16.386.547 1.332.595 1.43.048.098.079.213.016.341-.063.127-.095.206-.19.317-.095.111-.2.248-.286.333-.095.095-.195.198-.084.389.111.19.494.814 1.059 1.318.729.649 1.344.85 1.534.945.19.095.301.079.412-.048.111-.127.476-.555.603-.745.127-.19.254-.159.428-.095.174.063 1.11.523 1.3.618.19.095.317.143.364.222.048.079.048.46-.095.853z"/>
         </svg>
       </div>
@@ -768,16 +816,31 @@ const waP3 = phoneClean.slice(7);
     </a>
   </aside>
 
-  <!-- ─── SCRIPT DE FORMULARIO DE CONVERSIÓN WHATSAPP Y HONEYPOT ──────── -->
+  <!-- ─── SCRIPT DE ACORDEÓN FAQ + FORMULARIO WHATSAPP CON MICRO-INTERACCIONES ── -->
   <script is:inline>
     // @ts-nocheck
     document.addEventListener("DOMContentLoaded", () => {
+      // 1. Acordeón fluido de Preguntas Frecuentes (21-accordion)
+      const accordions = document.querySelectorAll("#faq-accordion-list .t-acc");
+      accordions.forEach((acc) => {
+        const head = acc.querySelector(".t-acc-head");
+        if (!head) return;
+        head.addEventListener("click", () => {
+          const isOpen = acc.getAttribute("data-open") === "true";
+          const nextState = String(!isOpen);
+          acc.setAttribute("data-open", nextState);
+          head.setAttribute("aria-expanded", nextState);
+        });
+      });
+
+      // 2. Formulario de Contacto Interactivo con Honeypot, Error Shake (12) y Text/Icon Swap (04, 09)
       const form = document.getElementById("contact-form");
       const p1 = form?.getAttribute("data-wa-p1") || "504";
       const p2 = form?.getAttribute("data-wa-p2") || "8900";
       const p3 = form?.getAttribute("data-wa-p3") || "5569";
       const WA_PHONE = p1 + p2 + p3;
       const WA_HOST = "https://" + "wa" + ".me/";
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       function openWhatsApp(customText) {
         const cleanText = encodeURIComponent(customText || "Hola LaPonTech, quisiera solicitar un diagnóstico gratuito para mi negocio.");
@@ -785,12 +848,95 @@ const waP3 = phoneClean.slice(7);
         window.open(targetUrl, "_blank", "noopener,noreferrer");
       }
 
-      // Formulario de Contacto Interactivo con Honeypot
       const honeypot = document.getElementById("b_field");
       const formError = document.getElementById("form-error");
+      const userNameEl = document.getElementById("user_name");
+      const businessNameEl = document.getElementById("business_name");
       const serviceSelect = document.getElementById("service_select");
+      const userMessageEl = document.getElementById("user_message");
+      const submitBtnIcon = document.getElementById("submit-btn-icon");
+      const submitBtnText = document.getElementById("submit-btn-text");
+
+      const cs = getComputedStyle(document.documentElement);
+      const getMs = (name, fb) => {
+        const v = parseFloat(cs.getPropertyValue(name));
+        return Number.isFinite(v) ? v : fb;
+      };
+
+      function triggerFieldError(fieldEl) {
+        if (!fieldEl) return;
+        const wrap = fieldEl.closest(".t-input-wrap");
+        if (wrap) wrap.classList.add("is-error");
+        fieldEl.classList.add("is-error");
+        fieldEl.setAttribute("aria-invalid", "true");
+
+        if (!prefersReduced) {
+          fieldEl.classList.remove("is-shaking");
+          void fieldEl.offsetWidth; // Reflow para re-disparar la animación
+          fieldEl.classList.add("is-shaking");
+
+          const shakeMs = getMs("--shake-dur-a", 80) * 2 + getMs("--shake-dur-b", 60) * 2;
+          setTimeout(() => fieldEl.classList.remove("is-shaking"), shakeMs + 20);
+        }
+
+        if (fieldEl._revertTimer) clearTimeout(fieldEl._revertTimer);
+        const holdMs = getMs("--revert-hold", 3500);
+        fieldEl._revertTimer = setTimeout(() => {
+          fieldEl._revertTimer = null;
+          if (wrap) wrap.classList.remove("is-error");
+          fieldEl.classList.remove("is-error");
+        }, holdMs);
+      }
+
+      function clearFieldError(fieldEl) {
+        if (!fieldEl) return;
+        if (fieldEl._revertTimer) {
+          clearTimeout(fieldEl._revertTimer);
+          fieldEl._revertTimer = null;
+        }
+        const wrap = fieldEl.closest(".t-input-wrap");
+        if (wrap) wrap.classList.remove("is-error");
+        fieldEl.classList.remove("is-error", "is-shaking");
+        fieldEl.removeAttribute("aria-invalid");
+
+        if (
+          formError &&
+          !formError.classList.contains("hidden") &&
+          userNameEl?.value.trim() &&
+          serviceSelect?.value &&
+          userMessageEl?.value.trim()
+        ) {
+          formError.classList.add("hidden");
+        }
+      }
+
+      [userNameEl, serviceSelect, userMessageEl].forEach((el) => {
+        if (!el) return;
+        el.addEventListener("input", () => clearFieldError(el));
+        el.addEventListener("change", () => clearFieldError(el));
+      });
+
+      function swapButtonLabel(nextLabel) {
+        if (!submitBtnText) return;
+        if (prefersReduced) {
+          submitBtnText.textContent = nextLabel;
+          return;
+        }
+        const dur = getMs("--text-swap-dur", 150);
+        submitBtnText.classList.add("is-exit");
+        setTimeout(() => {
+          submitBtnText.textContent = nextLabel;
+          submitBtnText.classList.remove("is-exit");
+          submitBtnText.classList.add("is-enter-start");
+          void submitBtnText.offsetHeight;
+          submitBtnText.classList.remove("is-enter-start");
+        }, dur);
+      }
 
       if (form) {
+        let confirmTimer = null;
+        const defaultBtnLabel = "Consultar requerimiento por WhatsApp";
+
         form.addEventListener("submit", (e) => {
           e.preventDefault();
 
@@ -799,15 +945,22 @@ const waP3 = phoneClean.slice(7);
             return;
           }
 
-          const userName = document.getElementById("user_name")?.value.trim() || "";
-          const businessName = document.getElementById("business_name")?.value.trim() || "No especificado";
+          const userName = userNameEl?.value.trim() || "";
+          const businessName = businessNameEl?.value.trim() || "No especificado";
           const serviceVal = serviceSelect?.value || "";
           const serviceText = serviceSelect?.options[serviceSelect.selectedIndex]?.text || serviceVal;
-          const message = document.getElementById("user_message")?.value.trim() || "";
+          const message = userMessageEl?.value.trim() || "";
 
-          if (!userName || !serviceVal || !message) {
+          const missingFields = [];
+          if (!userName) missingFields.push(userNameEl);
+          if (!serviceVal) missingFields.push(serviceSelect);
+          if (!message) missingFields.push(userMessageEl);
+
+          if (missingFields.length > 0) {
+            missingFields.forEach((field) => triggerFieldError(field));
+            missingFields[0]?.focus();
             if (formError) {
-              formError.textContent = "Por favor completa tu nombre, el servicio de interés y un breve detalle de lo que necesitas.";
+              formError.textContent = "Por favor completa los campos resaltados (nombre, servicio de interés y un breve detalle).";
               formError.classList.remove("hidden");
             }
             return;
@@ -816,6 +969,16 @@ const waP3 = phoneClean.slice(7);
           if (formError) {
             formError.classList.add("hidden");
           }
+
+          // Confirmación táctil en el botón mientras se abre WhatsApp
+          if (confirmTimer) clearTimeout(confirmTimer);
+          if (submitBtnIcon) submitBtnIcon.setAttribute("data-state", "b");
+          swapButtonLabel("¡Abriendo WhatsApp con tu consulta!");
+
+          confirmTimer = setTimeout(() => {
+            if (submitBtnIcon) submitBtnIcon.setAttribute("data-state", "a");
+            swapButtonLabel(defaultBtnLabel);
+          }, 2800);
 
           const formattedMessage = 
             `¡Hola LaPonTech! Me comunico desde su portal web:\n\n` +
