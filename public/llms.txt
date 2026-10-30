@@ -18,7 +18,7 @@
 
 ## Servicios para Empresas y PYMEs
 - [Páginas Web Profesionales & Catálogos Digitales](https://lapontech.com/#presencia-digital): Sitios web rápidos, landings de conversión y catálogos interactivos optimizados para celulares y estructurados para SEO y GEO, con pedidos directos a WhatsApp.
-- [Desarrollo de Software & Sistemas a Medida](https://lapontech.com/#facturacion-inventario): Herramientas digitales adaptadas al flujo exacto del negocio (control de inventario y bodega, punto de venta POS, cuentas por cobrar, seguimiento de pedidos o cotizadores) sin suscripciones forzosas.
+- [Desarrollo de Aplicaciones & Sistemas a Medida](https://lapontech.com/#facturacion-inventario): Herramientas digitales adaptadas al flujo exacto del negocio (control de inventario y bodega, punto de venta POS, cuentas por cobrar, seguimiento de pedidos o cotizadores) sin suscripciones forzosas.
 - [Automatización Operativa & Mensajes por WhatsApp](https://lapontech.com/#automatizaciones): Automatización a medida de tareas manuales repetitivas, integrando formularios, avisos por WhatsApp, hojas de cálculo y recordatorios de cobro.
 - [Asesoría Técnica, Servidores & Equipos](https://lapontech.com/#asesoria-tecnica): Despliegue en servidores web optimizados, enrutamiento de DNS, configuración y autenticación de correos corporativos (SPF, DKIM, DMARC) sobre proveedores externos especializados (Google Workspace, Microsoft 365, Zoho), hosting web administrado opcional y soporte de equipos de cómputo.
 

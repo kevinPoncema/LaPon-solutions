@@ -36,7 +36,7 @@ Diseñamos páginas web profesionales y catálogos interactivos optimizados para
 - **Navegación fluida en celulares:** Diseño ligero pensado para abrir rápido con datos móviles.
 - **Control total y mantenimiento opcional:** Dominio `.com` a nombre del cliente y soporte opcional.
 
-### 2.2. Desarrollo de Software & Sistemas a Medida (`#facturacion-inventario`)
+### 2.2. Desarrollo de Aplicaciones & Sistemas a Medida (`#facturacion-inventario`)
 Construimos herramientas digitales adaptadas al flujo exacto de cada operación cuando los cuadernos, las hojas de Excel desordenadas o los programas genéricos quedan cortos, sin ataduras a suscripciones obligatorias por usuario.
 - **Hecho a la medida del proceso:** Funciones pensadas para la forma real de trabajar del negocio, sin módulos innecesarios.
 - **Ejemplos adaptables de implementación:** Control de existencias y bodega, punto de venta (POS) y registro de cobros en mostrador, cuentas por cobrar, paneles administrativos, seguimiento de pedidos o cotizadores.

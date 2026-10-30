@@ -103,7 +103,7 @@
     {
       "id": "facturacion-inventario",
       "popular": false,
-      "titulo": "Desarrollo de Software & Sistemas a Medida",
+      "titulo": "Desarrollo de Aplicaciones & Sistemas a Medida",
       "subtitulo": "Construimos herramientas digitales adaptadas al flujo exacto de tu negocio, sin atarte a suscripciones obligatorias.",
       "badges": ["📦 Soluciones a Medida", "🔒 Código y Datos Propios", "🛠️ Soporte Opcional"],
       "descripcion": "Si los cuadernos, las hojas de Excel desordenadas o los programas genéricos ya te quedan cortos, creamos la solución que tu operación necesita. Diseñamos sistemas claros para resolver tu cuello de botella: desde control de inventario y bodega, hasta puntos de venta (POS), paneles administrativos o seguimiento de pedidos. Tu negocio define las reglas; nosotros construimos la herramienta.",
@@ -115,7 +115,7 @@
       ],
       "cta_texto": "Cotizar desarrollo a medida →",
       "servicio_form_val": "facturacion-inventario",
-      "wa_msg": "Hola LaPonTech, me interesa cotizar un Desarrollo de Software & Sistema a Medida para mi negocio."
+      "wa_msg": "Hola LaPonTech, me interesa cotizar un Desarrollo de Aplicaciones & Sistema a Medida para mi negocio."
     },
     {
       "id": "automatizaciones",
@@ -306,7 +306,7 @@
       },
       {
         "valor": "facturacion-inventario",
-        "texto": "Desarrollo de Software & Sistemas a Medida"
+        "texto": "Desarrollo de Aplicaciones & Sistemas a Medida"
       },
       {
         "valor": "automatizaciones",
